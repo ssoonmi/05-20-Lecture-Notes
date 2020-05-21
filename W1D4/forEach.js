@@ -23,26 +23,20 @@ parks.forEach(function (park, idx, arr) {
   console.log("------------");
 });
 
-
-let str = "";
-
-parks.forEach(function(ele){
-  str = ele + " ";
-})
-
-console.log(str)
-
-
 // --------------------------------------------
 
-// An example showing that the first argument to the forEach method is an actual function.
+// An example showing that the first argument to the 
+// forEach method is an actual function.
 
-// let nums = [1, 2, 3, 4];
+let nums = [1, 20, 13, 7];
 
-// let numLogger = function (subArr, i) {
-//   console.log(i);
-// }
+function numLogger (num, i) {
+  console.log(num);
+  console.log(i);
+  console.log("-----");
+}
 
+console.log(numLogger);
 // nums.forEach(numLogger);
 
 

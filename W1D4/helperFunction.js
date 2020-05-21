@@ -1,5 +1,9 @@
-// When we define a function, that does not execute the logic we wrote.
-// The logic inside the functin will run when we invoke the function.
+// Here, we are using a function we previosuly defined to help with the logic of another function.
+// This is a VERY common pattern and will become more and more relevant as we progress in the curriculum.
+// NOTE:
+  // When we define a function, that does not execute the logic we wrote.
+  // The logic inside the functin will run when we invoke the function.
+
 
 let isEven = function (num) {
   return num % 2 === 0;
@@ -17,9 +21,10 @@ let extractEvens = function (numbers) {
   }
 
   return evens;
-}
+};
 
-// console.log(extractEvens([3, 5, 4, 7, 8]));
+let evensArr = [3, 5, 4, 7, 8];
+console.log(extractEvens(evensArr));
 
 let b = function () {
   console.log('starting b')

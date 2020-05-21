@@ -4,24 +4,31 @@
   // where the returned boolean expression evaluates to true
 
 
-let parks = ['Zion', 'Yellowston', 'Acadia', 'Yosemite'];
+let parks = ['Zion', 'Yellowston', 'Acadiaaaaa', 'Yosemite'];
+
+// Old Way
+
 let yParks = [];
 
 for (let i = 0; i < parks.length; i++) {
   let park = parks[i];
 
   if (park[0] === 'Y') {
-    yParks.push(park)
+    yParks.push(park);
   }
 }
 
-console.log(yParks);
+// console.log(yParks);
 
 
+// -------------------------------------------------------------
 
+// New Way
+
+// This is a comment explaining an anti-pattern
+// Or don't do anti-patterns!
 let selectedParks = parks.filter(function (park) {
-  return park.length > 7;
-})
-
+  return (park.length > 7) && (park[0] === 'Y') ;
+});
 
 console.log(selectedParks);
