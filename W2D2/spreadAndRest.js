@@ -2,10 +2,11 @@
   // Take in any remaining parameters passed into a function
   // and places them in an array
 
-// JavaScript will NOT tell us if we provided the wrong number of arguments to a function
-// If we want to capture all arguments being passed to a function
-  // The rest parameter must be the last argument in a function definition
-  // We can use the rest parameters to grab all remaining arguments.
+// JavaScript will NOT tell us if we provided the wrong 
+  // number of arguments to a function
+// Used if we want to capture all arguments being passed to a function
+// The rest parameter must be the last argument in a function definition.
+// We can use the rest parameter to grab all remaining arguments.
 
 
 
@@ -17,9 +18,15 @@ function smoothie(ingredient1, ingredient2) {
 // smoothie('mango', 'apple');
 
 
+
+
+
+// We can use rest parameters to make the function more dynamic and 
+  // take in any number of arguments.
+
 function restSmoothie(ingredient1, ...otherIngredients) {
   let string = 'My smoothie has ' + ingredient1;
-  console.log(' --- Displaying Rest Parameters: ---')
+  console.log('\n --- Displaying Rest Parameters: ---')
   console.log(otherIngredients);
   console.log(' --- End Display --- \n')
 
@@ -52,7 +59,7 @@ function restSmoothie(ingredient1, ...otherIngredients) {
 
 let smallDogs = ['chihuahua', 'pomeranian', 'maltese'];
 let mediumDogs = ['poodle', 'collie', 'basset hound'];
-let largeDogs = ['saint bernard', 'great dane', 'mastiff'];
+let largeDogs = ['saint bernard', 'great dane', 'english mastiff'];
 
 // In this case,
   // by using the spread operator, we take each element of the array
@@ -83,12 +90,15 @@ let onlineInstructors = {
 let nyInstructors = {
   d: 'David',
   p: 'Paloma',
-  k: 'Kafele'
-}
+  k: 'Kafele',
+  j: 'Josh'
+};
 
-let combinedInstructors = { ...onlineInstructors, ...nyInstructors };
+let combinedInstructors = { ...nyInstructors };
+combinedInstructors.m = 'Manny';
 
-// console.log(combiendInstructors);
+console.log(combinedInstructors);
+console.log(nyInstructors);
 
 
 

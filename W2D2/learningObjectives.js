@@ -103,7 +103,8 @@ let obj3 = { name: "Sergey", skill: "hockey" };
 // --------------------------------------------------------------------
 
 
-// 7. Define a function that utilizes ...rest syntax to accept an arbitrary number of arguments
+// 7. Define a function that utilizes ...rest syntax to accept an 
+//    arbitrary number of arguments
 
 function restSum(...otherNums) {
   let sum = 0;
@@ -188,8 +189,8 @@ let {
 // --------------------------------------------------------------------
 
 
-// 11. Write a function that accepts a string as an argument and returns an object 
-//     representing the count of each character in the array
+// 11. Write a function that accepts a string as an argument and returns  
+//     an object representing the count of each character in the array
 
 
 function stringConverter(string) {

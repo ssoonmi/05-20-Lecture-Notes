@@ -16,12 +16,12 @@ let parks = ['Zion', 'Yellowstone', 'Acadia', "Yosemite"];
 
 // forEach will invoke some logic on each element elemnt of an array
 
-parks.forEach(function (park, idx, arr) {
-  console.log(park);
-  console.log(idx);
-  console.log(arr);
-  console.log("------------");
-});
+// parks.forEach(function (park, idx, arr) {
+//   console.log(park);
+//   console.log(idx);
+//   console.log(arr);
+//   console.log("------------");
+// });
 
 // --------------------------------------------
 
@@ -36,7 +36,7 @@ function numLogger (num, i) {
   console.log("-----");
 }
 
-console.log(numLogger);
+// console.log(numLogger);
 // nums.forEach(numLogger);
 
 
@@ -55,3 +55,69 @@ console.log(numLogger);
 // }
 
 // nums.forEach(numLogger);
+
+
+
+
+// ------------------------------------------
+
+// ------   PITFALLS OF .forEach();   -------
+
+// ------------------------------------------
+
+
+// We CANNOT return inside of .forEach();
+
+// .forEach is not good for search functionality
+
+// Good for simple iteration on an array
+
+
+
+
+
+
+// ---------------------------------------------
+
+// Bad use of using .forEach();
+
+let numbers = [1, 6, 3, 4];
+
+function findFirstEvenBad(numbers){
+
+  numbers.forEach(evenIdx);
+  
+  return null;
+}
+
+function evenIdx(num, idx){
+  if (num % 2 === 0) {
+    console.log(num);
+    console.log(idx);
+    console.log("-------")
+    return idx;
+  }
+}
+
+console.log(findFirstEvenBad(numbers));
+
+
+
+
+
+// ---------------------------------------------
+
+// Proper use of .forEach();
+
+function findFirstEvenGood(numbers) {
+
+  for(let i = 0; i < numbers.length; i++) {
+    if (number % 2 === 0) {
+      return idx;
+    }
+  }
+
+  return null;
+}
+
+console.log(findFirstEvenGood(numbers));
