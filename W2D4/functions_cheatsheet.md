@@ -111,3 +111,8 @@ const implicitFatArrow = (params) => ({
   function: 'implicit fat arrow'
 });
 ```
+
+## Bind
+- `bind` accepts multiple arguments
+- first argument is the context that you want to bind the function to
+- any arguments that come afterwards will be passed in when the bound function is called **BEFORE** the call time arguments
