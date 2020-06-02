@@ -103,6 +103,10 @@ const rl = readline.createInterface({
 
 [`readline` Documentation]
 
+## EOD
+
+[EOD Lecture Notes]
+
 ## Learning Objectives
 1. Identify JavaScript as a language that utilizes an event loop model
 2. Identify JavaScript as a single threaded language
@@ -122,3 +126,4 @@ const rl = readline.createInterface({
 [Event Loop]: ./event_loop.js
 [User Input In Node]: ./user_input_in_node.js
 [`readline` Documentation]: https://nodejs.org/api/readline.html
+[EOD Lecture Notes]: ./eod.js
