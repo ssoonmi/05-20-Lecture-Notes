@@ -62,9 +62,9 @@ How to use the Repl:
 
 `git status` - checks if there is a git repository and the status of your git repository
 
-`git add` - adds items to your staging area from your working directory
+`git add {FOLDER/FILE PATH}` - adds folder or file specified to your staging area from your working directory
 
-`git commit -m 'Write your commit message here...'` - commits items in your staging area to your local repository as a new version
+`git commit -m 'Write your commit message here...'` - adds all items in your staging area to your local repository bundled as a new version or commit
 
 `git log` - see your past commit history (past versions)
 
@@ -109,19 +109,46 @@ How to use the Repl:
 
 `git remote add {name-of-remote} {remote-url}` - adds a remote repository with the given tag name for the url
 
-## Merge Conflict
+## `git rebase`
 
-- If there is no merge conflict when merging, then the new commits from the branch you are merging will be added to the master branch
-- After you resolve a merge conflict, it will create a new commit in your git history
+- Careful when using this! Make sure you know what will happen when you rebase commits!
+
+`git rebase {BRANCH NAME or COMMIT HASH}` - takes the HEAD of the branch name or the commit and uses it as the start point of the current branch
+
+![Git Rebase]
+
+### If there is a rebase conflict:
+
+`git rebase --abort` - only if there is a rebase conflict, this will abort the rebase
+
+- add the changes to the staging once you resolve the rebase conflicts in VSCode
+
+`git rebase --continue` - run this after you add all the changes to staging to continue with the rebase (make sure to run `git status` to see if you still have conflicts after you continue)
+
+- make sure to see that the rebase was successful before continuing to work
+
+## `git merge`
 
 `git merge {other-branch}` - will take the other branch's commits and add it into teh current branch
+- If there is no merge conflict when running merging, then the new commits from the branch you are merging will be added to the master branch
+
+- After you resolve a merge conflict, it will create a new commit in your git history
 
 ### If there is a merge conflict:
 
 `git merge --abort` - only if there is a merge conflict, this will abort the merge
 
 - add the changes to the staging once you resolve the merge conflicts in VSCode
-- 
+
+`git merge --continue` - run this after you add all the changes to staging to continue with the merge (make sure to run `git status` to see if you still have conflicts after you continue)
+
+- make sure to see that the merge was successful before continuing to work
+
+## `git checkout`
+
+`git checkout {BRANCH NAME or COMMIT HASH}` - used to force the HEAD to be at the checked out branch or commit on a detached branch (Not recommended. Just checkout a new branch and reset the commits on the branch there.)
+
+`git checkout -- {FILE NAME}` - used to reset the file specified to be the same as the HEAD's version
 
 ## Other Useful Commands
 
@@ -130,6 +157,8 @@ How to use the Repl:
 `git config --global user.email {INSERT EMAIL HERE}` - sets your global git user's email and displays that for every git commit you make
 
 `git push -u {REMOTE REPO TAG NAME} {BRANCH NAME}` - sets the upstream for the branch to the remote repo and branch so your local git repo will track changes between itself and the remote repo (can see those changes with `git status`)
+
+If you want VSCode to be the editor that opens when changing commit messages, do `EDITOR="code --wait"` in your terminal.
 
 ## NodeJS Learning Objectives
 1. Define NodeJS as distinct from browser based JavaScript runtimes.
@@ -153,3 +182,4 @@ How to use the Repl:
 [`fs` Documentation]: https://nodejs.org/api/fs.html
 [Git Directories]: ./git_directories.png
 [Git Branches]: ./git_branches.png
+[Git Rebase]: ./git_rebase.png
