@@ -46,20 +46,22 @@ const fs = require('fs');
 //   // });
 // });
 
+const contents = fs.readFileSync("poem.txt", 'utf8');
+console.log(contents);
 
+console.log('------')
 
-const data = fs.readFileSync('poem.txt', "utf8");
-console.log(data);
 
 function replaceStrs(file, oldStr, newStr) {
-  fs.readFile(file, 'utf8', (err, data) => {
+  const resultOfReadFile = fs.readFile(file, 'utf8', (err, data) => {
+    console.log(data);
     if (err) {
       console.log(err);
     }
     let newData = data.split(oldStr).join(newStr);
     writeContents('new_' + file, newData);
   });
-  console.log('other commands');
+  console.log('result', resultOfReadFile);
 }
 
 function writeContents(file, data) {
@@ -67,9 +69,8 @@ function writeContents(file, data) {
     if (err) {
       console.log(err);
     }
-    console.log('done!');
+    console.log('done writing!');
   });
 }
 
-// replaceStrs('poem.txt', 'roses', 'tulips');
-// replaceStrs('foods.txt', 'a', 'x');
+replaceStrs('poem.txt', 'roses', 'tulips');
