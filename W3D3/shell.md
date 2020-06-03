@@ -37,7 +37,7 @@ The **Bourne Shell** (1979) added the use of file descriptor 2 for error message
 
 **NOTE:** These three standard file handles - input `(0)`, output `(1)`, and errors or logging `(2)` - are associated with any program you will run that interacts with the shell.  In particular, you may remember the *input* (`process.stdin`) and *output* (`process.stdout`) attributes associated with the call to `readline.createInterface()` from the lessons on the `readline` module.
 
-On most Linux systems and the Mac OS each user has a particular default shell; other shells will generally either already be available or easily installed.  Three notable more recent widely used shells are the **Korn Shell** (`ksh`, 1983) *(some Linux servers)*, the **Bourne-Again Shell** (`bash`, 1989) *(most Linux workstations and many servers)*, and the **Z Schell** (`zsh`, 1990) *(Mac OS Catalina)*.
+On most Linux systems and the Mac OS each user has a particular default shell; other shells will generally either already be available or easily installed.  Three notable more recent widely used shells are the **Korn Shell** (`ksh`, 1983) *(some Linux servers)*, the **Bourne-Again Shell** (`bash`, 1989) *(most Linux workstations and many servers)*, and the **Z Shell** (`zsh`, 1990) *(Mac OS Catalina)*.
 
 (**COMMAND.COM**, **CMD.EXE** and **POWERSHELL** are all Microsoft shells with some similarities to the UNIX-style shells discussed; they will not be discussed further here)
 
