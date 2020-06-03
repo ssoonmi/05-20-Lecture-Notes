@@ -1,11 +1,11 @@
 // Recursive Functions:
-//    A function which calls itself
+//    A function that calls itself
 
 // Cases:
 //    Base Case: What makes the function stop recursing
 //    Recursive Case: When our function will keep recursing
 //    These are mutually exclusive! 
-//    Most often we wil only see one case in our code
+//    Many times we will only see one case in our code
 
 // Step:
 //    Recursive Step: What causes our function to keep recursing
@@ -36,8 +36,8 @@ function countDown(num) {
 
 
 
-
-
+// Written below is a function countUpOrDown(num) that will log all numbers from 
+//    that number to zero. This function can accept both positive and negative numbers.
 
 
 function countUpOrDown(num) {
