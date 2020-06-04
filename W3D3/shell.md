@@ -56,8 +56,8 @@ The *nodes* in the UNIX file system are **files**, which are themselves an order
 ## Shell Commands from the Lectures
 
 - **`< | > >>`** -   (file redirection) - `< <file>` redirects the standard input stream to read from a file; `> <file>` redirects the standard output stream into a new file; `>> <file>` redirects the standard output stream into a file, appending if the file already exists.
-NOTE 1: a common pattern is `2>&1`, which means 'direct the stderr stream (`2`) to the same stream as stdout (`1`).
-- **`. .. ~`**    -   (special directories)   dot and dot-dot are "this directory" and "the parent of this directory", respectively.  Tilde is the user's home directory.
+NOTE: a common redirection pattern is `2>&1`, which means 'direct the stderr stream (`2`) to the same stream as stdout (`1`).  Another one is `2>/dev/null`, which means 'discard any error messages'.
+- **`. .. ~`**    -   (special directories)   Dot (`.`) and dot-dot (`..`) are "this directory" and "the parent of this directory", respectively.  Tilde (`~`) is the user's home directory.
 - **`alias`** -   define or display aliases
 - **`cd`**    -   change directory
 - **`chmod`** -   change file permissions
@@ -170,7 +170,7 @@ He noted that files by default are not executable, and so to make them runnable 
 
 ## Deep Resources for Further Study
 
-For Free and Open Source Software (FOSS), good* documentation is generally part of the package.  In order to make the most of these resources, one has to spend some time to get to know them, but you might want to download a reference guide to the shell or shells you most commonly use - all this will make more sense the more you use it!
+For Free and Open Source Software (FOSS), good* documentation is generally part of the package.  In order to make the most of these resources, one has to spend some time to get to know them; you might want to download one or more of these reference guides for the shell or shells you most commonly use - all this will make more sense the more you use it!
 
 **The GNU Bash Reference Manual**:
 https://www.gnu.org/software/bash/manual/bash.pdf
@@ -186,8 +186,8 @@ http://kornshell.com/doc/
 ## Expanded List of Shell Commands
 
 - `< | > >>` -   (file redirection) - `< <file>` redirects the standard input stream to read from a file; `> <file>` redirects the standard output stream into a new file; `>> <file>` redirects the standard output stream into a file, appending if the file already exists.
-NOTE 1: a common pattern is `2>&1`, which means 'direct the stderr stream (`2`) to the same stream as stdout (`1`).
-- `. .. ~`    -   (special directories)   dot and dot-dot are "this directory" and "the parent of this directory", respectively.  Tilde is the user's home directory.
+NOTE: a common redirection pattern is `2>&1`, which means 'direct the stderr stream (`2`) to the same stream as stdout (`1`).  Another one is `2>/dev/null`, which means 'discard any error messages'.
+- `. .. ~`    -   (special directories)   Dot (`.`) and dot-dot (`..`) are "this directory" and "the parent of this directory", respectively.  Tilde (`~`) is the user's home directory.
 - `", ', <backtick>`   -   (string delimiters) double-quotes delimit interpolated strings; single-quotes delimit literal strings; backticks delimit commands that are run, returning the output as a string (this backtick thing is an older syntax - the modern form is `$(<command>)`)
 - `${<variable>}`   -   (variable expansion)
 - `alias` -   define or display aliases
