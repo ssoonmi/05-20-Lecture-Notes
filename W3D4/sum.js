@@ -2,26 +2,29 @@
 //    of numbers and returns the sum of all elements of the array.
 //  This problem must be solved recursively.
 
-// Repeating pattern
 
+// Repeating pattern
+//  Adding elements in the array
 
 // Where does the pattern break
-
+// When we're at the last element
 
 // Base Case
-
+// when arr.length === 1
 
 // Recursive Case
-
+// when arr.length > 1
 
 // Recrusive Step
-
-
-
+// recursiveSum(arr.slice(1))
 
 
 function recursiveSum(array) {
+    if(array.length === 1){
+        return array[0];
+    }
 
+    return array[0] + recursiveSum(array.slice(1));
 }
 
 const array = [2, 4, 3, 6];

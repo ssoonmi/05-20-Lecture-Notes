@@ -5,23 +5,19 @@
 
 
 // Repeating pattern
-
+// multiplying by decremented number
 
 // Where does the pattern break
-
+// when the number is zero
 
 // Base Case
-
+// if num === 0
 
 // Recursive Case
-
+// if num > 0
 
 // Recrusive Step
-
-
-
-
-
+// num * factorial(num -1)
 
 
 // Website to visualize the call stack for factorial:
@@ -29,9 +25,12 @@
 
 
 function factorial(num) {
+    if(num === 0){
+        return 1;
+    }
 
+    return num * factorial(num - 1)
 }
-
 
 console.log(factorial(4));
 

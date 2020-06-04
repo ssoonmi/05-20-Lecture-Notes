@@ -1,39 +1,36 @@
 //  We want to write a function fib(nth) the takes a number
 //    and returns the nth number of the fibonacci sequence.
 //  The first two numbers of the fibonacci sequence are both 1. Every 
-//    number after wards is the sum of the two prior fibonacci numbers.
+//    number afterwards is the sum of the two prior fibonacci numbers.
 //  This problem must be solved recursively.
 
 
 // Repeating pattern
-
+// The sum of two prior numbers
 
 // Where does the pattern break
-
+// the first two numbers
 
 // Base Case
-
+// num === 1 || num === 2
 
 // Recursive Case
-
+// num > 2
 
 // Recrusive Step
-
-
-
-
-
+// fib(n-1) + fib(n-2)
 
 function fib(nth) {
+    if(nth === 1 || nth === 2){
+        return 1;
+    }
 
+    return fib(nth-1) + fib(nth-2);
 }
 
+console.log(fib(7));
 
-
-
-console.log(fib(5));
-
-
+// 1,1,2,3,5,8,13
 
 
 

@@ -1,34 +1,40 @@
 //  We want to write a function exponent(base, power) which takes two numbers,
-//    a base and power, returns the base raised to that power.
+//    a base and power, and returns the base raised to that power.
 //  This problem must be solved recursively.
 
 
 // Repeating pattern
-
+// repeated multiplication
+// if n is negative, turns fraction (numerator of 1)
 
 // Where does the pattern break
-
+// when power equals 0, return 1
 
 // Base Case
-
+// power === 0
 
 // Recursive Case
-
+// power > 0
 
 // Recrusive Step
-
-
-
-
-
+// 2^5 === 2 * 2 * 2 * 2 * 2 = 32
+// 2^3 === 2 * 2 * 2 === 2 * 2^2
+// base * exponent(base, power -1)
 
 function exponent(base, power) {
+    if(power === 0){
+        return 1;
+    }
 
+    if(power <  0){
+        power *= -1;
+        return 1 / exponent(base, power);
+    } else{
+        return base * exponent(base, power - 1);
+    }
 }
 
-
-
-console.log(exponent(2, 5));
+console.log(exponent(2, 0));
 
 // exponent(base, power);   // 1st frame,   base = ,   power = 
 // exponent(base, power);   // 2nd frame,   base = ,   power = 
