@@ -16,25 +16,25 @@
 
 
 
+// Visual example of the call stack:
+//    https://www.cs.usfca.edu/~galles/visualization/RecFact.html
 
 
 
 
 
+function echo(word) {                   // camp, amp, mp, p
+  if (word.length > 1) {               // recursive case
+    console.log(word.toUpperCase());    // CAMP, AMP, MP
 
+    let newWord = word.slice(1);        // amp, mp, p
+    let response = echo(newWord);       // p, mp, amp
 
-function echo(word) {
-  if (word.length > 1) {
-    console.log(word.toUpperCase());
-
-    let newWord = word.slice(1);
-    let response = echo(newWord);
-
-    console.log(response);
-    return word;
-  } else {
-    console.log(word.toUpperCase());
-    return word;
+    console.log(response);              // p, mp, amp
+    return word;                        // mp, amp, camp
+  } else {                             // base case
+    console.log(word.toUpperCase());    // P
+    return word;                        // p
   }
 }
 

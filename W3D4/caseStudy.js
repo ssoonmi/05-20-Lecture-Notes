@@ -9,6 +9,7 @@
 
 // Step:
 //    Recursive Step: What causes our function to keep recursing
+//    Where we recursively invoke our function
 
 
 
@@ -41,17 +42,17 @@ function countDown(num) {
 
 
 function countUpOrDown(num) {
-  if (num === 0) {    //  <-- THIS IS
-    return;           //  <-- OUR
-  }                   //  <-- BASE CASE
+  if( num === 0){
+    return;
+  }
 
   console.log(num);
 
-  if (num > 0) {              // <-- THIS IS ONE OF OUR RECURSIVE CASES
-    countUpOrDown(num - 1);   // <-- THIS IS ONE OF OUR RECURSIVE STEPS
-  } else if (num < 0) {       // <-- THIS IS ALSO A RECURSIVE CASE
-    countUpOrDown(num + 1);   // <-- THIS IS ALSO A RECURSIVE STEP
+  if(num > 0){
+    countUpOrDown(num - 1);
+  } else {
+    countUpOrDown(num + 1);
   }
 }
 
-// countUpOrDown(-10);
+countUpOrDown(10);
