@@ -1,0 +1,54 @@
+#! /bin/zsh
+################################################################################
+#
+# ysh install script - G. Burgess (a/A Online JS-Py Week 3 assignment)
+#
+# NOTE: This is not 'done' - a good shell script needs to test the outcome of
+#       any operation that might fail (which this one doesn't do. although I
+#       started)  Shell scripts are much more than just a list of commands that
+#       could be typed at the command prompt.  Unlike programming languages like
+#       JavaScript and Python, the developer cannot expect that a failed
+#       operation will cause an exception to be raised or execution to halt - so
+#       any important code doing system-critical stuff needs to be appropriately
+#       guarded.
+#
+################################################################################
+
+YSH="$HOME/ysh"
+
+if [[ -d "$YSH" ]] then
+  echo "installation folder already exists; exiting..."
+  exit 1
+fi
+
+echo "looks like we're doing this..."
+
+YSH_ROOT="$YSH/home/root"
+YSH_USER="$YSH/home/$USER"
+YSH_BIN="$YSH/bin"
+
+echo "creating directory tree..."
+mkdir -p "$YSH_ROOT" "$YSH_USER" "$YSH_BIN"
+
+echo "restricting root access..."
+chmod a-w "$YSH_ROOT"
+if (touch "$YSH_ROOT/test.sh" 2>/dev/null) then
+  echo "root security compromised"
+else
+  echo "root security confirmed"
+fi
+
+echo "installing scripts..."
+curl -o "$YSH_BIN/ysh_ls" "https://gist.githubusercontent.com/ATMartin/\
+18dc07b9063e27e88f14216375045e17/raw/660d7fe270760c976d7334fd31dd0427045e88a4/\
+mysh_ls"
+
+echo "patching scripts..."
+sed -iE 's/mysh/ysh/g' "$YSH_BIN/ysh_ls"
+
+echo "all done!"
+
+# here document to modify ~/.zshrc
+# export PATH=~/ysh/bin:$PATH
+# alias yls="ysh_ls"
+
