@@ -8,10 +8,15 @@
   <script type="text/javascript">
     const handleDragStart = e => {
       e.target.classList.add('is-being-dragged');
+      e.target.innerHTML = "I'm Being Dragged!";
       e.dataTransfer.setData('text/plain', e.target.id);
-      
       e.dataTransfer.dropEffect = 'move';
     };
+
+    const handleDragEnd = e => {
+      e.target.classList.remove('is-being-dragged');
+      e.target.innerHTML = "Drag Me!"
+    }
 
     const handleDragEnter = e => {
       // Needed so that the "drop" event will fire.
@@ -24,6 +29,8 @@
     };
 
     const handleDragOver = e => {
+        const id = e.dataTransfer.getData('text/plain');
+        const draggedElement = document.getElementById(id);
       // Needed so that the "drop" event will fire.
       e.preventDefault();
     };
@@ -31,45 +38,48 @@
     const handleDrop = e => {
       const id = e.dataTransfer.getData('text/plain');
       const draggedElement = document.getElementById(id);
+      draggedElement.removeEventListener('dragend', handleDragEnd);
       draggedElement.draggable = false;
+      draggedElement.innerHTML = "I've been dropped!";
       e.target.appendChild(draggedElement);
     };
 
     window.addEventListener('DOMContentLoaded', () => {
-      document
-        .getElementById('red-square')
-        .addEventListener('dragstart', handleDragStart);
+      const redSquare = document.getElementById('red-square');
+      redSquare.addEventListener('dragstart', handleDragStart);
+      redSquare.addEventListener('dragend', handleDragEnd);
 
       const dropZone = document.getElementById('drop-zone');
-      dropZone.addEventListener('drop', handleDrop);
       dropZone.addEventListener('dragenter', handleDragEnter);
       dropZone.addEventListener('dragleave', handleDragLeave);
       dropZone.addEventListener('dragover', handleDragOver);
+      dropZone.addEventListener('drop', handleDrop);
     });
   </script>
   <style>
     #drop-zone {
       align-items: center;
       border: 1px solid blue;
-      color: blue;
       display: flex;
+      flex-direction: column;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 2em;
+      font-size: 24px;
       font-weight: bold;
-      height: 200px;
-      margin: auto;
+      padding: 10px;
+      height: 400px;
       justify-content: center;
-      /* position: absolute; */
-      /* right: 0; */
+      position: absolute;
+      right: 33%;
+      /* margin: auto; */
       top: 100px;
-      width: 200px;
+      width: 400px;
     }
 
     #red-square {
       display: flex;
       background-color: red;
       font-weight: bold;
-      font-size: 1.5em;
+      font-size: 24px;
       box-sizing: border-box;
       height: 120px;
       width: 120px;
@@ -84,7 +94,7 @@
 
     .is-active-drop-zone {
       background-color: blue;
-      color: red;
+      color: purple;
     }
   </style>
 </head>
