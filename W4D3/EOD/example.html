@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h3>LO #1</h3>
+  <button id="increment-count">I have been clicked <span id="clicked-count">0</span> times</button>
+  <hr>
+  <h3>LO #2</h3>
+
+  <h1>Pizza Toppings</h1>
+  <input type="checkbox" id="on-off">
+  <label for="on-off">Extra Cheese</label>
+  <div id="now-you-see-me" style="display:none">Add $1.00</div>
+  <br>
+  <br>
+  <hr>
+  <h3>LO #3</h3>
+
+  <input id="stopper" type="text" placeholder="Quick! Type STOP">
+  <hr>
+  <h3>LO #4</h3>
+  <input type="text" id="fancypants">
+  <hr>
+  <h3>LO #5</h3>
+  <form class="form form--signup" id="signup-form">
+    <input class="form__field" id="name" type="text" placeholder="Name" style="display:block">
+    <input class="form__field" id="email" type="text" placeholder="Email" style="display:block">
+    <input class="form__field" id="password" type="text" placeholder="Password" style="display:block">
+    <input class="form__field" id="confirm-password" type="text" placeholder="Password" style="display:block">
+    <button class="form__submit" id="submit" type="submit">Submit</button>
+  </form>
+  <hr>
+
+  <h3>LO #6</h3>
+
+  <style>
+    #drop-zone {
+      align-items: center;
+      border: 1px solid #DDD;
+      color: #CCC;
+      display: flex;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 2em;
+      font-weight: bold;
+      height: 200px;
+      justify-content: center;
+      right: 0;
+      top: 100px;
+      width: 200px;
+    }
+
+    #red-square {
+      background-color: red;
+      box-sizing: border-box;
+      height: 100px;
+      width: 100px;
+    }
+
+    .is-being-dragged {
+      opacity: 0.5;
+      border: 8px dashed white;
+    }
+
+    .is-active-drop-zone {
+      background-color: blue;
+    }
+  </style>
+  <div id="red-square" draggable="true"></div>
+  <div id="drop-zone">drop zone</div>
+
+  <hr>
+  <h3>LO #7</h3>
+  <style>
+    .box {
+      border: 2px solid gray;
+      height: 50px;
+      width: 50px;
+      margin: 5px;
+    }
+  </style>
+
+  <div id="div-1" class="box">1</div>
+  <div id="div-2" class="box">2</div>
+  <div id="div-3" class="box">3</div>
+  <div id="div-4" class="box">4</div>
+  <div id="div-5" class="box">5</div>
+  <div id="div-6" class="box">6</div>
+  <div id="div-7" class="box">7</div>
+  <div id="div-8" class="box">8</div>
+  <div id="div-9" class="box">9</div>
+  <div id="div-10" class="box">10</div>
+
+  <hr>
+  <h3>LO #8</h3>
+  <p>The Bubbling Principle means that when an event happens on an element, it first runs the handlers on it, then on
+    its
+    parent, then all the way up on other ancestors.</p>
+</body>
+
+</html>

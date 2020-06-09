@@ -1,0 +1,131 @@
+<!-- <html>
+
+<head>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.addEventListener("click", event => {
+        console.log(event.currentTarget);
+        console.log(event.target);
+        // console.log(event.target.id);
+      });
+      
+
+      // let div = document.getElementById('clickable-div');
+      // div.addEventListener('click', () => {
+      //   alert("The onclick handler!")
+      // })
+    });
+  </script>
+  <title>Bubbling</title>
+</head>
+
+<body onclick="alert('The body handler!')">
+  <div id='clickable-div'>
+    <p id="paragraph">
+      If you click on this P, the onclick event for the DIV actually runs.
+    </p>
+  </div>
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bubbling</title>
+  <script type='text/javascript'>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.addEventListener('click', event => {
+        console.log(event.target.id);
+      })
+
+      const stopper = document.getElementById('stopper');
+      // stopper.onclick = event => {
+      //   event.stopPropagation();
+      // };
+      let ptag = document.getElementById('p-tag');
+
+      ptag.addEventListener('click', (event) => {
+        event.stopPropagation();
+      })
+    })
+  </script>
+</head>
+<body>
+  <form onclick="alert('form')">FORM
+    <div id='stopper' onclick="alert('div')">DIV
+      <p id='p-tag' onclick="alert('p')">P</p>
+    </div>
+  </form>
+</body>
+</html> -->
+
+
+<html>
+
+<head>
+  <title>Bubbling</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      function handler(e) {
+        console.log(e.currentTarget.tagName);
+      }
+      document.querySelector('#main-ele').addEventListener('click', handler);
+      document.querySelector('#first-div').addEventListener('click', (event) => {
+        event.stopPropagation();
+        handler(event);
+      });
+      document.querySelector('p').addEventListener('click', e => {
+        e.stopPropagation();
+        handler(e);
+      });
+
+
+    })
+    
+  </script>
+</head>
+
+<body>
+  <main id='main-ele'>
+    THIS IS THE MAIN, BUT NOT THE DIV OR P
+    <div id='first-div'>
+      THIS IS THE DIV, BUT NOT THE P
+      <p>This is a paragraph in a div in a main in a body in an html</p>
+    </div>
+  </main>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+  <ul id="my-list">
+    <li>This is list item 1.</li>
+    <li>This is list item 2.</li>
+    <li>This is list item 3.</li>
+    <li>This is list item 4.</li>
+    <li>This is list item 5.</li>
+  </ul>
+  <script>
+    document
+      .getElementById('my-list')
+      .addEventListener('click', e => {
+        // will print out "This is list item X"
+        // depending on which list item is clicked
+        console.log(e.target.innerHTML);
+
+        // always prints "my-list"
+        console.log(e.currentTarget.id);
+      });
+  </script>
+</body>
+</html> -->

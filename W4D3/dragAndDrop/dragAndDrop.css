@@ -1,0 +1,11 @@
+#red-square {
+  width: 10rem;
+  height: 10rem;
+  background-color: red;
+}
+
+#drop-zone {
+  width: 15rem;
+  height: 15rem;
+  border: 0.2rem solid black;
+}
