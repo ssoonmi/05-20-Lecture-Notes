@@ -1,5 +1,5 @@
 // event.target gives us what intiatd the event
-// event.currentTarget gives us the node which the 
+// event.currentTarget gives us the HTMLelement which the 
     // event is assigned to
 
 

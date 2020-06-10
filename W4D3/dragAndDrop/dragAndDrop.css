@@ -1,11 +1,39 @@
-#red-square {
-  width: 10rem;
-  height: 10rem;
-  background-color: red;
+#drop-zone {
+align-items: center;
+border: 1px solid blue;
+display: flex;
+flex-direction: column;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 24px;
+font-weight: bold;
+padding: 10px;
+height: 400px;
+justify-content: center;
+position: absolute;
+right: 33%;
+/* margin: auto; */
+top: 100px;
+width: 400px;
 }
 
-#drop-zone {
-  width: 15rem;
-  height: 15rem;
-  border: 0.2rem solid black;
+#red-square {
+display: flex;
+background-color: red;
+font-weight: bold;
+font-size: 24px;
+box-sizing: border-box;
+height: 120px;
+width: 120px;
+justify-content: center;
+align-items: center;
+}
+
+.is-being-dragged {
+opacity: 0.5;
+border: 8px dashed white;
+}
+
+.is-active-drop-zone {
+background-color: blue;
+color: purple;
 }

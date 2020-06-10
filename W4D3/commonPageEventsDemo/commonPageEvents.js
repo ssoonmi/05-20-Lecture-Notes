@@ -1,7 +1,7 @@
 // Event Handler
     // We can assign events to HTML elements on the page.
     // These events may involve user interaction, time delays, etc.
-    // node.addEventListener
+    // HTMLelement.addEventListener
         // We have been using this method on the window!
         // There are many built in events which we can listen for
             // 'click'
@@ -27,11 +27,11 @@
 
 //  New Methods Shown in Examples
   // event.detail
-  // node.classList.remove('class-to-remove')
-  // node.classList.add('class-to-add')
-  // node.innerHTML
-  // node.style
-  // node.value
+  // HTMLelement.classList.remove('class-to-remove')
+  // HTMLelement.classList.add('class-to-add')
+  // HTMLelement.innerHTML
+  // HTMLelement.style
+  // HTMLelement.value
 
 
 
