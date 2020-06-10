@@ -1,0 +1,28 @@
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 80px;
+  padding: 30px;
+  background-color: lightseagreen;
+  border: 2px solid darkgray;
+  border-radius: 2px;
+  width: 500px;
+}
+
+.form-field {
+  display: block;
+  padding: 10px;
+}
+
+.form-title {
+  margin: auto;
+  font-size: 40px;
+  padding: 15px;
+}
+
+.form-submit {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}

@@ -1,131 +1,68 @@
-<!-- <html>
-
-<head>
-  <script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.addEventListener("click", event => {
-        console.log(event.currentTarget);
-        console.log(event.target);
-        // console.log(event.target.id);
-      });
-      
-
-      // let div = document.getElementById('clickable-div');
-      // div.addEventListener('click', () => {
-      //   alert("The onclick handler!")
-      // })
-    });
-  </script>
-  <title>Bubbling</title>
-</head>
-
-<body onclick="alert('The body handler!')">
-  <div id='clickable-div'>
-    <p id="paragraph">
-      If you click on this P, the onclick event for the DIV actually runs.
-    </p>
-  </div>
-</body>
-
-</html> -->
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Bubbling</title>
-  <script type='text/javascript'>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.addEventListener('click', event => {
-        console.log(event.target.id);
-      })
-
-      const stopper = document.getElementById('stopper');
-      // stopper.onclick = event => {
-      //   event.stopPropagation();
-      // };
-      let ptag = document.getElementById('p-tag');
-
-      ptag.addEventListener('click', (event) => {
-        event.stopPropagation();
-      })
-    })
-  </script>
-</head>
-<body>
-  <form onclick="alert('form')">FORM
-    <div id='stopper' onclick="alert('div')">DIV
-      <p id='p-tag' onclick="alert('p')">P</p>
-    </div>
-  </form>
-</body>
-</html> -->
-
 
 <html>
 
 <head>
   <title>Bubbling</title>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      function handler(e) {
-        console.log(e.currentTarget.tagName);
-      }
-      document.querySelector('#main-ele').addEventListener('click', handler);
-      document.querySelector('#first-div').addEventListener('click', (event) => {
-        event.stopPropagation();
-        handler(event);
-      });
-      document.querySelector('p').addEventListener('click', e => {
-        e.stopPropagation();
-        handler(e);
-      });
-
-
-    })
-    
-  </script>
+  <link rel="stylesheet" href="bubblingPrinciple.css">
+  <script type="text/javascript" src="bubblingPrinciple.js"></script>
 </head>
 
 <body>
-  <main id='main-ele'>
-    THIS IS THE MAIN, BUT NOT THE DIV OR P
-    <div id='first-div'>
-      THIS IS THE DIV, BUT NOT THE P
-      <p>This is a paragraph in a div in a main in a body in an html</p>
+  <section class="example parent-event-handler">
+    <h2>Parent Event Handler</h2>
+    <p class="description">
+      The div has a click event but not the p tag. Clicking on the p tag will still trigger this event
+    </p>
+    <div id='clickable-div'>DIV
+      <p id="paragraph">
+        If you click on this P, the onclick event for the DIV actually runs.
+      </p>
     </div>
-  </main>
+  </section>
+
+  <section class="example nested-event-handlers">
+    <h2>Nested Event Handlers</h2>
+    <p class="description">
+      The p, div, and main tags all have their own event handler.
+      Clicking on anyone of these elements will trigger an event.
+      That event will bubble up and also trigger the parent's events.
+    </p>
+    <main id='main-ele'>
+      THIS IS THE MAIN, BUT NOT THE DIV OR P
+      <div id='first-div'>
+        THIS IS THE DIV, BUT NOT THE P
+        <p id='nested-p'>This is a paragraph in a div in a main in a body in an html</p>
+      </div>
+    </main>
+  </section>
+
+  <section class="example stopping-propagation">
+    <h2>Stopping Propagation</h2>
+    <p class="description">
+      The p, div, and form all have their own onclick which will send an alert.
+      We can stop this event from bubbling up using event.stopPropagation();
+    </p>
+    <form onclick="alert('form')">FORM
+      <div id='stopper' onclick="alert('div')">DIV
+        <p id='stopper-p-tag' onclick="alert('p')">P</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="example list-event-handler">
+    <h2>Desirable List Event Handler</h2>
+    <p class="description">
+      Here we have a situation where bubbling is desirable.
+      By assigning the event on the ul we do not need to assign this event on all the li individually.
+    </p>
+    <ul id="my-list">
+      <li>This is list item 1.</li>
+      <li>This is list item 2.</li>
+      <li>This is list item 3.</li>
+      <li>This is list item 4.</li>
+      <li>This is list item 5.</li>
+    </ul>
+  </section>
 </body>
 
 </html>
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-  <ul id="my-list">
-    <li>This is list item 1.</li>
-    <li>This is list item 2.</li>
-    <li>This is list item 3.</li>
-    <li>This is list item 4.</li>
-    <li>This is list item 5.</li>
-  </ul>
-  <script>
-    document
-      .getElementById('my-list')
-      .addEventListener('click', e => {
-        // will print out "This is list item X"
-        // depending on which list item is clicked
-        console.log(e.target.innerHTML);
-
-        // always prints "my-list"
-        console.log(e.currentTarget.id);
-      });
-  </script>
-</body>
-</html> -->
