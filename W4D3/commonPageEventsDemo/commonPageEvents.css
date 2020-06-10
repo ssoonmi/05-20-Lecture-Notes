@@ -5,3 +5,22 @@
 .hide {
   display: none;
 }
+
+.example-container {
+  display: flex;
+  padding: 20px;
+  border: 2px solid darkblue;
+  width: 24%;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.title {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+}
+
+#pizza-h2 {
+  margin: 0 0 20px 0;
+}

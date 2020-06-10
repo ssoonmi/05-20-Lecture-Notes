@@ -9,16 +9,31 @@
 
 
 <body>
-  <!-- <button id='increment-count'>
-    I have been clicked <span id="clicked-count">0</span> times.
-  </button> -->
 
-  <!-- <h1 id='the-h1'>Pizza Toppings</h1>
-  <input onclick='' type="checkbox" id="on-off">
-  <label for="on-off">Extra Cheese</label>
-  <div id="now-you-see-me">Add $1.00</div> -->
+  <section class="example-container">
+    <h1 class="title">Click Counter Example</h1>
+    <p class="description">Here we use event.detail to count the number of clicks</p>
+    <button id='increment-count'>
+      I have been clicked <span id="clicked-count">0</span> times.
+    </button>
+  </section>
 
-  <!-- <input type="text" id="stopper" placeholder="Quick! Type STOP"> -->
+  <section class="example-container">
+    <h1 class="title">Checkbox Example</h1>
+    <p class="description">Here we use a click event to add or remove a CSS class</p>
+    <h2 id='pizza-h2'>Pizza Toppings</h2>
+    <span>
+      <input type="checkbox" id="on-off">
+      <label for="on-off">Extra Cheese</label>
+    </span>
+    <div id="now-you-see-me" class="hide">Add $1.00</div>
+  </section>
+
+  <section class="example-container">
+    <h1 class="title">Text Input Example</h1>
+    <p class="description">Here we use .value to get the text in the input field</p>
+    <input type="text" id="stopper" placeholder="Quick! Type STOP">
+  </section>
 </body>
 </html>
 
