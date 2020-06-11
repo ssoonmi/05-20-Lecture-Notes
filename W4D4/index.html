@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON and localStorage</title>
+  <script type="text/javascript" src="json_demo.js"></script>
+  <script type="text/javascript" src="localStorage_demo.js"></script>
+</head>
+<body>
+  <h1>JSON and localStorage Demo</h1>
+
+  <h2>JSON</h2>
+  <ul>
+    <li>
+      <strong>serialize</strong> - converting data into a string (or some other kind of value like "binary") so your program can send it
+      to another computer
+    </li>
+    <li>
+      <strong>deserialize</strong> - converting text (or something another computer has sent to your program) and turn it into data
+    </li>
+  </ul>
+
+  <h2>localStorage</h2>
+  <ul>
+    <li>
+      `JSON.stringify(value)` will turn the value passed into it into a string.
+    </li>
+    <li>
+      `JSON.parse(str)` will turn a JSON-formatted string into a JavaScript object.
+    </li>
+    <li>
+      <strong>Web Storage API</strong> - has a much larger storage limit than cookies, making it a useful place to store data on the
+      client side
+    </li>
+    <li>`sessionStorage` - persists for the duration of the session and ends when a user closes the browser</li>
+    
+    <li>`localStorage` - persists past the current session and has no expiration date</li>
+    <ul>
+      <li>`localStorage.setItem('key', value)`</li>
+      <li>`const value = localStorage.getItem('key')`</li>
+    </ul>
+  </ul>
+</body>
+</html>
