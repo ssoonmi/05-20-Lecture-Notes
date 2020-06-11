@@ -1,0 +1,37 @@
+#drop-zone {
+    align-items: center;
+    border: 1px solid #DDD;
+    color: #CCC;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    height: 200px;
+    justify-content: center;
+    right: 0;
+    top: 100px;
+    width: 200px;
+}
+
+#red-square {
+    background-color: red;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+}
+
+.is-being-dragged {
+    opacity: 0.5;
+    border: 8px dashed white;
+}
+
+.is-active-drop-zone {
+    background-color: blue;
+}
+
+.box {
+    border: 2px solid gray;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}

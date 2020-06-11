@@ -1,12 +1,25 @@
+// In the code below we set an individual event listeners on the window.
+// This is NOT the standard way. Usually we will set one event listener on the window
+    // for when the DOM has loaded.
+// This is for demonstration purposes, separating each LO for readability
+
+
+
 // 1.
 
 window.addEventListener("DOMContentLoaded", event => {
+  // We get the elements from the page using their respective id
   const button = document.getElementById("increment-count");
   const count = document.getElementById("clicked-count");
+
+  // Even though the event is on the button, we can still manipulate the span
   button.addEventListener("click", event => {
     count.innerHTML = `${event.detail}`;
   });
 });
+
+
+
 
 // 2.
 
@@ -28,25 +41,38 @@ window.addEventListener("DOMContentLoaded", event => {
   });
 });
 
+
+
+
 // 3.
 
 window.addEventListener("DOMContentLoaded", event => {
-  const stopCyanMadness = () => {
+
+  // define our callback for setTimeout
+  const stopGreyMadness = () => {
+
     // get the value of the input field
     const inputValue = document.getElementById("stopper").value;
+
     // if value is anything other than 'STOP', change background color
     if (inputValue !== "STOP") {
-      document.body.style.backgroundColor = "cyan";
+      document.body.style.backgroundColor = "lightgrey";
     }
   };
-  setTimeout(stopCyanMadness, 5000);
+
+  // Invoke the callback asynchronously using setTimeout
+  setTimeout(stopGreyMadness, 5000);
 });
+
+
+
 
 // 4.
 
 window.addEventListener("DOMContentLoaded", event => {
   const input = document.getElementById("fancypants");
 
+  // We use the focus and blur proerites to set CSS styles on the corresponding element.
   input.addEventListener("focus", event => {
     event.target.style.backgroundColor = "#E8F5E9";
   });
@@ -54,6 +80,9 @@ window.addEventListener("DOMContentLoaded", event => {
     event.target.style.backgroundColor = "initial";
   });
 });
+
+
+
 
 // 5.
 
@@ -80,16 +109,25 @@ window.addEventListener("DOMContentLoaded", event => {
   form.addEventListener("submit", checkPasswordMatch);
 });
 
+
+
+
 // 6.
 
-const handleDragStart = e => {
+
+const handleDragStart = e => {  // What will happen when the element is being dragged
+
+  // We use e.target to get the element
   e.target.classList.add('is-being-dragged');
+
+  // We use e.dataTransfer to manipulate the data which will be transfered through
+    // the drag and drop process
   e.dataTransfer.setData('text/plain', e.target.id);
   e.dataTransfer.dropEffect = 'move';
 };
 
 const handleDragEnter = e => {
-  // Needed so that the "drop" event will fire.
+  // We need e.preventDefault(); so that the "drop" event will fire.
   e.preventDefault();
   e.target.classList.add('is-active-drop-zone');
 };
@@ -99,28 +137,40 @@ const handleDragLeave = e => {
 };
 
 const handleDragOver = e => {
-  // Needed so that the "drop" event will fire.
+  // We need e.preventDefault(); so that the "drop" event will fire.
   e.preventDefault();
 };
 
 const handleDrop = e => {
+  // Get the id through the data that was set to the dataTransfer object in handleDragStart
   const id = e.dataTransfer.getData('text/plain');
   const draggedElement = document.getElementById(id);
+
+  // We no longer want the element to be draggable
   draggedElement.draggable = false;
+
+  // We access the drop zone through e.target
+  // drop is an event on the dropzone
   e.target.appendChild(draggedElement);
 };
 
 window.addEventListener('DOMContentLoaded', () => {
 
+  // We set the dragstart event on the red square
   document.getElementById('red-square')
     .addEventListener('dragstart', handleDragStart);
 
+  // These other events revolve around the dropzone
   const dropZone = document.getElementById('drop-zone');
   dropZone.addEventListener('drop', handleDrop);
   dropZone.addEventListener('dragenter', handleDragEnter);
   dropZone.addEventListener('dragleave', handleDragLeave);
   dropZone.addEventListener('dragover', handleDragOver);
 });
+
+
+
+
 
 // 7. 
 
@@ -133,4 +183,13 @@ window.addEventListener("DOMContentLoaded", event => {
   });
 });
 
-//
+
+
+
+
+// 8.  Define the bubbling principle
+
+// - The Bubbling Principle means that when an event happens on an element, 
+  // it first runs the event handlers on that element, 
+  // then on its parent, 
+  // then all the way up on other ancestors.
