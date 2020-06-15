@@ -1,0 +1,19 @@
+{
+  "name": "W5D1",
+  "version": "1.0.0",
+  "description": "## Built-in Node Packages",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha --watch",
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "lodash": "^3.0.0",
+    "mocha": "^8.0.1"
+  }
+}
