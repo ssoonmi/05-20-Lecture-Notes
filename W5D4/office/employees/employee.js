@@ -1,3 +1,5 @@
+import Department from '../departments/department.js';
+
 export class Employee {
 
 }
