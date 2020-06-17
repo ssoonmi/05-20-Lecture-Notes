@@ -1,19 +1,20 @@
 import simulateBackend from './simulateBackend.js';
 
 window.addEventListener("DOMContentLoaded", () => {
-  [ employees, departments ] = simulateBackend();
-  saveToCookies(employees);
-  saveToCookies(departments);
+  debugger
+  const {employees, departments} = simulateBackend();
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("departments", JSON.stringify(departments));
   displayData("employee-list", employees);
-  displayDepts("department-list", departments);
+  displayData("department-list", departments);
 });
-
-function saveToCookies(data){
-
-};
 
 // will grab on to the ul with that id, 
   // then populate it with li of the data type
-function displayData(ulId, data){
-
+function displayData(listId, dataArray){
+  const list = document.getElementById(listId);
+  dataArray.forEach(item =>{
+    const li = item.display();
+    list.appendChild(li);
+  });
 }

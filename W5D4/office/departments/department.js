@@ -42,4 +42,8 @@ export default class Department {
       console.log(`\nEmployee not found in ${this.deptTitle}.\n`)
     }
   }
+
+  display(){
+    return `<li class="dept-li">${this.deptTitle}</li>`;
+  }
 }
