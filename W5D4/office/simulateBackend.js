@@ -7,14 +7,14 @@ export default function simulateBackend(){
       departments: []
   }
 
-  sales = new Department("Sales");
-  distribution = new Department("Distribution");
+  const sales = new Department("Sales");
+  const distribution = new Department("Distribution");
 
-  michael = new Manager("Michael Scott", "Regional Manager", 40000, sales);
-  dwight = new Employee("Dwight Schrute", "Floor Supervisor", 35000, sales);
-  pam = new Employee("Pamela Halpert", "Office Administrator", 35000, sales);
-  jim = new Employee("Jim Halpert", "Lead Sales", 35000, sales);
-  darryl = new Employee("Darryl Philibin", "Foreman", 35000, distribution);
+  const michael = new Manager("Michael Scott", "Regional Manager", 40000, sales);
+  const dwight = new Employee("Dwight Schrute", "Floor Supervisor", 35000, sales);
+  const pam = new Employee("Pamela Halpert", "Office Administrator", 35000, sales);
+  const jim = new Employee("Jim Halpert", "Lead Sales", 35000, sales);
+  const darryl = new Employee("Darryl Philibin", "Foreman", 35000, distribution);
 
   michael.addToTeam(dwight);
   pam.addSupervisor(michael);

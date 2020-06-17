@@ -1,19 +1,19 @@
 export class Employee {
   constructor(name, position, salary, department) {
-    this.name = name,
-    this.position = position,
-    this.salary = salary,
-    this.department = department
+    this.name = name;
+    this.position = position;
+    this.salary = salary;
+    this.department = department;
     department.addEmployee(this);
-    this.shenanigans = [],
-    this.enemies = []
+    this.shenanigans = [];
+    this.enemies = [];
     this.supervisor;
   }
 
   display(){
     return `<li class="employee-li">` +
       `<div class="employee-div">Name: ${this.name}</div>` +
-      `<div class="employee-div">Department: ${this.department}</div>` +
+      `<div class="employee-div">Department: ${this.department.deptTitle}</div>` +
       `<div class="employee-div">Position: ${this.position}</div>` +
       `<div class="employee-div">Salary: ${this.salary}</div>` + `</li>`;
   }
@@ -46,16 +46,15 @@ export class Manager extends Employee {
     this.team = [];
   }
 
-  DisplayTeam(){
+  displayTeam(){
     this.display();
-    this.supervisedEmployees.forEach((employee =>{
+    this.team.forEach((employee =>{
       employee.display();
     }))
   }
 
   addToTeam(employee){
-    if(!this.supervisedEmployees.includes(employee)){
-      this.supervisedEmployees.push(employee);
+    if(!this.team.includes(employee)){
       employee.addSupervisor(this);
     } else {
       alert("Already a team member!");

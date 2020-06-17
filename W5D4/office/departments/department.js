@@ -1,4 +1,4 @@
-const readline = require('readline');
+// const readline = require('readline');
 
 export default class Department {
 
@@ -21,10 +21,10 @@ export default class Department {
       output: process.stdout
     });
 
-    rl.question('The department title is not approved.\nPlease enter a new title: ', (deptTitle) => {
-      this.deptTitle = deptTitle;
-      rl.close();
-    });
+    // rl.question('The department title is not approved.\nPlease enter a new title: ', (deptTitle) => {
+    //   this.deptTitle = deptTitle;
+    //   rl.close();
+    // });
 
     this.checkDeptTitle();
   }
@@ -44,6 +44,6 @@ export default class Department {
   }
 
   display(){
-    return `<li class="dept-li">${this.deptTitle}</li>`;
+    return `<li class="department-li">${this.deptTitle}</li>`;
   }
 }
