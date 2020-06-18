@@ -1,5 +1,9 @@
 // the export syntax will not work in node
 export class Employee {
+
+  // cosnt michael = new Employee("michael scott", "regional manager",
+  //                  40000, sales)
+
   constructor(name, position, salary, department) {
     this.name = name;
     this.position = position;
@@ -21,6 +25,7 @@ export class Employee {
   }
 
   // Note the use of the spread operator
+  // vistem and witnesses are instances of employee class
   commitTomfoolery(shenanigan, victim, ...witnesses){
     this.shenanigans.push(shenanigan);
     this.enemies.push(victim, ...witnesses);
@@ -52,15 +57,21 @@ export class Manager extends Employee {
     this.team = [];
   }
 
-  displayTeam(){
-    this.display();
-    this.team.forEach((employee =>{
+  // michael.displayTeam(); sets the context, sets this to michael
+  // michael is an instance of the manager class.
+  // We can also call michael a manager object
+
+  displayTeam(){ // context, this = michael
+    this.display(); // michael.display();
+    this.team.forEach((employee =>{ // michael.team()
       employee.display();
     }))
   }
 
   addToTeam(employee){
+    // check if employee is in team
     if(!this.team.includes(employee)){
+      this.team.push(employee);
       employee.addSupervisor(this);
     } else {
       alert("Already a team member!");

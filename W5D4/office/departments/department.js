@@ -1,4 +1,5 @@
 // the export syntax will not work in node
+// export deafult for ES6, the browser
 export default class Department {
   constructor(deptTitle){
     this.deptTitle = deptTitle;
@@ -10,6 +11,7 @@ export default class Department {
   }
 
   removeEmployee(removedEmployee){
+    // check if employee is in the dept
     if(this.employees.includes(removedEmployee)){
       this.employees = this.employees.filter((employee)=>{
         return employee !== removedEmployee;

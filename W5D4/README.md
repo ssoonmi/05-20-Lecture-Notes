@@ -45,6 +45,9 @@
 * Create instances of departments and employees
 
 * Load our webpage once we have created instances of the classes
+  - normall this would be done by a backend
+
+
 
 
 
@@ -65,6 +68,8 @@
   display
     - Display will return a string containing all of the department's information
     - This string will be formatted as an <li>. Remember, all HTML is really a string
+
+
 
 
 
@@ -123,3 +128,9 @@
   - displayTeam
     In case we only want to display a specfici team
     Calls the employee.team() method
+
+
+
+
+
+<!-- If time- serialize, deserialize JSON -->
