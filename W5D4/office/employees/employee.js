@@ -1,3 +1,4 @@
+// the export syntax will not work in node
 export class Employee {
   constructor(name, position, salary, department) {
     this.name = name;
@@ -10,6 +11,7 @@ export class Employee {
     this.supervisor;
   }
 
+  // We return a string formatted as an <li>
   display(){
     return `<li class="employee-li">` +
       `<div class="employee-div">Name: ${this.name}</div>` +
@@ -18,6 +20,7 @@ export class Employee {
       `<div class="employee-div">Salary: ${this.salary}</div>` + `</li>`;
   }
 
+  // Note the use of the spread operator
   commitTomfoolery(shenanigan, victim, ...witnesses){
     this.shenanigans.push(shenanigan);
     this.enemies.push(victim, ...witnesses);
@@ -28,10 +31,12 @@ export class Employee {
     this.position = demotion;
   }
 
-  hrReprot () {
+  // alert will only work when we are in the browser
+  hrReport () {
     alert('Error: HR does not exist');
   }
 
+  // First we check if the manager is alredy set as the employee's supervisor
   addSupervisor(manager){
     if (this.supervisor !== manager){
       this.supervisor = manager;
@@ -40,6 +45,7 @@ export class Employee {
   }
 }
 
+// A manager is a specific type of employee
 export class Manager extends Employee {
   constructor(name, position, salary, department){
     super(name, position, salary, department);
@@ -61,3 +67,10 @@ export class Manager extends Employee {
     }
   }
 }
+
+// module.exports is for when we are in node
+
+// module.exports = {
+//   Employee, 
+//   Manager
+// }
