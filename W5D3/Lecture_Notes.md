@@ -73,7 +73,7 @@ Generally, *objects should be replaceable with their subtypes*.
 * Postconditions cannot be weakened in a subtype
 * Invariants of the supertype must be preserved in a subtype
 
-Curtis shares an example of a *Square* class that is derived (incorrectly, per the Liskov Substitution Principle) from a *Rectangle* class, as the *Square* class sets the parent *Rectangle* width and heigth to the same value.  The *square* class is the refactored as an independent class, so that it can have a `setSide` method that reflects its squareness without altering two dimensions on the *Rectangle* class.
+Curtis shares an example of a *Square* class that is derived (incorrectly, per the Liskov Substitution Principle) from a *Rectangle* class, as the *Square* class sets the parent *Rectangle* width and heigth to the same value.  The *square* class is theN refactored as an independent class, so that it can have a `setSide` method that reflects its squareness without altering two dimensions on the *Rectangle* class.
 
 Curtis closes with:
 * **classes** are about *behavior*
@@ -102,7 +102,7 @@ The **Law of Demeter** promotes loose ***coupling*** *between classes*.
 
 NOTE: The LoD is also refered to as the "one-dot" rule, as one is allowed to invoke `obj.property` but not `obj.relatedObj.property`.
 
-Curtis mentions that the LoD is in particular protecting JavaScript developers from some of the complexities of tracing refereces in JS code.
+Curtis mentions that the LoD is in particular protecting JavaScript developers from some of the complexities of tracing references in JS code.
 
 ---
 
