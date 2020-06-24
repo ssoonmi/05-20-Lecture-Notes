@@ -28,7 +28,7 @@ testing-demo
 * describe(string, callback)
   - The `describe` function is an organizational function that accepts a descriptive string and a callback. We'll use the `describe` function to `describe` what we will be testing.
   - The callback handed to the `describe` function will be where we insert our actual tests. 
-  - Note: When testing instance methods, it is customary to include "prototype." in the description
+  - Note: When testing instance methods, it is customary to include "prototype." followed by the method name in the description
 
 * it(string, callback)
   - The `it` function is an organizational function we will use to wrap around each test we write. The `it` function accepts a descriptive string and callback to set up our test.
@@ -141,8 +141,4 @@ chai.use(spies);
 In order to spy on a function we first need to tell Chai which function we'd like to spy on using the `chai.spy.on` method.
 
 Chai checks how many times a function has been invoked using the method chain `expect(func).to.have.been.called.exactly(n)` where `n` is the number of times `func` is expected to be called.
-
-
-
-## Testing static methods on classes
 
