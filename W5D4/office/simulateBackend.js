@@ -1,6 +1,8 @@
 // import syntax is for the brwser, and usually we will be using js in the browser, ES6
 import Department from './departments/department.js';
-import {Employee, Manager} from './employees/employee.js';
+import * as People from './employees/employee.js';
+
+const { Employee, Manager } = People;
 
 // require is for node, ES5
 // const Department = require('./departments/department.js');
