@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+  <link rel="stylesheet" href="game.css">
+  <script type="module" src="game.js"></script>
+</head>
+<body>
+  <main>
+    <div id="game-board">
+      <div>
+        <button id="use-callback" class="pure-button">Use a callback</button>
+        <button id="use-promise" class="pure-button">Use a Promise</button>
+        <button id="use-async-await" class="pure-button">Use async/await</button>
+      </div>
+      <div id="score"></div>
+      <div id="category-title"></div>
+      <div id="question"></div>
+      <div id="value"></div>
+      <div id="invalid-count"></div>
+      <form class="pure-form">
+        <textarea id="player-response" class="pure-input-1"></textarea>
+      </form>
+      <button id="check-response" class="pure-button">Check response</button>
+      <div id="answer"></div>
+    </div>
+  </main>
+</body>
+</html>
