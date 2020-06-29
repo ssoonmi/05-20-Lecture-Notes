@@ -6,19 +6,19 @@
 ## File Structure
 
 * Whenever you are running tests with Mocha the important thing to know is that the Mocha CLI will automatically be looking for a directory named `test`.
-* The files you want to test will be loaced in the problems directory. 
-* The created test directory's file structure should mirror that of the problems directory.
+* The files you want to test will be loaced in the `problems` directory. 
+* The created `test` directory's file structure should mirror that of the `problems` directory.
 * Each test file should have the word `-spec` appended to the end of the file name. 
 
 Ex:
-
+```
 testing-demo
   └──
   problems
     └── myFile.js
   test
     └── myFile-spec.js
-
+```
 
 
 
@@ -33,15 +33,13 @@ testing-demo
 * it(string, callback)
   - The `it` function is an organizational function we will use to wrap around each test we write. The `it` function accepts a descriptive string and callback to set up our test.
   - We can insert the actual test we intend to write within the callback handed to the `it` function.
+  - Arrange: Getting/creating what we'll need for our test
+  - Act: Executing logic to be tested
+  - Assert: Testing logic
 
 * context(string, callback)
   - The `context` function has the same functionality as the `describe` block and is used for organizational purposes.
   - We use `context` instead of nesting `describe` blocks.
-
-
-
-
-## Testing Errors
 
 
 
@@ -142,3 +140,19 @@ In order to spy on a function we first need to tell Chai which function we'd lik
 
 Chai checks how many times a function has been invoked using the method chain `expect(func).to.have.been.called.exactly(n)` where `n` is the number of times `func` is expected to be called.
 
+
+
+
+## Testing Errors
+
+We do not want to invoke code which will throw an error. This will interupt our tests and throw an error.
+
+The syntax we use in Chai for testing if an error will be thrown is:
+
+```javascript
+  expect(() => myFunc()).to.throw(Error)
+```
+
+We pass the expect block a function which when invoked will then invoke the function which will throw the error.
+
+We can expect any Error to be thrown: Error, TypeError, SyntaxError, ReferenceError, etc.

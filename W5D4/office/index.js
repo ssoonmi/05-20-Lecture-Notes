@@ -6,7 +6,10 @@ window.addEventListener("DOMContentLoaded", () => {
   
   displayData("employee-list", employees);
   displayData("department-list", departments);
-  debugger
+
+  // We utilize the debugger invoke instance methods on 
+    // the employees we created.
+  // debugger
 });
 
 // will grab on to the ul with that id, 

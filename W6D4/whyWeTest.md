@@ -25,7 +25,7 @@ TDD is one way for developers to ensure that the code written by every member of
 
 The Test-driven development workflow can be broken down intro three simple steps. Red, Green, Refactor:
 
-1. Red
+1. Red:
   - Write the tests and watch them fail (a failing test is red). It's important to ensure the tests initially fail so that you don't have false positives.
 2. Green:
   - Write the minimum amount of code to ensure the tests pass (a passing test will be green).
