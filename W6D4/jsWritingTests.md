@@ -155,4 +155,8 @@ The syntax we use in Chai for testing if an error will be thrown is:
 
 We pass the expect block a function which when invoked will then invoke the function which will throw the error.
 
+<<<<<<< HEAD
 We can expect any Error to be thrown: Error, TypeError, SyntaxError, ReferenceError, etc.
+=======
+We can expect any Error to be thrown: Error, TypeError, SyntaxError, ReferenceError, etc.
+>>>>>>> 7e7b55a09054c5e06d463ac61242e4d329498cd3
