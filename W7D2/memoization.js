@@ -9,6 +9,13 @@
 
 
 
+
+
+
+
+
+
+
 // Example:
 
 
@@ -17,18 +24,17 @@
 
 function slowFib(n) {
   if (n === 1 || n === 2) return 1;
-  return fib(n - 1) + fib(n - 2);
+  return slowFib(n - 1) + slowFib(n - 2);
 }
 
 slowFib(6);     // => 8
-
-
 
 //                                         f(6)
 //                     f(5)                  |                  f(4)
 //           f(4)        |         f(3)      |        f(3)       |     f(2)      |
 //    f(3)     |  f(2)   |   f(2)   |  f(1)  |   f(2)  |   f(1)  |
 // f(2) | f(1) | 
+
 
 
 
@@ -42,12 +48,19 @@ slowFib(6);     // => 8
 
 
 
+// Our code without memoization:
+
+// function slowFib(n) {
+//   if (n === 1 || n === 2) return 1;
+//   return slowFib(n - 1) + slowFib(n - 2);
+// }
+
+// slowFib(6);     // => 8
 
 
-
-function fastFib(n, memo = {}) {
+function fastFib(n, memo = {1: 1, 2: 1}) {
   if (n in memo) return memo[n];
-  if (n === 1 || n === 2) return 1;
+  // if (n === 1 || n === 2) return 1;
 
   memo[n] = fastFib(n - 1, memo) + fastFib(n - 2, memo);
   return memo[n];
@@ -58,15 +71,24 @@ fastFib(50);    // => 12586269025
 
 
 
+// Before memoization
+
+//                                         f(6)
+//                     f(5)                  |                  f(4)
+//           f(4)        |         f(3)      |        f(3)       |     f(2)      |
+//    f(3)     |  f(2)   |   f(2)   |  f(1)  |   f(2)  |   f(1)  |
+// f(2) | f(1) | 
+
+
 
 // Now, our function calls will look like this:
-
 
 //                                         f(6)
 //                     f(5)                  |           f(4) <= retrieve stored answer
 //           f(4)        |         f(3)   <= retrieve stored answer
 //    f(3)     |  f(2)   |
 // f(2) | f(1) | 
+
 
 
 // In slowFib, the number of procedures is about 2^n, giving a time complexity of O(2^n)
