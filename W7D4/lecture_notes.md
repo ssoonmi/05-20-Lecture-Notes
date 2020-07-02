@@ -11,11 +11,11 @@
 >In computer science, an abstract data type (ADT) is a mathematical model for data types. An abstract data type is defined by its behavior (semantics) from the point of view of a user, of the data, specifically in terms of possible values, possible operations on data of this type, and the behavior of these operations. This mathematical model contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not a user.
 >Formally, an ADT may be defined as a "class of objects whose logical behavior is defined by a set of values and a set of operations"
 
-(Wikipedia)
+*--- Wikipedia*
 
 [Linked] Lists, Stacks, and Queues are examples of ADTs.  Other important ADTs that you will encounter are *Sets*, *Multi-Sets* (aka *Bags*), *Maps*, and *Multi-Maps*.  As JavaScript arrays can be used to implement Lists, Stacks and Queues, so JavaScript objects can be used to implement Sets (as keys), Maps (as key/value pairs), and Multi-Sets and Multi-Maps (by mapping keys to a count or an array of values, respectively).
 
-More generally, programming languages will generally provide some basic implementation of the common ADTs, and will also provide features that you can use to implement your own - though the latter are mostly useful for passing assessments and technical interviews!
+Every higher-level programming language will generally provide some basic implementation of the common ADTs, and will also provide features that you can use to implement your own - though the latter are mostly useful for passing assessments and technical interviews!
 
 ## Linked List
 
@@ -35,11 +35,11 @@ Linked lists contain ordered data, like an array.  The difference lies in how th
 
 The homework suggests that linked lists have "no indices, and no random access" - this is not quite the full story, since if you think about it you should see that (a) you certainly could implement indices and random access on a linked list, and that (b) while an array can be indexed in O(1) time, a linked list will have a time complexity of O(n).
 
-Note: When you code any of these ADTs you will end up creating two classes that work together; a *Node* class that represents the vertices of the ADT, and a *Container* class that will manage a collection of zero or more Nodes.
+Often when you code any of these ADTs you will end up creating two classes that work together; a *Node* class that represents the vertices of the ADT, and an owner class - generically called a *Container* - that will manage its own collection of zero or more Nodes.
 
 The homework mentions singly and doubly-linked lists, as well as circularly linked lists.  "Multiply-Linked" lists are also mentioned but not described; as the geometry of the graph deviates from linearity it is increasingly difficult to describe the corresponding ADT as a "list".
 
-The homework also mentions typical operations that are implemented on linked lists: Insertion, Deletion, Search [by value], Read/Write access to a selected node, and Size (or length) on the container itself.
+The homework also mentions typical generic operations that are implemented on linked lists: *Insertion*, *Deletion*, *Search* [by value], *Read*/*Write Access* to a selected node, and *Size* (or length) on the container itself.
 
 As mentioned in the homework, the time complexity of insertion and deletion operations on a linked list is O(1), while the search and access operations are O(n).  (why?)  The space complexity for linked lists is O(n) in general.
 
@@ -53,13 +53,13 @@ In contrast, a Queue is a data structure with a front and a back, like a line th
 
 As mentioned in the homework, you can use Array#push and Array#shift in JavaScript to implement a simple Queue data structure.  (Can you think of another pair of Array methods you could use?)
 
-Both Stacks and Queues have a length, and in the projects you will maintain these values.  The pure ADTs are length-agnostic; the whole point of these ADTs is that they support insertions and deletions at the expected places in O(1) time.  (Whereas counting the number of items in the list requires...?  Note also that keeping track of the length of the ADT by updating an attribute allows us to report the length in O(1) time, but has to be updated on every insert and delete, and so requires ... to maintain?)
+Both Stacks and Queues have a length, and in the projects you will maintain these values.  The pure ADTs are length-agnostic; the whole point of these ADTs is that they support insertions and deletions at the expected places in O(1) time.  (Whereas counting the number of items in the list requires...?)  Note also that keeping track of the length of an ADT container by updating an attribute allows us to report the length in O(1) time.
 
 If a Stack or Queue is implemented via a Node type (as you will do in today's projects) the Node will require both a *value* and a *next* property.
 
 For consideration - (a) if there is a *next* property but not a *previous* property, what sort of list is being used to implement a Stack or Queue?  and (b) which direction should *next* point to, in order to minimize the programmatic (and time) complexity of maintaining the underlying list?
 
-Operations on a Stack are typically `push`, `pop`, and `size`.  For a Queue, the corresponding operations are `enqueue`, `dequeue`, and (yes, you guesed it!) `size`.  (In his lecture, Curtis also mentions a `peek` method for Stacks and Queues, to peek at the Node or Value that is on top of a Stack or the head of a Queue)
+Cannonical operations on a Stack are typically `push`, `pop`, and `size`.  For a Queue, the corresponding operations are `enqueue`, `dequeue`, and (yes, you guesed it!) `size`.  (In his lecture, Curtis also mentions a `peek` method for Stacks and Queues, to peek at the Node or Value that is on top of a Stack or the head of a Queue)
 
 If Stacks and Queues are implemented on top of a Linked List, then it should not be surprising that their time complexity behaviors are the same as those of linked lists; O(1) for insertion and deletion, O(n) for access and searches.  As with the underlying list ADT, the space complexity for both Stacks and Queues is proportional to the number of nodes, so O(n).
 
@@ -86,12 +86,12 @@ Similarly, a *Map* is an ADT that maps a unique collection of keys to a collecti
 
 Different schemes for storing data have different time and space complexity behavior. Developers chose an ADT that is optimized for the problem to be solved, and then worry about which implementation to use (or develop) once the ADT has been identified. All of this matters more for larger data sets (and less for smaller ones).
 
-Curtis mentions that typically a Stack or Queue will `throw` an `Error` if an attempt is made to `pop` from an empty Stack or `dequeue` from an empty Queue.  In the project work for today this is generally *not* the expected behavior - look at the `spec` tests to determine what behavior is expected from your classes in these cases.
+Curtis mentions that typically a Stack or Queue will `throw` an `Error` if an attempt is made to `pop` from an empty Stack or `dequeue` from an empty Queue.  (In today's project work this is generally *not* the expected behavior - look at the `spec` tests to determine what behavior is expected from your classes in these cases)
 
 Curtis also discusses the List type, which allows much more flexible access than either Stacks or Queues.  He mentions that the JS Array type is a convenient structure to use to implement a List.  He also points out that the JS Array type can be resized as needed without effort by the programmer, in contrast to array types in many other programming languages.  (Python Lists are analogous to JavaScript Arrays, and do not require any explicit management - but like JS Arrays, this also means that the programmer is at a remove from the very real underlying complexity that still exists when an array has to be reallocated)
 
 ## ADTs in Review
 
-You should know in general what a List, Linked-List, Stack, Queue, Set, and Map are.
+* You should know in general what a List, Linked-List, Stack, Queue, Set, and Map are.
 
-For the Linked-List, Stack and Queue ADTs, you should be familiar with their typical operations, and know what their typical time and space complexities are.
+* For the Linked-List, Stack and Queue ADTs, you should be familiar with their typical operations, and know what their typical time and space complexities are.
