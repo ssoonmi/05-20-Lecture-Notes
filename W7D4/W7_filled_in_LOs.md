@@ -32,13 +32,13 @@
 
 3. Identify complexity classes of code
   - Important takeaway here is being able to connect code patterns with complexities
-    - Doing an exact number of calculations (independent of input) -> constant O(n)
+    - Doing an exact number of calculations (independent of input) -> constant O(1)
     ```javascript
     function constant_1(n) {
       return n * 2 + 1;
     }
     ```
-    - Looping an exact number of times (independent of input) -> constant O(n)
+    - Looping an exact number of times (independent of input) -> constant O(1)
     ```javascript
     function constant_2(n) {
       for (let i = 1; i <= 20; i++) {
