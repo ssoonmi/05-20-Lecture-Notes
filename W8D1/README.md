@@ -1,6 +1,8 @@
 # Whiteboarding Problems
 
-## `intersection` Example
+Today, we will be practicing whiteboarding with your pair. One pair will act as an interviewer for one question and the other pair will be the interviewing practicing the steps of how to whiteboard. Switch problems and roles every 20 minutes.
+
+## [`intersection` Example]
 
 Given two data sets, find the intersection of both sets.
 
@@ -14,7 +16,7 @@ interviewer first
 
 interviewee first
 
-switch off every minutes
 
 [Problem Set 1]: ./problem_set1.md
 [Problem Set 2]: ./problem_set2.md
+[`intersection` Example]: ./board.md
