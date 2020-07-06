@@ -18,5 +18,6 @@ function binarySearch(array, target) {
   }
 }
 
+// 
 // O(logn) logarithmic time complexity
 // O(1) space complexity
