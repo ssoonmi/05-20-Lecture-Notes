@@ -1,3 +1,11 @@
+// Implementing a Graph in Code
+
+
+
+// Similar to when working with other ADTs, we can crate a node class
+// This class can have a property which will store all the nodes
+  // which this instance should hold reference to.
+
 class GraphNode {
   constructor(val) {
     this.val = val;
@@ -21,6 +29,44 @@ f.neighbors = [e];
 
 
 
+// Adjacency Matrix
+
+// The implementation above is considered rather clunky.
+// We have no easy way to refer to the entire graph.
+// Recall that there is no root to act as the definite starting point (unlike with Trees).
+// How can we pass this graph to a function?
+
+
+
+// One of the solutions is to create an Adjacency Matrix, a grid utilizing a 2D array.
+// Matrix implementation allows us to refer to the entire graph by simply referring to the 2D array.
+
+// The row index corresponds to the source of an edge.
+// The column index will correspond to its destination. 
+// A value of true will mean that there does exist an edge from source to destination,
+  // ie, the source node should hold reference to destination node.
+
+
+
+
+let matrix = [
+/*  Destinations =>     A/0     B/1     C/2     D/3     E/4     F/5   */
+/*  ----------------------------------------------------------------- */
+/*             | A/0 */[true,   true,   true,   false,  true,   false],
+/*             | B/1 */[false,  true,   false,  false,  false,  false],
+/* Sources =>  | C/2 */[false,  true,   true,   true,   false,  false],
+/*             | D/3 */[false,  false,  false,  true,   false,  false],
+/*             | E/4 */[true,   false,  false,  false,  true,   false],
+/*             | F/5 */[false,  false,  false,  false,  true,   true]
+];
+
+
+
+// Disadvantage: 
+//  An adjacency matrix requires a lot of space.
+//  To represent a graph of n nodes, we must allocate n2 space for the 2D array.
+//  If there are few edges in graph we will have to use n2 space, 
+    // even though the array will only contain a few true elements.
 
 
 
@@ -28,29 +74,17 @@ f.neighbors = [e];
 
 
 
-// Recursive case given a node
+  
+// Adjacency List
 
-function depthFirst(node, visited = new Set()) {
-  if (visited.has(node.val)) return;
+// We use an object where keys represent the node labels.
+// The values associated with the keys will be an array containing all adjacent nodes,
+  // ie, the nodes which this instance (represented by a key) should hold reference to.
 
-  console.log(node.val);
-  visited.add(node.val);
-  node.neighbors.forEach(neighbor => depthFirst(neighbor, visited));
-}
+// An adjacency list is easy to implement and allows us to refer to the entire graph by simply referencing the object. 
+// The space required for an adjacency list is the number of edges in the graph.
 
-
-depthFirst(f);
-
-
-
-
-
-
-
-// Recursive case given an adjacency list
-
-
-let graph = {
+let adjList = {
   'a': ['b', 'c', 'e'],
   'b': [],
   'c': ['b', 'd'],
@@ -62,7 +96,40 @@ let graph = {
 
 
 
-// function depthFirst(graph, node, visited = new Set()) {
+
+// Recursive case given a node
+
+function depthFirstNode(node, visited = new Set()) {
+  // We utilize a Set for our memo instead of a regular object
+  // A Set is like an object where the keys have no values
+  if (visited.has(node.val)) return;
+
+  console.log(node.val);
+  visited.add(node.val);
+  node.neighbors.forEach(neighbor => depthFirstNode(neighbor, visited));
+}
+
+// We invoke this with an instance of the graph node class
+depthFirstNode(f);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Recursive case given an adjacency list
+
+
+// function depthFirstAdj(graph, node, visited = new Set()) {
 //   // if this node has already been visited, then return early
 //   if (visited.has(node)) return;
 
@@ -73,8 +140,10 @@ let graph = {
 
 //   // then explore each of its neighbors
 //   graph[node].forEach(neighbor => {
-//     depthFirst(graph, neighbor, visited);
+//     depthFirstAdj(graph, neighbor, visited);
 //   });
 // }
 
-// depthFirst(graph, 'f')
+// // We invoke this with the adjacency list and a key from the list.
+// depthFirstAdj(adjList, 'f');
+// depthFirstAdj(adjList, 'a');
