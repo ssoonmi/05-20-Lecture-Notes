@@ -16,7 +16,16 @@ interviewer first
 
 interviewee first
 
+## `removeFromTail`
+
+[`removeFromTail` code]
+![removeFromTail image]
+
+Try doing `removeFromTail` for a single linked list!
+
 
 [Problem Set 1]: ./problem_set1.md
 [Problem Set 2]: ./problem_set2.md
 [`intersection` Example]: ./board.md
+[`removeFromTail` code]: ./removeFromTail.js
+[removeFromTail image]: ./doubly-linked-list-removeFromTail.png
