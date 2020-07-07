@@ -47,3 +47,7 @@ A node that does not have any children
 ## Sibling Nodes
 
 Nodes which share the same parent.
+
+## Subtree
+
+A subtree is a portion of a tree data structure that can be viewed as a complete tree in itself. Any node in a tree, together with all the nodes below it, comprise a subtree.
