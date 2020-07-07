@@ -4,6 +4,9 @@ function sumRec(arr) {
   return arr.pop() + sumRec(arr);
 }
 
+// O(n) time
+// O(n) space (amount of stack frames)
+
 console.log(sumRec([2, 3, 4])); // 9
 
 // There are many ways you can shuffle a collection. 
@@ -21,6 +24,8 @@ Array.prototype.shuffle = function() {
   // return arr;
 };
 
+// O(n) time
+// O(1) space (if not returning a new array, O(n) if returning a new array)
 console.log([1, 2, 3, 4, 5, 6, 7, 8, 9].shuffle());
 
 // Without using sets
@@ -69,6 +74,9 @@ function pairSumWithSets(arr, k) {
   return res;
 }
 
+// O(n) time
+// O(n) space
+
 console.log(pairSum([3, 5, 6, 2], 8)); // [[3, 5], [2, 6]]
 
 function bSearch(arr, target) { // array is sorted
@@ -89,5 +97,84 @@ function bSearch(arr, target) { // array is sorted
   }
 }
 
+// O(log n * log n) time (because slicing array each time and length of array is changing with log n)
+// O(n) space because all the lengths of all arrays add up to n
+
 console.log(bSearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 7)); // 6
 console.log(bSearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 0)); // null
+
+function longestPalindrome(str) {
+  let maxLongest = 0;
+  let res;
+  for (let i = 0; i < str.length - 1; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) {
+        for (let k = j; k >= i; k--) {
+          if (i === k && (j - i) > maxLongest) {
+            res = [i, j];
+            maxLongest = (j - i);
+          }
+          const incr = j - k;
+          if (str[i + incr] !== str[j - incr]) {
+            break;
+          }
+        }
+      }
+    }
+  }
+  return res;
+}
+
+// O(n ^ 3) time
+// O(1) space
+
+console.log(longestPalindrome('acapella')); // [0, 2]
+console.log(longestPalindrome('racecar')); // [0, 6]
+console.log(longestPalindrome('hello')); // not a palindrome so can return many different pairs
+
+function productifyWithoutDivision(arr) {
+  const res = [];
+
+  let beforeProduct = 1;
+  for (let i = 0; i < arr.length; i++) {
+    res[i] = beforeProduct;
+    beforeProduct = beforeProduct * arr[i];
+  }
+
+  let afterProduct = 1;
+  for (let j = arr.length - 1; j >= 0; j--) {
+    res[j] = res[j] * afterProduct;
+    afterProduct = afterProduct * arr[j];
+  }
+
+  return res;
+}
+
+// O(n) time
+// O(n) space
+
+console.log(productifyWithoutDivision([3, 4, 5])); // [20, 15, 12]
+
+function moveZeroes(arr) {
+  let pointer1 = 0;
+  let pointer2 = arr.length - 1;
+
+  while(pointer2 > pointer1) {
+    while (arr[pointer1] !== 0 && pointer1 < pointer2) {
+      pointer1++;
+    }
+    while (arr[pointer2] === 0 && pointer2 > pointer1) {
+      pointer2--;
+    }
+    [arr[pointer1], arr[pointer2]] = [arr[pointer2], arr[pointer1]];
+  }
+  return arr;
+}
+
+// O(n) time 
+// may seem like an O(n ^2) time, but look carefully! The pointers will
+// be reassigned to the each point in the array only once.
+
+// O(1) space
+
+console.log(moveZeroes([1, 2, 0, 3, 4, 0, 5, 6, 0])); // [1, 2, 6, 3, 4, 5, 0, 0, 0]

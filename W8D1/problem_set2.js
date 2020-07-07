@@ -6,6 +6,9 @@ function isPalindrome(str) {
   return true;
 }
 
+// O(n) time
+// O(1) space
+
 console.log(isPalindrome("racecar")); // true
 console.log(isPalindrome("acapella")); // false
 
@@ -16,6 +19,9 @@ Array.prototype.myMap = function(cb) {
   });
   return res;
 };
+
+// O(n) time
+// O(n) space
 
 // original map
 console.log([2, 3, 4].map(el => el + 2)); // [4, 5, 6]
@@ -57,6 +63,9 @@ function merge(left, right) {
   return res;
 }
 
+// O(n log n) time
+// O(n) space (amount of total space is the sum of all the lengths of the arrays created)
+
 console.log(mergeSort([8, 4, 2, 3, 1, 9, 5, 7, 6])); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 function bSearchWithIndexes(arr, target, startIdx = 0, endIdx) { // array is sorted
@@ -71,25 +80,71 @@ function bSearchWithIndexes(arr, target, startIdx = 0, endIdx) { // array is sor
   else if (target > mid) return bSearchWithIndexes(arr, target, midIdx + 1, endIdx);
 }
 
+// O(log n) time
+// O(log n) space (the amount of stack frames)
+
 console.log(bSearchWithIndexes([1, 2, 3, 4, 5, 6, 7, 8, 9], 7)); // 6
 console.log(bSearchWithIndexes([1, 2, 3, 4, 5, 6, 7, 8, 9], 0)); // null
 
 function productify(arr) {
-  const res = [];
+  let allProduct = 1;
 
-  let beforeProduct = 1;
   for (let i = 0; i < arr.length; i++) {
-    res[i] = beforeProduct;
-    beforeProduct = beforeProduct * arr[i];
+    allProduct *= arr[i];
   }
 
-  let afterProduct = 1;
-  for (let j = arr.length - 1; j >= 0; j--) {
-    res[j] = res[j] * afterProduct;
-    afterProduct = afterProduct * arr[j];
+  const res = [];
+  for (let j = 0; j < arr.length; j++) {
+    res.push(allProduct / arr[j]);
   }
 
   return res;
 }
 
+// O(n) time
+// O(n) space
+
 console.log(productify([3, 4, 5])); // [20, 15, 12]
+
+function attendanceRecord(str) {
+  let holdConsecutiveLates = 0;
+  let countAbsences = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'L') {
+      holdConsecutiveLates++;
+      if (holdConsecutiveLates > 2) return false;
+    } else if (str[i] === 'A') {
+      countAbsences++;
+      if (countAbsences > 1) return false;
+    } else {
+      holdConsecutiveLates = 0;
+    }
+  }
+  return true;
+}
+
+// O(n) time
+// O(1) space
+
+console.log(attendanceRecord('PLLP')); // true
+console.log(attendanceRecord("PLLLP")); // false
+console.log(attendanceRecord("A")); // true
+
+function missingNumber(arr) {
+  const countArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    countArr[arr[i]] = true;
+  }
+
+  for (let j = 0; j < countArr.length; j++) {
+    if (!countArr[j]) return j;
+  }
+  return countArr.length;
+}
+
+// O(n) time
+// O(n) space
+
+console.log(missingNumber([3, 5, 0, 4, 1])); // 2
+console.log(missingNumber([3, 5, 0, 4, 1, 2])); // 6 (no missing numbers should return next number)
