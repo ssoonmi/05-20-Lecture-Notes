@@ -9,14 +9,25 @@
 
 
 // Phase 4;
-// Write one more method fourth_anagram.This time, use two objects to store the number of times each letter appears in both words.
-// Compare the resulting objectss.
+// Write one more method fourth_anagram.This time, use two objects to store the 
+    // number of times each letter appears in both words.
+// Compare the resulting objects.
 
 // What is the time complexity ?
+
+
+
 
 //     Bonus : Do it with only one object.
 
 // Discuss the time complexity of your solutions together, then call over your TA to look at them.
+
+
+
+
+
+
+
 
 
 function anagrams(str1, str2) {
@@ -33,15 +44,17 @@ function anagrams(str1, str2) {
         console.log(count);
     }
 
+    // console.log(count);
     return Object.values(count).every(num => {
         return num === 0;
     })
 }
 
+
 const str1 = "asdfgh";
 const str2 = "hgfdsa";
 
-console.log(anagrams(str1, str2));
+// console.log(anagrams(str1, str2));
 
 
 const str3 = "asdfghh";
