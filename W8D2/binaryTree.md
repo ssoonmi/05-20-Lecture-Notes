@@ -40,4 +40,11 @@ If we traverse the tree one level at a time, from left to right, this is referre
 
 ### Depth First
 
-If we go down one path, it is typical to travel all the way down to the left-most leaf node, then check its sibling nodes before checking its parent. This is referred to a Depth First.
+If we go down one path, with post-order traversal it is typical to travel all the way down to the left-most leaf node, then check its sibling nodes before checking its parent. In pre-order traversal, we check each node as we go down the path. This is referred to a Depth First.
+
+## Typical Methods on a Binary Tree
+
+* Insert child of
+* Remove
+* Has?
+* Get subtree of

@@ -21,4 +21,23 @@ In addition to being a Binary Tree, a Binary Search Tree must also have the foll
 
 ## Binary Search Tree Traversal
 
-To easily obtain all values of a Binary Search Trees in ascending order, we ALWAYS traverse a Binary Search TRee in a Depth-First manner.
+To easily obtain all values of a Binary Search Trees in ascending order, we ALWAYS traverse a Binary Search TRee in a post-order Depth-First manner.
+
+
+## Typical Methods on a Binary Search Tree
+
+* Add
+* Remove
+* Has?
+
+### Add
+
+To add a new value, a new value will be inserted as a leaf (or the root node if it's the first node). If the new node is less than the current node, it will be inserted to the left. If the new node is greater than the current node, it will be inserted to the right. We continue this pattern until the new node will be inserted as a leaf.
+
+### Remove
+
+A node with two children:
+* We find the leftmost grandchild of the removed node's immediate right child.
+
+A node with one child:
+* The remove node's child and its subtree take the place of the removed node (we shift the subtree upwards).
