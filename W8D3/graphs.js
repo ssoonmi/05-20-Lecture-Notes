@@ -64,7 +64,7 @@ let matrix = [
 
 // Disadvantage: 
 //  An adjacency matrix requires a lot of space.
-//  To represent a graph of n nodes, we must allocate n2 space for the 2D array.
+//  To represent a graph of n nodes, we must allocate n^2 space for the 2D array.
 //  If there are few edges in graph we will have to use n2 space, 
     // even though the array will only contain a few true elements.
 
@@ -78,11 +78,16 @@ let matrix = [
 // Adjacency List
 
 // We use an object where keys represent the node labels.
-// The values associated with the keys will be an array containing all adjacent nodes,
-  // ie, the nodes which this instance (represented by a key) should hold reference to.
+// The values associated with the keys will be an array containing all 
+// adjacent nodes,
+  // ie, the nodes which this instance (represented by a key) 
+  // should hold reference to.
 
-// An adjacency list is easy to implement and allows us to refer to the entire graph by simply referencing the object. 
-// The space required for an adjacency list is the number of edges in the graph.
+// An adjacency list is easy to implement and allows us to refer to the 
+  // entire graph by simply referencing the object. 
+// The space required for an adjacency list is the number of edges in 
+  // the graph.
+
 
 let adjList = {
   'a': ['b', 'c', 'e'],
@@ -92,6 +97,10 @@ let adjList = {
   'e': ['a'],
   'f': ['e'],
 };
+
+
+
+
 
 
 
@@ -110,8 +119,21 @@ function depthFirstNode(node, visited = new Set()) {
 }
 
 // We invoke this with an instance of the graph node class
-depthFirstNode(f);
+// depthFirstNode(f);
 
+
+// depthFirstNode(node, visited);   // 1st frame,   node.val = 'f', visited = {'f'}
+// depthFirstNode(node, visited);   // 2nd frame,   node.val = 'e', visited = {'f', 'e'}
+// depthFirstNode(node, visited);   // 3rd frame,   node.val = 'a', visited = {'f', 'e', 'a'}
+// depthFirstNode(node, visited);   // 4th frame,   node.val = 'b', visited = {'f', 'e', 'a', 'b'}, popped off stack
+// depthFirstNode(node, visited);   // 5th frame,   node.val = 'c', visited = {'f', 'e', 'a', 'b', 'c'}
+// depthFirstNode(node, visited);   // 6th frame,   node.val = 'd', visited = {'f', 'e', 'a', 'b', 'c', 'd'}, popped off stack
+// 5th frame,     node.val = 'c'     returns undefined,     popped off the stack
+// 4th frame,     node.val = 'e'     vistied.has(node.val) = true,    returns undefined,     popped off the stack
+// 3rd frame,     node.val = 'a'     returns undefined,     popped off the stack
+// 2nd frame,     node.val = 'e'     returns undefined,     popped off the stack
+// 1st frame,     node.val = 'f'     returns undefined,     popped off the stack
+// Final return value: undefined
 
 
 
@@ -128,22 +150,59 @@ depthFirstNode(f);
 
 // Recursive case given an adjacency list
 
+// let adjList = {
+//   'a': ['b', 'c', 'e'],
+//   'b': [],
+//   'c': ['b', 'd'],
+//   'd': [],
+//   'e': ['a'],
+//   'f': ['e'],
+// };
 
-// function depthFirstAdj(graph, node, visited = new Set()) {
-//   // if this node has already been visited, then return early
-//   if (visited.has(node)) return;
+function depthFirstAdj(graph, node, visited = new Set()) {
+  // if this node has already been visited, then return early
+  if (visited.has(node)) return;
 
-//   // otherwise it hasn't yet been visited,
-//   // so print it's val and mark it as visited.
-//   console.log(node);
-//   visited.add(node);
+  // otherwise it hasn't yet been visited,
+  // so print it's val and mark it as visited.
+  console.log(node);
+  visited.add(node);
 
-//   // then explore each of its neighbors
-//   graph[node].forEach(neighbor => {
-//     depthFirstAdj(graph, neighbor, visited);
-//   });
-// }
+  // then explore each of its neighbors
+  graph[node].forEach(neighbor => {
+    depthFirstAdj(graph, neighbor, visited);
+  });
+}
 
 // // We invoke this with the adjacency list and a key from the list.
 // depthFirstAdj(adjList, 'f');
+// console.log(`\n----------\n`);
 // depthFirstAdj(adjList, 'a');
+
+
+function completeDepthFirst(graph) {
+  let visited = new Set ();
+  for (let node in graph) {
+    _depthFirstRecur(node, graph, visited)
+  }
+}
+
+function _depthFirstRecur(node, graph, visited) {
+  // if this node has already been visited, then return early
+  if (visited.has(node)) return;
+
+  // otherwise it hasn't yet been visited,
+  // so print it's val and mark it as visited.
+  console.log(node);
+  visited.add(node);
+
+  // then explore each of its neighbors
+  graph[node].forEach(neighbor => {
+    _depthFirstRecur(neighbor, graph, visited);
+  });
+}
+
+// We invoke this with the adjacency list and a key from the list.
+depthFirstAdj(adjList, 'f');
+console.log(`\n----------\n`);
+completeDepthFirst(adjList, 'a');
