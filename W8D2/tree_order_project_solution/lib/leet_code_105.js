@@ -31,10 +31,18 @@ function buildTree(preorder, inorder) {
     let rootIdx = inorder.indexOf(preorder[0]);
 
     let leftInorder = inorder.slice(0, rootIdx);
-    let rightInorder = inorder.slice(rootIdx);
+    let rightInorder = inorder.slice(rootIdx + 1);
 
     let leftPreorder = preorder.filter(val => leftInorder.includes(val));
     let rightPreorder = preorder.filter(val => rightInorder.includes(val));
+
+    console.log(`preorder: ${preorder}`);
+    console.log(`inorder: ${inorder}`);
+    console.log(`leftInorder: ${leftInorder}`);
+    console.log(`rightInorder: ${rightInorder}`);
+    console.log(`leftPreorder: ${leftPreorder}`);
+    console.log(`rightPreorder: ${rightPreorder}`);
+    console.log(`\n--------------\n`)
 
     root.left = buildTree(leftPreorder, leftInorder);
     root.right = buildTree(rightPreorder, rightInorder);
@@ -42,3 +50,8 @@ function buildTree(preorder, inorder) {
     return root;
 }
  
+
+const preorder = [3,9,20,15,7];
+const inorder = [9,3,15,20,7];
+
+buildTree(preorder, inorder);

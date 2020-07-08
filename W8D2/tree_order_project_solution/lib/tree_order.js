@@ -26,8 +26,11 @@ function inOrderArray(root) {
 // When debugging our code, we should console.log() any relevant or changing values
 
 function postOrderArray(root) {
-  console.log(root);
-  if (!root) return [];
+  if (!root){
+    return [];
+  } else {
+    console.log(root.val); 
+  };
 
   return [
     ...postOrderArray(root.left),
@@ -36,26 +39,16 @@ function postOrderArray(root) {
   ];
 }
 
-
-
-
-
-
-
 // In order to test, I will use the examples from the test file
 
 let root = new TreeNode("a");
 let b = new TreeNode("b");
 let c = new TreeNode("c");
 let d = new TreeNode("d");
-let e = new TreeNode("e");
-let f = new TreeNode("f");
 
 root.left = b;
 root.right = c;
 b.left = d;
-b.right = e;
-c.right = f;
 
 // We must invoke our functions to run them in node
 
@@ -64,7 +57,7 @@ c.right = f;
 
 // inOrderArray(root);
 
-// postOrderArray(root);
+postOrderArray(root);
 
 
 
