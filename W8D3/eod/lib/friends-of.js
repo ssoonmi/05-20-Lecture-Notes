@@ -25,7 +25,9 @@
 // 2. The name of the person whose friends you need to return
 // 3. The distance away from the person that you'll use to collect the friends 
   // (this value will always be greater than or equal to 1)
-// 4. The following table interprets the distance parameter:
+
+
+// The following table interprets the distance parameter:
 
 // Distance	Meaning
 // 1.	Immediate friends
@@ -63,14 +65,27 @@
 // How do we approach the problem?
 
 // 1. Identify what do we want this function to accomplish
+  // Finds the total list of friends a specified distance away from a person
+  // Traverse a graph and return node values
 
 // 2. Identify parameters
+  // 1. The adjacency list 
+  // 2. The name of the person whose friends you need to return
+  // 3. The distance away from the person
 
 // 3. Identify return values
+  // An array of all friends a specified distance away from a person
 
 // 4. Discuss possible methods of attacking the problem.
+  // Options: DFS, BFS, post-order, pre-order, in-order
+  // DFS for graphs
 
 // 5. If further clarification is needed, consider psuedo-code
+  // Utilize iteration and recursion
+  // Iterate through each key
+  // Invoke recursive helper function on each key
+  // Recursive helper function will recrusively called on all children of a node
+  // Keep track of distance
 
 
 
@@ -78,13 +93,63 @@
 
 
 
-function friendsOf(adjacencyList, target, distance) {
+function friendsOf(adjacencyList, name, distance) { // graph, 'jun', 2
+  if (!(name in adjacencyList)) return undefined;
 
+  let visited = new Set();
+
+  for (let friend of adjacencyList[name]) { // 'carrie'
+    friendsOfRecursion(friend, adjacencyList, visited, distance, 0), // 'carrie', graph, {}, 2, 0
+  }
+
+  visited.delete(name)
+  return Array.from(visited)
 }
 
-function friendsOfRecursion(){
-  
+function friendsOfRecursion(friend, adjacencyList, visited, maxDistance, currentDistance) { 
+  // 'carrie', graph, {}, 2, 0 || 'humza', graph, {'carrie'}, 2, 1 
+  if (currentDistance >= maxDistance) return;
+
+  visited.add(friend); // {'carrie'}, {'carrie', 'humza'}
+
+  for (let nextFriend of adjacencyList[friend]) { // 'humza' || 'silla'
+    friendsOfRecursion(nextFriend, adjacencyList, visited, maxDistance, currentDistance + 1); 
+    //'humza', graph, {'carrie'}, 2, 1
+  }
 }
+
+
+
+
+// const graph = {
+//   'carrie':  ['humza', 'jun'],
+//   'farrah':  ['humza'],
+//   'humza':   ['carrie', 'farrah', 'jun', 'silla'],
+//   'jun':     ['carrie', 'silla'],
+//   'ophelia': ['travis'],
+//   'silla':   ['humza', 'yervand'],
+//   'travis':  ['ophelia'],
+//   'yervand': ['silla'],
+// };
+
+
+// friendsOfRecursion(target, adjacencyList, visited, maxDistance, currentDistance);
+// adjacencyList and maxDistance will stay the same for every stack
+// 1st frame,   target = ,    visited = ,   currentDistance = 
+// 2nd frame,   target = ,    visited = ,   currentDistance = 
+// 3rd frame,   target = ,    visited = ,   currentDistance = 
+// 4th frame,   target = ,    visited = ,   currentDistance = 
+// 5th frame,   target = ,    visited = ,   currentDistance = 
+// 6th frame,   target = ,    visited = ,   currentDistance = 
+// 5th frame,   target = ,    visited = ,   currentDistance = 
+// 4th frame,   target = ,    visited = ,   currentDistance = 
+// 3rd frame,   target = ,    visited = ,   currentDistance = 
+// 2nd frame,   target = ,    visited = ,   currentDistance = 
+// 1st frame,   target = ,    visited = ,   currentDistance = 
+// Final return value: undefined
+
+
+
 
 /******************************************************************************
  * Do not change code beneath this line.
