@@ -12,7 +12,7 @@
 
 ## [Network Hardware]
 
-[TCP/IP Model]: ./tsp-ip-model.md
+[TCP/IP Model]: ./tcp-ip-model.md
 [Binary and Hexidecimal Notation]: ./binary-hexidecimal.md
 [Internet Protocol]: ./internet-protocol.md
 [Transport Protocols]: ./transport-protocols.md
