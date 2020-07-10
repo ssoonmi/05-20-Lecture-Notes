@@ -23,7 +23,7 @@
   - 
   - *
   - Given a tree, be able to determine the order of each traversal type:
-    ![Number tree](./number-tree.png)
+    ![Number tree]
     - 
     - 
     - 
@@ -95,3 +95,5 @@
   - Problems based on projects you've done this week
 - 1-2 Free response
   - 1-2 sentences about the question
+
+[Number tree]: ./number-tree.png
