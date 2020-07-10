@@ -20,9 +20,9 @@
     - A tree doesn't have any parent nodes if there are no children.
     - What's the min/max number of parent and leaf nodes for a tree with 5 nodes?
       - Two extreme implementations:
-      ![min-max-nodes-ll.png](./min-max-nodes-ll.png)
+      ![min-max-nodes-ll.png]
       - Implementing in a chain results in max number of parents and min number of leaves: 4 parents, 1 leaf
-      ![min-max-nodes-balanced.png](./min-max-nodes-balanced.png)
+      ![min-max-nodes-balanced.png]
       - Implementing as a balanced tree results in min number of parents and max number of leaves: 2 parents, 3 leaves
   - All that we need in order to implement a binary tree is a TreeNode class that can store a value and references to a left and right child. We can create a tree by assigning the left and right properties to point to other TreeNode instances:
   ```javascript
@@ -41,7 +41,7 @@
   - Post-order: Values are accessed after all of our children have been accessed.
   - *Breadth First: The previous three are types of Depth First Traversals. Breadth first accesses values of nodes by level, left to right, top to bottom.
   - Given a tree, be able to determine the order of each traversal type:
-    ![Number tree](./number-tree.png)
+    ![Number tree]
     - Breadth First: 20, 9, 24, 7, 11, 23, 27, 3, 10, 17, 36, 30
     - Pre-order: 20, 9, 7, 3, 11, 10, 17, 24, 23, 27, 36, 30
     - In-order: 3, 7, 9, 10, 11, 17, 20, 23, 24, 27, 30, 36
@@ -148,7 +148,7 @@
 ## Network Knowledge
 ### TCP/IP Model (IP Suite)
 1. Given a diagram of the TCP/IP model, be able to label each layer
-![tcp-ip-model](./tcp-ip-model.svg)
+![tcp-ip-model]
 2. Give a brief description of each layer (What is its major concern and an example)
 - Application: User-facing data, such as HTTP or FTP (file transfer)
 - Transport: Connectivity between clients and servers, such as TCP or UDP
@@ -157,7 +157,7 @@
 3. How does encapsulation apply to the model?
 - Each layer of the model encapsulates the previous.
 - For example, the application layer is the data that is being transferred, but the transport layer surrounds this data with transport protocols (such as TCP headers), which are surrounded by IP packets defined by protocols of the internet layer, which are sent along an ethernet cable with standards defined in the link layer.
-![encapsulation](./encapsulation.svg)
+![encapsulation]
 
 ### Internet Protocol
 1. What are the main responsibilities of TCP and of IP?
@@ -224,3 +224,9 @@
   - Problems based on projects you've done this week
 - 1-2 Free response
   - 1-2 sentences about the question
+
+[Number tree]: ./number-tree.png
+[min-max-nodes-ll.png]: ./min-max-nodes-ll.png
+[min-max-nodes-balanced.png]: ./min-max-nodes-balanced.png
+[encapsulation]: ./encapsulation.svg
+[tcp-ip-model]: ./tcp-ip-model.svg
