@@ -47,8 +47,9 @@
     - In-order: 3, 7, 9, 10, 11, 17, 20, 23, 24, 27, 30, 36
     - Post-order: 3, 7, 10, 17, 11, 9, 23, 30, 36, 27, 24, 20
 
-3. Explain and implement a Binary Search Tree.
+3. Explain and implement a Binary Search Tree. 
   - A binary search tree is a binary tree with the added stipulation that all values to the left of a node are less than its value and all values to the right are greater than its value.
+      - Example of a Binary Search Tree ![Binary Search Tree]
   - Example of a BST with an insert method. You won't be asked to implement a removal:
   ```javascript
   class BST {
@@ -118,7 +119,7 @@
       f: ['e']
     };
     ```
-- Nodes
+- Object-Oriented (ex: using Nodes)
   - Similar to our linked list or tree implementations
   - Track the value and the neighbors array as instance variables on the node
   - We don't have a reference to the overall graph with this implementation
@@ -218,7 +219,7 @@
 - Router: Layer 3 (Network Layer): A router connects a local network to other networks. A single IP address is used for external communication, then the router can forward to the IP addresses used on the internal network.
 
 ## Assessment Format
-- 2 hour assessment
+- 1 hour 40 minute assessment
 - ~20 Multiple Choice
 - Spec-based problems
   - Problems based on projects you've done this week
@@ -230,3 +231,4 @@
 [min-max-nodes-balanced.png]: ./min-max-nodes-balanced.png
 [encapsulation]: ./encapsulation.svg
 [tcp-ip-model]: ./tcp-ip-model.svg
+[Binary Search Tree]: ./binary-search-tree.png

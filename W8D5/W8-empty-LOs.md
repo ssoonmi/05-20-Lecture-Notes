@@ -89,7 +89,7 @@
   2. Be able to describe the function of each device and compare/contrast their uses.
 
 ## Assessment Format
-- 2 hour assessment
+- 1 hour 40 minute assessment
 - ~20 Multiple Choice
 - Spec-based problems
   - Problems based on projects you've done this week
