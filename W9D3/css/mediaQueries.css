@@ -1,0 +1,13 @@
+/* box-model media query */
+@media screen and (max-width: 750px) {
+  .box-li {
+    display: inline-block;
+  }
+}
+
+/* flexbox media query */
+/* @media screen and (max-width: 750px) {
+  .flex.container {
+    flex-direction: column;
+  }
+} */

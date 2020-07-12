@@ -1,0 +1,16 @@
+.wrapper.flexbox {
+  display: block;
+  height: fit-content;
+}
+
+.flex.container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  height: fit-content;
+}
+
+.flex.ele {
+  width: 100px;
+  height: fit-content;
+}

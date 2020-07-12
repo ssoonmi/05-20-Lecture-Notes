@@ -1,0 +1,114 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box vs. FlexBox vs. Grid</title>
+  <meta name="description" content="Box vs. FlexBox vs. Grid">
+  <meta name="Ed H." content="lecture example">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- <link rel="stylesheet" href="css/box.css"> -->
+  <!-- <link rel="stylesheet" href="css/flexbox.css">
+  <link rel="stylesheet" href="css/mediaQueries.css"> -->
+  <link rel="stylesheet" href="css/grid.css">
+  <!-- <link rel="stylesheet" href="css/sticky.css"> -->
+
+</head>
+  <main>
+    <header><h1 id="title">Display Properties</h1></header>
+    <body>
+      <div class="wrapper box">
+        <h2 class="h2 box">Box Model</h2>
+        <div>
+          <div class="box container">
+            Container
+            <div class="">
+              <ul>
+                <li class="box-li ele">Element One</li>
+                <li class="box-li ele">Element Two</li>
+                <li class="box-li ele">Element Three</li>
+                <li class="box-li ele">Element Four</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper flexbox">
+        <h2 class="h2 flexbox">FlexBox</h2>
+        <div>
+          <div class="flex container">Flex Container
+            <div class="flex ele one"><p>Element One</p>
+              <ul class="ele">
+                <li class="ele">Sub Element One</li>
+                <li class="ele">Sub Element Two</li>
+                <li class="ele">Sub Element Three</li>
+                <li class="ele">Sub Element Four</li>
+              </ul>
+            </div>
+            <div class="flex ele two">
+              <p>Element Two</p>
+              <ul class="ele">
+                <li class="ele">Sub Element One</li>
+                <li class="ele">Sub Element Two</li>
+                <li class="ele">Sub Element Three</li>
+                <li class="ele">Sub Element Four</li>
+              </ul>
+            </div>
+            <div class="flex ele Three">
+              <p>Element Three</p>
+              <ul class="ele">
+                <li class="ele">Sub Element One</li>
+                <li class="ele">Sub Element Two</li>
+                <li class="ele">Sub Element Three</li>
+                <li class="ele">Sub Element Four</li>
+              </ul>
+            </div>
+            <div class="flex ele Four">
+              <p>Element Four</p>
+              <ul class="ele">
+                <li class="ele">Sub Element One</li>
+                <li class="ele">Sub Element Two</li>
+                <li class="ele">Sub Element Three</li>
+                <li class="ele">Sub Element Four</li>
+              </ul>
+            </div>
+            <div class="flex ele Five">
+              <p>Element Five</p>
+              <ul class="ele">
+                <li class="ele">Sub Element One</li>
+                <li class="ele">Sub Element Two</li>
+                <li class="ele">Sub Element Three</li>
+                <li class="ele">Sub Element Four</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper grid">
+        <h2 class="h2 grid">Grid</h2>
+        <div>
+          <ul class="grid ul container">
+            <li class="ele grid item-1">
+              <h2>Header</h2>
+            </li>
+            <li class="ele grid item-2">
+              <h3>Main</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugit hic doloribus accusamus commodi quia reiciendis iste facilis eius eum laborum numquam quaerat ex, eligendi blanditiis debitis totam repellendus asperiores?</p>
+            </li>
+            <li class="ele grid item-3">
+              <h3>Sidebar</h3>
+              <ul class="grid ul">
+                <li>Nav Here</li>
+                <li>Nav Or There</li>
+                <li>Nav Maybe Here</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </body>
+  </main>
+</html>

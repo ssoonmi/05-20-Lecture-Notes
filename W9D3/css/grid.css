@@ -1,0 +1,37 @@
+/* Leave this here */
+.wrapper.grid {
+  display: block;
+  box-sizing: border-box;
+  height: fit-content;
+  width: 600px;
+}
+
+.grid.ul {
+  padding-left: 0px;
+}
+
+
+.grid.item-1 {
+  grid-area: header;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-self: center;
+}
+.grid.item-2 {
+  grid-area: main;
+  justify-self: center;
+}
+.grid.item-3 {
+  grid-area: sidebar;
+  justify-self: right;
+}
+
+.grid.container {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header"
+    "main main sidebar"
+}

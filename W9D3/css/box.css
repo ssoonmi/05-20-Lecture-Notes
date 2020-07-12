@@ -1,0 +1,27 @@
+.wrapper.box {
+  display: block;
+  
+  /* border: 1px solid black; */
+  padding: 5px;
+  background-color: yellow;
+}
+
+h2.box {
+  padding-bottom: 10px;
+}
+
+.box.container {
+  display: block;
+  margin: 0 auto;
+  background-color: lightyellow;
+}
+
+.box-li {
+  display: inline;
+  margin: 15px;
+  padding: 5px;
+  border: 5px dashed black;
+  background-color: greenyellow;
+  
+  /* width: 80000px; */
+}
