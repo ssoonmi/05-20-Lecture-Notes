@@ -179,6 +179,11 @@ function depthFirstAdj(graph, node, visited = new Set()) {
 // console.log(`\n----------\n`);
 // depthFirstAdj(adjList, 'a');
 
+// We see that when we invoke this function with 'a' we are not able to access the 'f' node
+
+
+
+
 
 function completeDepthFirst(graph) {
   let visited = new Set ();
@@ -203,6 +208,6 @@ function _depthFirstRecur(node, graph, visited) {
 }
 
 // We invoke this with the adjacency list and a key from the list.
-depthFirstAdj(adjList, 'f');
+completeDepthFirst(adjList, 'f');
 console.log(`\n----------\n`);
 completeDepthFirst(adjList, 'a');
