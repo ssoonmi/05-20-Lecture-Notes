@@ -1,0 +1,15 @@
+{
+  "name": "W9D2",
+  "version": "1.0.0",
+  "description": "- Asynchronous - interact with the server in the background without blocking any other events from happening on the web page. - JavaScript - the engine behind AJAX - XML - Response type used in the old days, now it's largely replaced by JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
