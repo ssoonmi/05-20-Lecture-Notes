@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+}
+
+a:hover, a:visited {
+  border-bottom: 1px solid red;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  background-color: transparent;
+  color: inherit;
+}

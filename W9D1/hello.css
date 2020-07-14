@@ -1,0 +1,42 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css");
+@import url("./styles/world.css");
+
+@import "reset.css";
+
+body {
+  margin: calc(40vw - 1.3rem);
+}
+
+main {
+  padding: 40px;
+  box-shadow: black 6px 4px 42px 26px;
+}
+
+main::after {
+  content: '';
+  background-color: green;
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+p.after {
+  content: '';
+  background-color: green;
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+div {
+  width: fit-content;
+  color: black;
+}
+
+div.comments > form > button {
+
+}
+
+.comments-form-button {
+  
+}
