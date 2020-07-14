@@ -1,4 +1,3 @@
-
 # Grid
 * A two-dimensional CSS styling method with two main components:
     1. Grid-container (parent element) has the grid laid out inside of it.
