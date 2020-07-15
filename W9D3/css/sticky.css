@@ -1,5 +1,6 @@
 header {
-  position: sticky;
+  /* position: sticky; */
   top: 0px;
-  background-color: purple;
+  background-color: white;
+  /* z-index: 1; */
 }

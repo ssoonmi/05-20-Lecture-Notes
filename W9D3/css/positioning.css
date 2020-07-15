@@ -1,0 +1,38 @@
+/*************** setting up the space... ***************/
+.wrapper.position {
+  /* UNCOMMENT THE NEXT LINE TO SEE THIS SECTION */
+  /* display: block; */
+  position: static;
+  padding: 5px;
+}
+
+.position__h2 {
+  padding-bottom: 10px;
+}
+
+/*************** space is set up ***************/
+.position__container {
+  display: block;
+  width: 500px;
+  padding: 20px;
+  background-color: yellow;
+  height: 900px;
+  /* position: relative; */
+}
+
+/*************** Positioning ***************/
+.position__container__item { 
+  border: 5px dashed black;
+  background-color: greenyellow;
+  text-align: center;
+  display: block;
+  width: 150px;
+  height: 150px;
+  padding: 15px;
+  margin: 25px;
+  
+  /* Play with the below styles */
+  /* position: static; */
+  /* top: 60px; */
+  /* left: 60px; */
+}

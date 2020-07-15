@@ -1,109 +1,79 @@
 <!doctype html>
-
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box vs. FlexBox vs. Grid</title>
+    <meta name="description" content="Box vs. FlexBox vs. Grid">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Box vs. FlexBox vs. Grid</title>
-  <meta name="description" content="Box vs. FlexBox vs. Grid">
-  <meta name="Ed H." content="lecture example">
-
-  <link rel="stylesheet" href="css/reset.css">
-  <!-- <link rel="stylesheet" href="css/box.css"> -->
-  <!-- <link rel="stylesheet" href="css/flexbox.css">
-  <link rel="stylesheet" href="css/mediaQueries.css"> -->
-  <link rel="stylesheet" href="css/grid.css">
-  <!-- <link rel="stylesheet" href="css/sticky.css"> -->
-
-</head>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/box.css">
+    <link rel="stylesheet" href="css/positioning.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/sticky.css">
+  </head>
   <main>
-    <header><h1 id="title">Display Properties</h1></header>
+    <header class="title" ><h1 class="title__h1">Display Properties</h1></header>
     <body>
       <div class="wrapper box">
-        <h2 class="h2 box">Box Model</h2>
+        <h2 class="box__h2">Box Model</h2>
         <div>
-          <div class="box container">
-            Container
-            <div class="">
-              <ul>
-                <li class="box-li ele">Element One</li>
-                <li class="box-li ele">Element Two</li>
-                <li class="box-li ele">Element Three</li>
-                <li class="box-li ele">Element Four</li>
-              </ul>
-            </div>
-          </div>
+          <p>Box Container</p>
+          <ul class="box__container">
+            <li class="box__container__li ele">Element One</li>
+            <li class="box__container__li ele">Element Two</li>
+            <li class="box__container__li ele">Element Three</li>
+            <li class="box__container__li ele">Element Four</li>
+          </ul>
         </div>
       </div>
+      <div class="wrapper position">
+        <h2 class="position__h2">Positioning</h2>
+        <p>Positioning Container</p>
+        <div class="position__container">
+          <p  class="position__container__item">Item</p>
+        </div>
+      </div>
+      <div class="wrapper mediaQuery">
+        <h2 class="mediaQuery__h2">Media Queries</h2>
+        <p>Media Queries Container</p>
+        <ul class="mediaQuery__container">
+          <li class="mediaQuery__container__item">A</li>
+          <li class="mediaQuery__container__item">B</li>
+          <li class="mediaQuery__container__item">C</li>
+          <li class="mediaQuery__container__item">D</li>
+        </ul>
+      </div>
       <div class="wrapper flexbox">
-        <h2 class="h2 flexbox">FlexBox</h2>
+        <h2 class="flexbox__h2">FlexBox</h2>
         <div>
-          <div class="flex container">Flex Container
-            <div class="flex ele one"><p>Element One</p>
-              <ul class="ele">
-                <li class="ele">Sub Element One</li>
-                <li class="ele">Sub Element Two</li>
-                <li class="ele">Sub Element Three</li>
-                <li class="ele">Sub Element Four</li>
-              </ul>
-            </div>
-            <div class="flex ele two">
-              <p>Element Two</p>
-              <ul class="ele">
-                <li class="ele">Sub Element One</li>
-                <li class="ele">Sub Element Two</li>
-                <li class="ele">Sub Element Three</li>
-                <li class="ele">Sub Element Four</li>
-              </ul>
-            </div>
-            <div class="flex ele Three">
-              <p>Element Three</p>
-              <ul class="ele">
-                <li class="ele">Sub Element One</li>
-                <li class="ele">Sub Element Two</li>
-                <li class="ele">Sub Element Three</li>
-                <li class="ele">Sub Element Four</li>
-              </ul>
-            </div>
-            <div class="flex ele Four">
-              <p>Element Four</p>
-              <ul class="ele">
-                <li class="ele">Sub Element One</li>
-                <li class="ele">Sub Element Two</li>
-                <li class="ele">Sub Element Three</li>
-                <li class="ele">Sub Element Four</li>
-              </ul>
-            </div>
-            <div class="flex ele Five">
-              <p>Element Five</p>
-              <ul class="ele">
-                <li class="ele">Sub Element One</li>
-                <li class="ele">Sub Element Two</li>
-                <li class="ele">Sub Element Three</li>
-                <li class="ele">Sub Element Four</li>
-              </ul>
-            </div>
-          </div>
+          <ul class="flexbox__container">
+            <li class="flexbox__container__item one">Element One</li>
+            <li class="flexbox__container__item two">Element Two</li>
+            <li class="flexbox__container__item three">Element Three</li>
+            <li class="flexbox__container__item four">Element Four</li>
+          </ul>
         </div>
       </div>
       <div class="wrapper grid">
-        <h2 class="h2 grid">Grid</h2>
+        <h2 class="grid__h2">Grid</h2>
         <div>
-          <ul class="grid ul container">
-            <li class="ele grid item-1">
+          <ul class="grid__container">
+            <li class="grid__container__item one">
               <h2>Header</h2>
             </li>
-            <li class="ele grid item-2">
+            <li class="grid__container__item two">
               <h3>Main</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugit hic doloribus accusamus commodi quia reiciendis iste facilis eius eum laborum numquam quaerat ex, eligendi blanditiis debitis totam repellendus asperiores?</p>
             </li>
-            <li class="ele grid item-3">
-              <h3>Sidebar</h3>
-              <ul class="grid ul">
-                <li>Nav Here</li>
-                <li>Nav Or There</li>
-                <li>Nav Maybe Here</li>
+            <li class="grid__container__item three">
+              <h3>NavBar</h3>
+              <ul class="sidebar">
+                <li><a href="#">Here.</a></li>
+                <li><a href="#">THere!</a></li>
+                <li><a href="#">Where?</a></li>
               </ul>
             </li>
           </ul>

@@ -1,37 +1,44 @@
-/* Leave this here */
+/* setting up the space... */
 .wrapper.grid {
-  display: block;
+  /* UNCOMMENT THE NEXT LINE TO SEE THIS SECTION */
+  /* display: block; */
   box-sizing: border-box;
   height: fit-content;
   width: 600px;
 }
 
-.grid.ul {
-  padding-left: 0px;
-}
-
-
-.grid.item-1 {
-  grid-area: header;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  justify-self: center;
-}
-.grid.item-2 {
-  grid-area: main;
-  justify-self: center;
-}
-.grid.item-3 {
-  grid-area: sidebar;
-  justify-self: right;
-}
-
-.grid.container {
+.grid__container, .sidebar {
+  padding-left: 5px;
   list-style: none;
+}
+
+.grid__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-template-areas: 
     "header header header"
     "main main sidebar"
+}
+
+.grid__container__item {
+  margin: 10px;
+  border: 5px dashed black;
+  padding: 5px;
+  background-color: greenyellow;
+}
+
+.grid__container__item.one {
+  grid-area: header;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-self: center;
+}
+.grid__container__item.two {
+  grid-area: main;
+  justify-self: center;
+}
+.grid__container__item.three {
+  grid-area: sidebar;
+  justify-self: right;
 }

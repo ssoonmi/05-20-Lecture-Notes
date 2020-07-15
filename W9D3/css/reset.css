@@ -13,12 +13,12 @@ html, body, div, h1, h2, h3 {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+  position: static;
 }
-
-
 
 main {
   width: 90%;
+  position: static;
 }
 
 header {
@@ -39,13 +39,9 @@ div {
 
 .wrapper {
   display: none;
-  height: fit-content;
+  height: fit-content + 20px;
   width: 100%;
   margin-bottom: 20px;
-}
-
-.container, .ele {
-  border: 1px solid black;
 }
 
 .container {

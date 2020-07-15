@@ -1,3 +1,9 @@
+#### If you want to play around with the styles you saw in class:
+1. Open `index.html` in your browser or open a Go Live server in VSCode.
+2. Open any of `css` files and make some changes! 
+    * Make sure to uncomment the line in the `.wrapper` selector where it says `display: block;`.
+3. Make some changes. When you save the CSS, the browser will update.
+___
 # LOs
 ## Box Model and Positioning
 1. Describe how:
@@ -36,13 +42,6 @@
 7. Use the order property to change the default order in which items are laid out
 8. Explain and use the "fr" unit of measure
 9. Use justify-items, align-items, justify-content and align-content to layout items in each grid area
-___
-## If you want to play around with the styles you saw in class:
-1. Right click on `index.html` in this folder.
-2. Click "copy path".
-3. Paste this in a browser tab/window and hit enter.
-4. Open a `css` file and make some changes! Make sure the css file is uncommented in `index.html`.
-5. To see your changes, reload the page in your browser.
 
 ## External Resources:
 * [FlexBox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
