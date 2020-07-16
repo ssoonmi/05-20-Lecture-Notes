@@ -35,6 +35,10 @@ ul, ol {
   color:red;
 }
 
+
+
+
+
 .content {
   margin-top:80px;
   width:100%;
@@ -61,6 +65,9 @@ ul, ol {
 .content__square--rotate:hover {
   transform: rotate(360deg);
 }
+
+
+
 
 
 .navbar__dropdown-container {

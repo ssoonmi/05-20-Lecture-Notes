@@ -15,9 +15,11 @@ In our CSS file, we will add `:hover` to the end of a selector and set any prope
 
 
 
+
+
 ## Transition
 
-One common property to implement on a psuedo-class is the transition property. We use the transition property show animated changes due to class and pseudo-class CSS rule application. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time.
+One common property to implement with a psuedo-class is the transition property. We use the transition property show animated changes due to class and pseudo-class CSS rule application. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time.
 
 List of CSS properties we can use transition on:
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
@@ -36,6 +38,9 @@ Sub properties:
        * Specifies how long to wait between the time a property is changed and the transition begins
     - `transition`
        * shorthand: property, duration, delay
+
+
+
 
 
 
@@ -82,9 +87,17 @@ EX 2:
 
 
 
+
+
+
+
+
 ## Overflow
 
-BY default, when we size an element to a width and height that is too small for all of the content, the browser will just show all of the content anyway. This can possibly mess up the way the page renders and displays. To fix this, we can use the overflow family of properties to specify how we want the overflow of content to be displayed.
+By default, when we size an element to a width and height that is too small for all of the content, the browser will just show all of the content anyway. This can possibly mess up the way the page renders and displays. To fix this, we can use the overflow family of properties to specify how we want the overflow of content to be displayed.
+
+
+
 
 The overflow family of properties are:
 * overflow
@@ -93,6 +106,10 @@ The overflow family of properties are:
     - Applies the setting(s) to the horizontal direction.
 * overflow-y
     - Applies the setting(s) to the vertical direction.
+
+
+
+
 
 There are four settings that the overflow family of properties can take:
 * `overflow: auto`
@@ -103,6 +120,9 @@ There are four settings that the overflow family of properties can take:
     - Always show a scroll bar, even if the content doesn't need one.
 * `overflow: hidden`
     - This clips the content. Anything beyond the boundary of the element is not visible.
+
+
+
 
 Examples of CSS Overflow:
 https://codepen.io/aa-academics/pen/jOPeNmp?editors=1100

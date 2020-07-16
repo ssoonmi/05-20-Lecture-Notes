@@ -7,10 +7,10 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <button>Settings</button>
-    <button>Profile</button>
-    <button>Help</button>
+  <nav class="navbar"> 
+    <button class="navbar__button navbar__button--active">Profile</button>
+    <button class="navbar__button">Settings</button>
+    <button class="navbar__button">Help</button>
   </nav>
 
 
@@ -20,20 +20,21 @@
     </header>
 
     <ul class="list">
+      <img src="./my_image.png" class="list__ul-image">
+      </div>
       <li class="list__item">
-        <img src="/product1.png" class="list__image">
+        <img src="/product1.png" class="list__li-image">
         <label class="list__label">Product #1</label>
       </li>
       
-      <li>
-        <img src="/product2.png" >
-        <label>Product #2</label>
-      </li>
+      <li class="list__item">
+        <img src="/product2.png" class="list__li-image">
+        <label class="list__label">Product #2</label>
       </li>
 
-      <li>
-        <img src="/product3.png" >
-        <label>Product #3</label>
+      <li class="list__item">
+        <img src="/product3.png" class="list__li-image">
+        <label class="list__label">Product #3</label>
       </li>
     </ul>
   </main>
