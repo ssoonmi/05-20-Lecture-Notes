@@ -123,6 +123,8 @@ How to link a stylesheet into an HTML page
 
 1. `Explain why using Web fonts helps with consistent experience across viewing devices:
     -  `Your explanation here.`
+    - Web fonts are good to use because every browser has different default font families, but there is a drawback. Google tracks when you use their fonts using google fonts
+    - Will be the same in any browser.
 
 1. Explain absolute and relative length units in CSS
     - Relative :
@@ -160,6 +162,7 @@ How to link a stylesheet into an HTML page
     - `position: relative` - positioned relative to closest parent ancestor 
     - `position: absolute` - removes from regular flow of the page. 
     - `position: static` - the default positioning of all elements. 
+    - The MC quiz from earlier in the week is good for positioning stuff.
 
 1. Identify elements rendered with specific padding and margin settings
 
