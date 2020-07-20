@@ -770,8 +770,8 @@ In general, every object in an RDBMS like postgres has a name that is unique in 
 
 * **users** (**roles**) are objects in the *global* namespace that are owned by the system's *superusers*
 * **databases** are objects in the *global* namespace that are owned by a *user or role*
-* schemas are objects located in a *database* namespace that are owned by a *user or role*
-* all other objects are located in a *schema* namespace (defaulting to the *default* schema, **public**) and owned by a *user or role*
+* **schemas** are objects located in a *database namespace* that are owned by a *user or role*
+* **all other objects** are located in a *schema namespace* (defaulting to the *default* schema, **public**) and owned by a *user or role*
 
 In addition to securing the database against authenticated access (through the 'front door'), most RDBMS's will have provisions for securing (encrypting) the binary files that hold the system's persisted data, to protect against inappropriate access to the system's data files or their backups.  This is referred to as securing 'data at rest', and is typically a requirement for systems that manage medical or financial data.  (We won't worry further about it here)
 
