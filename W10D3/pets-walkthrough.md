@@ -1,5 +1,7 @@
 # Pets Walkthrough
 
+[Database Schema Diagram]
+
 **MAKE SURE TO WRITE OUT ALL THE COMMANDS AND DO NOT COPY PASTE!**
 
 1. Initialize `package.json` to be able to install node packages. 
@@ -122,7 +124,7 @@ Should turn into:
   - `lastName`:`string`
 
 ```
-npx sequelize-cli \
+npx sequelize-cli model:generate \
   --name Owner \
   --attributes firstName:string,lastName:string
 ```
@@ -215,6 +217,21 @@ Validations should look like this:
 1. Make model level validations in the `models/pet.js` file
 
 - `name` cannot be empty
+
+Validations should look like this:
+
+```javascript
+{
+  name: {
+    type: DataTypes.String,
+    validate: {
+      notEmpty: true
+    }
+  },
+  petTypeId: DataTypes.INTEGER,
+  age: DataTypes.INTEGER
+}
+```
 
 1. Make the relationship between `Pet` and `PetType`.
 
@@ -337,7 +354,7 @@ generated:
 Inside of the `up` callback function:
 
 ```javascript
-await queryInterface.bulkInsert('PetTypes', [
+return queryInterface.bulkInsert('PetTypes', [
   { type: 'Bird', createdAt: new Date(), updatedAt: new Date() },
   { type: 'Cat', createdAt: new Date(), updatedAt: new Date() },
   { type: 'Dog', createdAt: new Date(), updatedAt: new Date() },
@@ -446,3 +463,5 @@ async function deleteBirdAndCat() {
 
 deleteBirdAndCat();
 ```
+
+[Database Schema Diagram]: https://drawsql.app/app-academy/diagrams/pets#
