@@ -31,20 +31,30 @@ packages:
 ## Sequelize-Cli CheatSheet
 
 `npx sequelize-cli init` - initialize sequelize tools in the project
+
 `npx sequelize-cli db:create` - create database with configuration in `config/config.json` file
+
 `npx sequelize-cli db:drop` - drop database with configuration in `config/config.json` file
+
 `npx sequelize-cli model:generate` - creates a migration file and a model file to edit (does NOT create the table in the database!)
   - key-value arguments:
-      - `--name`: Name of the model
+      - `--name`: Name of the model **Needs to be singular, Capitalized, and CamelCase**
+          - will create a table name that is pluralized, Capitalized, and CamelCase
+          - will create a model in the model file with a class that is singular, Capitalized, and CamelCase
+          - e.g. `--name MeasurementUnit`
       - `--attributes`: List of table column and type pairs separated by commas. Table column and type separated by colon.
-          - e.g. `name:string,order:int` cannot be separated by spaces
+          - e.g. `--attributes name:string,order:int` cannot be separated by spaces
           - e.g. `--attributes column1:type1,column2:type2,column3:type3`
+
 `npx sequelize-cli migration:generate --name <name of migration>` - creates a migration file that isn't for creating a table/model
   - Some common migrations: [Sequelize Migrations Cheatsheet]
+
 `npx sequelize-cli db:migrate` - migrates any of the migrations files that haven't been migrated to the database yet (creates/modifies tables in the database)
+
 `npx sequelize-cli seed:generate`- creates a seeder file
   - key-value arguments:
-      - `--name`: Name of the seed
+      - `--name`: Name of the seed, eg. `--name seed-movies`
+
 `npx sequelize-cli db:seed:all` - runs the seed files that haven't been run yet
 
 ## Sequelize Migrations
