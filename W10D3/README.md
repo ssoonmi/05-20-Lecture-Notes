@@ -59,7 +59,12 @@ packages:
 
 [Sequelize Associations Cheatsheet]
 
+## [Pets Walkthrough]
+
+- walkthrough with Migrations, Insertion, Updating, Deleting videos
+
 [Sequelize Associations Docs]: https://sequelize.org/master/manual/assocs.html
 [Sequelize Migrations Docs]: https://sequelize.org/master/manual/query-interface.html
 [Sequelize Associations Cheatsheet]: ./sequelize-associations.md
 [Sequelize Migrations Cheatsheet]: ./sequelize-migrations.md
+[Pets Walkthrough]: ./pets-walkthrough.md
