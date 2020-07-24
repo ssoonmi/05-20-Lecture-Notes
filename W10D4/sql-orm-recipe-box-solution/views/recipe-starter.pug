@@ -1,0 +1,25 @@
+extends layout.pug
+
+block main
+  if error
+    .uk-alert-danger(uk-alert)
+      p= error
+  else
+    h1.uk-heading-small New recipe
+    if newRecipeError
+      .uk-alert-danger(uk-alert)
+        p= newRecipeError
+    fieldset.uk-fieldset
+      legend.uk-legend Start your new recipe
+      p Enter your recipe title and click "Continue".
+      form(method="post" action="/recipes")
+        .uk-margin
+          input.uk-input(
+            name="title"
+            type="text"
+            placeholder="Recipe title"
+            required
+            value=title
+          )
+        .uk-margin
+          button.uk-button.uk-button-primary(type="submit") Continue

@@ -1,0 +1,45 @@
+html {
+  font-size: 15px;
+}
+
+.undecorated,
+.undecorated:hover {
+  text-decoration: none;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,65,88,1) 47%, rgba(42,65,88,1) 100%);
+  color: white;
+}
+
+.uk-button-default,
+.uk-logo,
+.uk-navbar-nav > li > a {
+  color: white;
+}
+
+.ingredient-amount,
+.ingredient-amount-name {
+  margin-right: 0.25em;
+}
+
+.ingredient-amount-name:empty {
+  margin-right: 0;
+}
+
+.instructions-list__list-item {
+  margin-bottom: 1em;
+}
+
+.no-expand {
+  flex: 0 0 100px;
+}
+
+select.no-expand {
+  flex: 0 0 150px;
+}
+
+.expand {
+  flex: 1 0 0px;
+}
