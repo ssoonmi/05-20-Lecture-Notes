@@ -8,7 +8,13 @@
 
 ## [SQL Practice Assessment Walkthrough Code]
 
+[SQL Practice Assessment Walkthrough Video]
+
 ## [Sequelize Practice Assessment Walkthrough Code]
+
+[Sequelize Practice Assessment Walkthrough Video]
+
+[Sequelize Practice Assessment Possible Errors Video]
 
 ## SQL Practice Assessment
 
@@ -30,3 +36,6 @@
 [SQL Practice Assessment Solutions]: ./sql-practice-assessment-solutions
 [Sequelize Practice Assessment Starter]: ./sequelize-practice-assessment-starter
 [Sequelize Practice Assessment Solutions]: ./sequelize-practice-assessment-solutions
+[SQL Practice Assessment Walkthrough Video]: https://drive.google.com/file/d/1bgZrCgkoHksLHBUihVUKlde9t7JgIfcL/view?usp=sharing
+[Sequelize Practice Assessment Walkthrough Video]: https://drive.google.com/file/d/1mgar6Umg4j7TlNTqL3JSvSxiLRN2v_hO/view?usp=sharing
+[Sequelize Practice Assessment Possible Errors Video]: https://drive.google.com/file/d/1RvHgso1DdqY6jWdLqzfQKOpj8yDntXVM/view?usp=sharing

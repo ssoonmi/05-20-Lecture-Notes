@@ -7,5 +7,5 @@
 ## [MacOS Postgres Installation]
 
 [Filled in Learning Objectives]: ./W9_filled_in_LOs.md
-[MacOS Postgres Installation]: ./MacOS-Postgres_Installation.md
-[Windows Postgres Installation]: ./Windows-Postgres_Installation.md
+[MacOS Postgres Installation]: ./MacOS-Postgres-Installation.md
+[Windows Postgres Installation]: ./Windows-Postgres-Installation.md
