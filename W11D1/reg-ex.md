@@ -9,7 +9,7 @@ Practice: https://regexr.com/
 
 ### Pattern Matching
 
-For more explanations on all the rules, [see below](##regular-expression-operators):
+For more explanations on all the rules, [see below](#regular-expression-operators):
 
 `*` - zero or more
 
@@ -41,7 +41,7 @@ For more explanations on all the rules, [see below](##regular-expression-operato
 
 ### JavaScript Regular Expressions
 
-For more detailed explanations, [see below](##regular-expressions-in-javascript)
+For more detailed explanations, [see below](#regular-expressions-in-javascript)
 
 Creating a new regular expression in JavaScript
 
