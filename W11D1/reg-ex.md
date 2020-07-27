@@ -56,7 +56,9 @@ pattern replaced by a replacement (only if pattern is a regular expression and
 has global search, `g`., if the pattern is a string, it will only replace the 
 first match)
 
-## String with Characters only
+## Regular Expression Operators
+
+### String with Characters only
 
 Matches the string exactly
 
@@ -69,7 +71,7 @@ ex: if pattern is `"pat"` it looks for exactly `"pat"` in the string
 | `"matter"` | `false` |
 | `"Pat"`| `false` |
 
-## Star Operator `*`
+### Star Operator `*`
 
 **Zero or more** of what's right before it
 
@@ -85,7 +87,7 @@ ex: if the pattern is `"th*e"`, then it looks for a `"t"`, then zero or more
 | `"than"`| `false` |
 | `"other"` | `true` |
 
-## Optional Operator `?`
+### Optional Operator `?`
 
 **Zero or one** of what's right before it
 
@@ -105,7 +107,7 @@ NOTE: To use a question mark in your string, you need to escape it in a regex
 - ex: pattern of `"at\?"` would return `true` for an input of `"where you at?"`
   but `false` for an input of `"patty"`
 
-## Plus Operator `+`
+### Plus Operator `+`
 
 **One or more** of what's right before it
 
@@ -121,7 +123,7 @@ ex: if pattern is `"at+"`, then it looks for an `"a"`, then one or more `"t"`
 | `"atttttt"`| `true` |
 | `"apart"` | `false` |
 
-## Dot Operator `.`
+### Dot Operator `.`
 
 Any one character
 
@@ -138,7 +140,7 @@ after that, then any one character after that
 | `"forest"` | `true` |
 | `"burn"` | `false` |
 
-## Hat Operator - `^`
+### Hat Operator - `^`
 
 Start of input anchor
 
@@ -153,7 +155,7 @@ string
 | `"is your name Pat?"`| `true` |
 | `"Pat, my name is"`| `false` |
 
-## Dollar Sign Operator - `$`
+### Dollar Sign Operator - `$`
 
 End of input anchor
 
@@ -168,7 +170,7 @@ string
 | `"is your name Pat?"`| `false` |
 | `"Pat, my name is"`| `true` |
 
-## Square Brackets
+### Square Brackets
 
 Any character of your choice in the brackets
 
@@ -200,7 +202,7 @@ either `t` or `m`, then an `e`
 | `"rate"`| `true` |
 | `"rage"`| `false` |
 
-### Range of characters
+#### Range of characters
 
 You can indicate a range of characters in the square brackets.
 
@@ -210,7 +212,7 @@ ex: pattern of `[j-w]` means any lower letter from `j` to `w`
 
 ex: pattern of `[0-9]` means any number from `0` to `9`
 
-### Hat Operator inside Square Brackets
+#### Hat Operator inside Square Brackets
 
 Not any of those characters
 
@@ -225,7 +227,7 @@ ex: if pattern is `"[^aeiou]"`, then it looks for any non-vowel character
 | `"where"`| `true` |
 | `"iou"`| `false` |
 
-## Parentheses
+### Parentheses
 
 Group of characters
 
@@ -254,7 +256,7 @@ ex: if pattern is `"at( is)?"`, then it looks for `"at"`, then an optional
 | `"that is true"`| `true` |
 | `"hat"`| `true` |
 
-## Special Character Classes
+### Special Character Classes
 
 Lowercase:
 
