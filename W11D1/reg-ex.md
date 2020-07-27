@@ -333,7 +333,8 @@ otherwise `false`
   const regex = /mushy/gi;
   let count = 0; 
   console.log(str.replace(regex, match => {
-    if (count++ % 2 === 0) return green;
+    if (count++ % 2 === 0) return 'green';
+    else return match;
   })); // 'This banana is green. I do not like MUSHY bananas'
   ```
 
@@ -363,7 +364,7 @@ otherwise `false`
     const key = match.replace(/%/g, '');
     return data[key];
   });
-  console.log(replacedStr);
+  console.log(replacedStr); //"My dog's name is Fido. He is 4 years old. His favorite toy is bone."
   ```
 
 [Practice with Regular Expression]: https://regexr.com/

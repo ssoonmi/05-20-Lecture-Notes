@@ -27,7 +27,9 @@ const data = { name: 'Fido', age: 4, favToy: 'bone' }
 const regex = /%\w+%/g;
 const str = "My dog's name is %name%. He is %age% years old. His favorite toy is %favToy%."
 const replacedStr = str.replace(regex, match => {
+  console.log(match);
   const key = match.replace(/%/g, '');
+  console.log(key);
   return data[key];
 });
 console.log(replacedStr);
