@@ -4,6 +4,8 @@
 
 [Regular Expression Notes]
 
+[Docs for RegExp in JavaScript]
+
 [Regular Expression Code]
 
 [Regular Expression Practice - regexone]
@@ -25,6 +27,7 @@
 [Regular Expression Code]: ./reg-ex.js
 [Regular Expression Practice - regexone]: https://regexone.com/
 [Regular Expression Practice - regexr]: https://regexr.com/
+[Docs for RegExp in JavaScript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 [Node HTTP Notes]: ./node-http.md
 [Basic Node HTTP Code]: ./http.js
 [Node HTTP Code with Files]: ./httpFile.js
