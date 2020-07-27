@@ -9,7 +9,7 @@ Practice: https://regexr.com/
 
 ### Pattern Matching
 
-For more explanations on all the rules, see below.
+For more explanations on all the rules, [see below](##Regular-Expression-Operators):
 
 `*` - zero or more
 
@@ -39,7 +39,9 @@ For more explanations on all the rules, see below.
 
 `\W` - not a word character
 
-### JavaScript methods
+### JavaScript Regular Expressions
+
+For more detailed explanations, [see below](##Regular-Expressions-in-JavaScript)
 
 Creating a new regular expression in JavaScript
 
