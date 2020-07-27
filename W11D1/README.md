@@ -10,7 +10,7 @@
 
 [Regular Expression Practice - regexr]
 
-## Node HTTP
+## Node.js Web Applications with HTTP Node Module
 
 [Node HTTP Notes]
 
@@ -20,7 +20,6 @@
 
 [Node HTTP Code with Form]
 
-## Node.js Web Applications
 
 [Regular Expression Notes]: ./reg-ex.md
 [Regular Expression Code]: ./reg-ex.js

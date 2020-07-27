@@ -21,7 +21,7 @@ const server = http.createServer(async (req, res) => {
 });
 ```
 
-How to get the body of a `POST` request:
+### How to get the body of a `POST` request:
 
 ```javascript
 // ... inside of http.createServer

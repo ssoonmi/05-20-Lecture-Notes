@@ -12,18 +12,31 @@ Practice: https://regexr.com/
 For more explanations on all the rules, see below.
 
 `*` - zero or more
+
 `+` - one or more
+
 `?` - zero or one
+
 `^` - start of input
+
 `$` - end of input
+
 `[]` - any character
+
 `[a-z]` - range of characters
+
 `[^]` - not those characters
+
 `\s` - whitespace
+
 `\d` - digit
+
 `\w` - a word character
+
 `\S` - not whitespace
+
 `\D` - not digit
+
 `\W` - not a word character
 
 ### JavaScript methods
