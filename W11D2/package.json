@@ -1,0 +1,15 @@
+{
+  "name": "W11D2",
+  "version": "1.0.0",
+  "description": "- Node.js framework\r - makes common web dev tasks easier to implement\r - reduces boilerplate code\r - unopinionated and minimalistic\r     - doesn't tell you how you need to structure your project\r     - no structure for authentication or database access\r - handles routing, basic error handling\r - easy to define middlewares",
+  "main": "intro-to-express.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
