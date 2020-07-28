@@ -1,9 +1,23 @@
+# Express CheatSheet
 
-### Express Application
+## Application Object
 
+```javascript
+const express = require('express');
+const app = require('app'); // creates the Express application
+app.set('view engine', 'pug'); // sets the default view engine to be pug
+app.get('/', (req, res) => {}); // defines a route with method GET and path of '/'
+app.post('/', (req, res) => {}); // defines a route with method POST and path of '/'
+app.patch('/', (req, res) => {}); // defines a route with method PATCH and path of '/'
+app.put('/', (req, res) => {}); // defines a route with method PUT and path of '/'
+app.delete('/', (req, res) => {}); // defines a route with method DELETE and path of '/'
+app.use('/users', router); // uses a router for any path starting with `/users`
+app.listen(port, () => {
+  // ... callback executed after server successfully connected to specified port
+}); // listen for requests on the specified port
+```
 
-
-### Express Request Object
+## Request Object
 
 ```javascript
 req.path // URL path
@@ -14,12 +28,25 @@ req.body // body of the request (only populated when you use a body-parser middl
 req.cookies // cookies
 ```
 
-### Express Response Object
+## Response Object
+
+- Status code is `200` by default
 
 ```javascript
-res.render()
+
+res.status(404); // sets the status code to 404
+res.render('file-view-name', { variable: value }); // executes the file with the variables and sends the result, HTML string, to the client (variables object is optional)
+res.json({ message: 'success' }); // Sends the POJO passed in as a JSON response
+res.redirect('/'); // redirects the client to the path of `/`
+res.type('application/json'); // sets the `Content-Type` header to `application/json`
+res.end(); // ends the response without any data
 ```
 
+## Router Object
+
+
+
+## Misc.
 
 ### Set and Get Express Settings
 
@@ -37,9 +64,5 @@ res.render()
       ```javascript
       app.get('view engine');
       ```
-
-### Render an HTML Template
-
-
 
 [Docs for `app.set`]: https://expressjs.com/en/api.html#app.set
