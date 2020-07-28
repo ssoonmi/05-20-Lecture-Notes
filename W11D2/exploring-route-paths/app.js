@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.set('view engine', 'pug');
-app.set('views', 'banana');
+app.set('views', 'banana'); // sets the views folder to be banana instead of the default "views" folder
 
 app.get('/', (req, res) => {
   const productPaths = [

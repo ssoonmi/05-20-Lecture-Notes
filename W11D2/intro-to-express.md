@@ -51,6 +51,8 @@ matches will be run.
       - The route handler for `GET` `/blogs/hello` can never get called because
         the `GET` `/blogs/:id` gets created first and matches to that route
         before it can match to `/blogs/hello`
+      - to hit the correct route handler, the route for `/blogs/hello` needs to
+        be defined BEFORE the route `/blogs/:id`
   - request: `GET` `/blogs` => route handler: `404` not found response
   - request: `POST` `/` => route handler: `404` not found response
   - request: `POST` `/hello` => route handler: `404` not found response
