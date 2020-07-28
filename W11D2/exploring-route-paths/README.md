@@ -20,3 +20,16 @@
 ## Routes
 
 ### Product Page
+
+- `/product/1`
+- `/product/2`
+- And so on...
+
+### Products Page
+
+- `/products`
+- `/our-products`
+- `/product`
+- `/prodcts`
+- `/productts`
+- `/productos`
