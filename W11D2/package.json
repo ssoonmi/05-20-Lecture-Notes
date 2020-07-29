@@ -5,7 +5,7 @@
   "main": "intro-to-express.js",
   "scripts": {
     "start": "node intro-to-express.js",
-    "dev": "nodemon intro-to-express.js"
+    "dev": "nodemon --inspect intro-to-express.js"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }
 }

@@ -1,20 +1,28 @@
 const express = require('express');
-
+const logger = require('morgan');
 const app = express();
+app.use(logger('dev'));
+
+// creating a middleware:
+// app.use((req, res, next) => {
+//   // before route handler and subsequent middlewares
+//   res.on('finish', () => {
+//     // after route handler is done
+//   });
+//   next();
+// });
 
 app.get(`/hello`, (req, res) => {
   res.send('<h1>GET /hello</h1>');
 });
 
 app.get(`/`, (req, res) => {
-  debugger
-  res.send('<h1>GET /</h1>');
+  res.send('<h1>GET /sdfkdfjdkfj</h1>');
 });
 
 app.get(`/blogs/hello`, (req, res) => {
   res.send("<h1>GET /blogs/hello</h1>");
 });
-
 app.get(`/blogs/:id`, (req, res) => {
   console.log('params', req.params);
   res.send(`
@@ -22,6 +30,7 @@ app.get(`/blogs/:id`, (req, res) => {
     <h2>:id is ${req.params.id}</h2>
   `);
 });
+
 
 app.get(`/blogs/:id/comments`, (req, res) => {
   res.send(`
