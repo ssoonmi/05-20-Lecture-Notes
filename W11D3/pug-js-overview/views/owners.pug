@@ -1,0 +1,35 @@
+extends layout.pug
+
+mixin ownerRow(firstName, lastName, pets)
+  tr
+    td= firstName
+    td= lastName
+    td: ul
+      each pet in pets
+        li #{pet.name}
+
+block mainContent
+  table
+    thead
+      tr
+        th First Name
+        th Last Name
+        th Pets
+    tbody
+      each owner in owners
+        +ownerRow(owner.firstName, owner.lastName, owner.Pets)
+      else
+        tr
+          td(colspan=2) No owners
+  form.pure-form(action="/owners" method="post")
+    fieldset
+      legend Create an owner
+      input(type="text" name="firstName" placeholder="First Name")
+      input(type="text" name="lastName" placeholder="Last Name")
+      select(name="petIds" multiple)
+        each pet in pets
+          option(value=pet.id)= pet.name
+      button(type="submit") Create this owner
+
+block footer
+  span copyright

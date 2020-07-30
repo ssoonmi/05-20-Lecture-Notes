@@ -1,0 +1,12 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Pet Types
+  body
+    ul
+      each petType in petTypes
+        li= petType.type
+          ul
+            each pet in petType.Pets
+              li= pet.name

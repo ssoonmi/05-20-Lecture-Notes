@@ -1,0 +1,21 @@
+extends layout.pug
+
+block content
+  h1= title
+  include includes/form_errors
+  form(action=`/create-interesting` method='post')
+    include includes/basic_info
+    .form-group
+      label(for='age') Age:
+      input(type="number" id='age' class="form-control" name="age" value=age)
+    .form-group
+      label(for='favorite-beatle') Favorite Beatle
+      select#favorite-beatle.form-control(name='favoriteBeatle')
+        option(value="") --Please choose an option--
+        each beatle in ['John', 'Paul', 'Ringo', 'George', 'Scooby-Doo']
+          option(value=beatle selected=(beatle === favoriteBeatle) && 'selected')= beatle
+    .form-check
+      input#iceCream.form-check-input(type='checkbox' checked=(iceCream === 'on') name="iceCream")
+      label.form-check-label(for='iceCream') Likes Ice Cream
+    div
+      input(type='submit' class='btn btn-primary' value='Create Interesting User')

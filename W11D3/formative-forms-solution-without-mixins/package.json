@@ -1,0 +1,29 @@
+{
+  "name": "solution",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "debug": "nodemon --inspect index.js",
+    "test": "PORT=3001 mocha --exit",
+    "test-with-json": "PORT=3001 mocha --reporter json --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cheerio": "^1.0.0-rc.3",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  }
+}

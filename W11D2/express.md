@@ -12,6 +12,7 @@ app.patch('/', (req, res) => {}); // defines a route with method PATCH and path 
 app.put('/', (req, res) => {}); // defines a route with method PUT and path of '/'
 app.delete('/', (req, res) => {}); // defines a route with method DELETE and path of '/'
 app.use('/users', middleware); // uses a middleware for any path starting with `/users` (first argument is optional)
+app.use(express.static(path.join(__dirname, 'public'))) // serves up static files in the `/public` directory
 app.listen(port, () => {
   // ... callback executed after server successfully connected to specified port
 }); // listen for requests on the specified port

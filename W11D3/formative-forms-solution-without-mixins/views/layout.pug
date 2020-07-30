@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title Formative Forms - #{title}
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+    style(type="text/css").
+      body {
+        padding: 40px;
+      }
+      .links-container {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-check {
+        margin-bottom: 20px;
+      }
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      a.navbar-brand(href='/') Formative Forms
+      .navbar-nav
+        a.nav-item.nav-link(href='/create') Create User
+        a.nav-item.nav-link(href='/create-interesting') Create Interesting User
+
+    block content
