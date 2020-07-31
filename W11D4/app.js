@@ -77,4 +77,14 @@ app.use((err, req, res, next) => {
 
 const port = 3000;
 
-app.listen(port, () => console.log('Server is listening on port', port));
+const connect = async () => {
+  try {
+    await require('./db/models').sequelize.authenticate();;
+    console.log('Connection has been established successfully.');
+    app.listen(port, () => console.log('Server is listening on port', port));
+  } catch (error) {
+    console.error('Unable to connect to the database');
+  }
+};
+
+connect();
