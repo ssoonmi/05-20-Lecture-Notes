@@ -17,6 +17,7 @@
 ## HTTP
 
 - Identify the five parts of a URL
+    - See Monday's Practices URLs Reading
     ```
     foo://example.com:8042/over/there?name=ferret#nose
 
@@ -34,11 +35,12 @@
 ## Express Routing
 
 - Define routes with parameters and with regular expressions
+    - See [Monday lecture videos](https://open.appacademy.io/learn/js-py---may-2020-online/week-11-may-2020-online/exploring-route-paths---part-2)
     - Parameters Ex: parameter of `id` 
       ```js
       app.get('/blogs/:id/comments', ...);
       ```
-      will match routes like:
+          will match routes like:
           - `GET /blogs/2/comments`
           - `GET /blogs/232434/comments`
           - `GET /blogs/hello/comments`
@@ -46,8 +48,16 @@
       ```js
       app.get('/blogs/\\w+/comments', ...);
       ```
-      will match routes like:
+          will match routes like:
           - `GET /blogs/hello/comments`
-      but not routes like:
+          - `GET /blogs/e/comments`
+          but not routes like:
           - `GET /blogs/2/comments`
           - `GET /blogs/232434/comments`
+          - `GET /blogs//comments`
+
+## Format of the Assessment
+
+- ~5 MC's
+- Express Project - expected to be 2 hours and 30 minutes
+- 2 hours and 40 minutes long

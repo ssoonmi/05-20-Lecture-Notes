@@ -129,7 +129,7 @@ Generate a model (and migration) for the "HairColor" model with the attributes:
 - the "color" column will hold values up to 20 characters in length and 
   will not allow `NULL`s 
 
-Generate a model (and migration) for the "People" model with the attributes:
+Generate a model (and migration) for the "Person" model with the attributes:
 
 | Attribute name | Attribute type | Constraints                         |
 |----------------|----------------|-------------------------------------|

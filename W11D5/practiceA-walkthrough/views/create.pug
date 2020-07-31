@@ -1,0 +1,10 @@
+form(action="/new-person" method="post")
+  input(name="firstName" type="text" required)
+  input(name="lastName" type="text" required)
+  input(name="age" type="number")
+  textarea(name="biography")
+  select(name="hairColorId" required)
+    each hairColor in hairColors
+      option(value=hairColor.id)= hairColor.color
+  input(type="hidden" name="_csrf" value= csrfToken)
+  button(type="submit")

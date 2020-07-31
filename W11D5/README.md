@@ -14,11 +14,11 @@
 
 [Practice A Walkthrough]
 
-### Videos
+### Videos - On the way
 
 
 
-## Practice B
+## Practice B - On the way
 
 [Practice B Starter]
 
