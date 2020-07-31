@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "express_practice_app",
+    "password":  "EzB5Dxo2dabnQBF8",
+    "database": "express_practice_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  },
+  "test": {
+    "username": "express_practice_app",
+    "password":  "EzB5Dxo2dabnQBF8",
+    "database": "express_practice_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  },
+  "production": {
+    "username": "express_practice_app",
+    "password":  "EzB5Dxo2dabnQBF8",
+    "database": "express_practice_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  }
+}

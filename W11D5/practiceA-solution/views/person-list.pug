@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title People
+  body
+    table
+      thead: tr
+        th First name
+        th Last name
+        th Age
+        th Biography
+        th Hair Color
+      tbody
+        each person in people
+          tr
+            td= person.firstName
+            td= person.lastName
+            td= person.age
+            td= person.biography
+            td= person.HairColor.color
