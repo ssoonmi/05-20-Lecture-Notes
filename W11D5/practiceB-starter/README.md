@@ -8,19 +8,10 @@ In this assessment, you are asked to create an Express application. You will
 create an Express application that
 
 * Has a page that shows a list of pasta dishes
-* Has a page that shows a list of pasta dishes by flavor profile
+* Has a page that shows a list of pasta dishes by sauce
+* Has a page that shows a list of pasta dishes by noodle
 * Has a page to create a pasta dish
 * Is protected from Cross-Site Request Forgeries
-
-In the **images** directory, you will find
-
-* A screenshot of the person listing page
-* A screenshot of the person creation form
-
-The screenshots show you what is expected from a _structure_ standpoint. They
-are meant to be guides. The tests will _not_ make any assertions about the
-styling of your pages, merely the structure of the pages and the data presented
-on them.
 
 Use the technologies you have used up to this point. They are all installed in
 the **package.json** for your convenience.
@@ -42,39 +33,9 @@ Do not remove any dependencies already listed in the **package.json**.
 You can run your application in "dev" mode. The **nodemon** package is installed
 and runnable from `npm run dev`.
 
-## Running the tests
-
-This is "black-box testing". The tests will _only_ use your Express application.
-It will not make connections to the database or directly test your route
-handlers. They will merely make HTTP requests of your Express app and analyze
-the responses.
-
-To ease your development, tests will run against your **development** database
-and _not_ the test database.
-
-**You** will be responsible for creating, migrating, and seeding the data in
-your development database.
-
-Run your tests with `npm test`. You can run `npm test test/test-file-name.js`
-to run the tests for a specific part of the assessment.
-  * Example: To only run the test `01-form-page.js` do, 
-    `npm test test/01-form-page.js`
-
-If you get tired of seeing all of the Sequelize failures, you can try running:
-
-```
-npm test 2> /dev/null
-``` 
-
-That should redirect the annoying messages into oblivion but leave the
-mocha output available for you to read. This may prevent you from seeing other
-errors, though, so make sure to run it without the `2> /dev/null` if you're 
-trying to get a test to pass and need to see error output.
-
 ## App Requirements
 
-These are the requirements for the application. Follow them closely. The tests
-will attempt to read data from your rendered HTML. 
+These are the requirements for the application. Follow them closely. 
 
 Read all of the requirements. Determine the data needed to include in your data
 model.
@@ -104,23 +65,15 @@ Initialize Sequelize in your assessment and replace the use your
 }
 ```
 
-Remove `logging: false` if you want to see SQL output in your terminal when 
-running tests with `npm test`. 
+Remove `logging: false` if you want to see SQL output in your terminal.
 
 Create the `development` database with those configurations.
 
-For this assessment, the tests will be using your `development` database
-configuration defined in the `config.json` file. **The tests will not be
-testing your database explicitly, but test specs DO rely on you setting up the
-database AND database constraints properly.** 
-
-You will need to generate and run the migrations, models, and seeders. There is 
-no need to run `npm test` until after doing this.
+You will need to generate and run the migrations, models, and seeders.
 
 ### The data model
 
-You will need to store "pasta" data, "noodle" data, "sauce" data, and 
-"flavor profile" data.
+You will need to store "pasta" data, "noodle" data, and "sauce" data
 
 You can name the tables and columns however you want but there are certain
 constraints on the columns:
@@ -142,34 +95,18 @@ A sauce should have:
 - Text to describe the color of the sauce and restricted to 30 characters,
   required
 
-A flavor profile should have:
-- Text to describe the flavor (e.g. spicy) and restricted to 20 characters, 
-  required
-
 Relationships between the data:
 
 * A pasta dish should have a noodle and a sauce.
 * A noodle can be in many different pasta dishes.
 * A sauce can be in many different pasta dishes.
-* A sauce can have many different flavor profiles.
-* A flavor profile can be used to define the taste of many different sauces.
 
 **HINT:** The order in which the data is organized now may not be the order
 you want to migrate the tables! Draw a SQL schema with relationships and
 foreign keys to make sure you know what table should have what foreign keys
 and how to structure your migrations!
 
-Make seeds for the flavors, noodles, and sauces:
-
-Create the following flavor profiles (can include more if you want):
-
-| flavor profiles |
-|-----------------|
-| Spicy           |
-| Savory          |
-| Sweet           |
-| Creamy          |
-| Tangy           |
+Make seeds for the noodles and sauces:
 
 Create the following noodles (can include more if you want):
 
@@ -184,14 +121,14 @@ Create the following noodles (can include more if you want):
 
 Create the following sauces (can include more if you want):
 
-| name              | color | flavor profiles |
-|-------------------|-------|-----------------|
-| Alfredo           | white | creamy, savory  |
-| Bolognese         | red   | savory          |
-| Cheesy Bechamel   | white | creamy          |
-| Garlic Soy        | brown | savory          |
-| Brown Butter Sage | brown | sweet, creamy   |
-| Red Chili Broth   | red   | spicy, savory   |
+| name              | color |
+|-------------------|-------|
+| Alfredo           | white |
+| Bolognese         | red   |
+| Cheesy Bechamel   | white |
+| Garlic Soy        | brown |
+| Brown Butter Sage | brown |
+| Red Chili Broth   | red   |
 
 ### Your main file
 
@@ -199,6 +136,21 @@ You must use the **app.js** file to create and configure your Express
 application. You must store the instance of your Express.js application in a
 variable named "app". That is what is exported at the bottom of the **app.js**
 file.
+
+Add the following middleware to timeout the server if the server is left
+hanging on a request:
+
+```js
+app.use((req, res, next) => {
+  req.setTimeout(1000, () => {
+    res.status(500).end();
+  });
+  res.setTimeout(1000, () => {
+    res.status(500).end();
+  });
+  next();
+});
+```
 
 Set up your CSRF middleware to use cookies.
 
@@ -245,10 +197,10 @@ When someone accesses your application, they should see a list of pastas that
 are stored in your database. The list should contain:
 
 * The pasta's label
-* The pasta's noodle
-* The pasta's sauce
-* The pasta's flavor profiles as a list - also links that that go to 
-  `/flavor/:id` where `:id` is the id of the flavor profile
+* The pasta's noodle - also links that that go to  `/noodle/:id` where `:id` is
+  the id of the noodle
+* The pasta's sauce - also links that that go to  `/sauce/:id` where `:id` is
+  the id of the sauce
 * The pasta's taste factor
 * The pasta's description
 
@@ -268,21 +220,14 @@ table
         td= thing.property2
 ```
 
-The tests will use a regular expression to determine if each piece of data is
-wrapped with TD tags. For example, to test for the "Ramen"
-value appearing in the HTML of the page, the tests would use the following
-regular expression.
+### The route "GET /noodle/:id"
 
-```
-<td[^>]*>\s*Ramen\s*</td>
-```
+This page shows a list of pastas for that noodle that are stored in your
+database. The list should contain a similar table of pastas to that on the 
+"GET /" route.
 
-The regular expression will ignore any attributes that you put on the table data
-tag as well as any white space around the entry for the data value.
+### The route "GET /sauce/:id"
 
-Again, the styling is not important to the tests.
-
-### The route "GET /flavor/:id"
-
-This page shows a list of pastas for that flavor that are stored in your database. 
-The list should contain a similar table of pastas to that on the "GET /" route.
+This page shows a list of pastas for that sauce that are stored in your
+database. The list should contain a similar table of pastas to that on the 
+"GET /" route.
