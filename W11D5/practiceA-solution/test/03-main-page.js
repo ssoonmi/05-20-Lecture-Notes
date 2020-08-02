@@ -87,7 +87,7 @@ describe('The main page', () => {
         .send(`lastName=${lastName}`)
         .send(`biography=${biography}`)
         .send(`age=${age}`)
-        .send('hairColorId=1')
+        .send(`hairColorId=${optionValue}`)
         .expect(302);
     } catch (e) {
       createError = new Error('Could not create a new person to test on the main screen');
