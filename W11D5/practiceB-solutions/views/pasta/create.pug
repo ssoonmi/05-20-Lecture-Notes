@@ -1,0 +1,19 @@
+extends ../layout.pug
+
+block content
+  h1 Create a Pasta
+  form(action="/pasta/create" method="post")
+    input(type="hidden" name="_csrf" value=csrfToken)
+    input(type="text" name="label" placeholder="Label" required)
+    textarea(name="description" placeholder="Description")
+    label Taste Factor (0-10)
+      input(type="number" name="taste")
+    label Choose a Noodle
+      select(name="noodleId" required)
+        each noodle in noodles
+          option(value=noodle.id)= noodle.name
+    label Choose a Sauce
+      select(name="sauceId" required)
+        each sauce in sauces
+          option(value=sauce.id)= sauce.name
+    button(type="submit") Create Pasta

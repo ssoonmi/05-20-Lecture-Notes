@@ -29,7 +29,9 @@ routes created on the browser.
 
 [Practice B Starter]
 
-[Practice B Solution] - On the way (by Sunday morning)
+[Practice B Solution]
+
+[Practice B Images] - images of solutions
 
 [Empty Learning Objectives]: ./empty-LOs.md
 [Filled In Learning Objectives]: ./filled-in-LOs.md
@@ -39,3 +41,4 @@ routes created on the browser.
 [Practice A Walkthrough Video]: https://drive.google.com/file/d/1sh12ICQVe8gh_1rOsT7sF5wusKu14TH5/view?usp=sharing
 [Practice B Starter]: ./practiceB-starter
 [Practice B Solution]: ./practiceB-solution
+[Practice B Images]: ./practiceB-images
