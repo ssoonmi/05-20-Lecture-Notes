@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  a(href="/pets") Back
+  h1 Details
+  dl
+    dt Name
+    dd= pet.name
+    dt Age
+    dd= pet.age
+    dt Type
+    dd= pet.PetType.type
+  h2 Owners
+  ul
+    each owner in pet.Owners
+      li: a(href="/owners" + owner.id) #{owner.lastName}, #{owner.firstName}

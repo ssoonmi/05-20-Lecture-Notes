@@ -1,0 +1,15 @@
+{
+  "name": "W12D2",
+  "version": "1.0.0",
+  "description": "## Symmetric vs Asymmetric Cryptographic Algorithms",
+  "main": "bcrypt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3"
+  }
+}

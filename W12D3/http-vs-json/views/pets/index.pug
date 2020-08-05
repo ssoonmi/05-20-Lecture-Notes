@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  table.pure-table.pure-table-striped
+    thead
+      tr
+        th Pet
+        th Number of owners
+    tbody
+      each pet in pets
+        tr
+          td: a(href='/pets/' + pet.id)= pet.name
+          td= pet.numberOfOwners
