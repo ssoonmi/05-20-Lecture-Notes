@@ -1,6 +1,6 @@
 const express = require('express');
 const asyncHandler = require('express-async-handler');
-const { all, one } = require('../data/pet-data');
+const { all, one } = require('../data/pets');
 const router = express.Router();
 
 /* GET /pets listing. */

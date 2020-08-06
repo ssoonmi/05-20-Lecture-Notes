@@ -20,8 +20,6 @@
 - username and password
 - secret code in a text or an app
 
-- [Authentication Demo]
-
 ### Session-based Authentication
 
 - sign up/login with username/password combination
@@ -61,4 +59,3 @@
 [PBKDF2 Demo]: ./pbkdf2.js
 [BCrypt Demo]: ./bcrypt.js
 [Argon2 Demo]: ./argon2.js
-[Authentication Demo]: ./authentication.js
