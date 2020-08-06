@@ -4,5 +4,8 @@ html(lang='en')
     meta(charset='utf-8')
     title
   body
-    h1 Email #{email}
-    a(href= href) Sign In with Google
+    h1= loggedIn?  "Email: " + email : "Sign In"
+    if (loggedIn)
+      h2 Id: #{id}
+    else
+      a(href= href) Sign In with Google
