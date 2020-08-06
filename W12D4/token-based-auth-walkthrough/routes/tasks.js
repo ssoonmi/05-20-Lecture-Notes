@@ -1,9 +1,13 @@
 const express = require("express");
-const router = express.Router();
 const db = require("../db/models");
-const { check, validationResult } = require("express-validator");
+const { check } = require("express-validator");
+const { asyncHandler, handleValidationErrors } = require("../utils");
+const { requireAuth } = require("../auth");
+const router = express.Router();
 
 const { Task } = db;
+
+router.use(requireAuth);
 
 const validateTask = [
   //  Task name cannot be empty:
@@ -15,41 +19,6 @@ const validateTask = [
     .isLength({ max: 255 })
     .withMessage("Task name can't be longer than 255 characters."),
 ];
-
-const handleValidationErrors = (req, res, next) => {
-  console.log('handleValidationErrors middleware');
-  const validationErrors = validationResult(req);
-
-  // If the validation errors are empty,
-  if (!validationErrors.isEmpty()) {
-    // Generate an array of error messages
-    const errors = validationErrors.array().map((error) => error.msg);
-
-    // Generate a new `400 Bad request.` Error object
-    // and invoke the next function passing in `err`
-    // to pass control to the global error handler.
-    const err = Error("Bad request.");
-    err.status = 400;
-    err.title = "Bad request.";
-    err.errors = errors;
-    return next(err);
-  }
-
-  // Invoke the next middleware function
-  next();
-};
-
-const asyncHandler = (handler) => {
-  console.log('asyncHandler wrapper middleware');
-  return async (req, res, next) => {
-    console.log('asyncHandler middleware');
-    try {
-      handler(req, res, next);
-    } catch(err) {
-      return next(err);
-    }
-  }
-};
 
 router.get(
   "/",
