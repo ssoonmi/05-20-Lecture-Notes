@@ -11,14 +11,17 @@ router.use(requireAuth);
 
 const validateTask = [
   //  Task name cannot be empty:
-  check("name")
+  check("name") // sees if `req.body.name` exists
     .exists({ checkFalsy: true })
     .withMessage("Task name can't be empty."),
   //  Task name cannot be longer than 255 characters:
-  check("name")
+  check("name") // sees if `req.body.name` is longer than 255 characters
     .isLength({ max: 255 })
     .withMessage("Task name can't be longer than 255 characters."),
-];
+  check("color") // sees if `req.body.color` is included in the string
+    .inIn(['red', 'yellow'])
+    .withMessage("Task color is invalid."),
+]; // an array of middleware functions
 
 router.get(
   "/",

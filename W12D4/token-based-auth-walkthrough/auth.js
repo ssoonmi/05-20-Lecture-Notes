@@ -1,6 +1,9 @@
 const jwt = require("jsonwebtoken");
 const bearerToken = require("express-bearer-token");
+// bearerToken just does something like this:
+  // req.token = req.headers.Authorization.replace('Bearer ', '');
 const { jwtConfig } = require("./config");
+
 
 const db = require("./db/models");
 
@@ -32,9 +35,7 @@ const restoreUser = (req, res, next) => {
   const { token } = req;
 
   if (!token) {
-    const err = new Error("Unauthorized");
-    err.status = 401;
-    return next(err);
+    return res.set("WWW-Authenticate", "Bearer").status(401).end();
   }
 
   return jwt.verify(token, secret, null, async (err, jwtPayload) => {
