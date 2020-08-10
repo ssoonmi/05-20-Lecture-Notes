@@ -29,4 +29,4 @@
 [Auth Part 3 Walkthrough]: https://drive.google.com/file/d/1LW-sSrhB-fKjoYd1dC_rEXLiBf_D1JDD/view?usp=sharing
 [Auth CSS Part 1 Walkthrough]: https://drive.google.com/file/d/1UNx6HJvD5IeOgX01MO5veXohZ3gWBndv/view?usp=sharing
 [Auth CSS Part 2 Walkthrough]: https://drive.google.com/file/d/1D61Tj2wXtsZX_upmpQZkYvTt0r9o3zAG/view?usp=sharing
-[Auth CSS Part 3 Walkthrough]: %20https://drive.google.com/file/d/1vv4iRqFe-3Badf-w3ytuXpbMj7TbdR1y/view?usp=sharing
+[Auth CSS Part 3 Walkthrough]: https://drive.google.com/file/d/1vv4iRqFe-3Badf-w3ytuXpbMj7TbdR1y/view?usp=sharing
