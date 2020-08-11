@@ -40,6 +40,10 @@
 
 [Pull Request Part 2 Walkthrough]
 
+- How to checkout a remote repository
+  - `git checkout --track origin/remote-branch-name`
+  - `git pull origin remote-branch-name`
+
 [Google Drive Folder for All Videos]: https://drive.google.com/drive/folders/1mYfD1ygA9Z5hN_pTb4yzCSFPHktIcXG5?usp=sharing
 [Github Repo for Twitter Lite Walkthrough]: https://github.com/ssoonmi/twitter-lite-walkthrough
 [Set Up Instructions]: ./setup-instructions.md
