@@ -12,13 +12,13 @@
 
 - MUST self-close tags
 
-| HTML    | self-closing tag	JSX equivalent |
-|---------|----------------------------------|
-| <br>    | <br />                           |
-| <hr>    | <hr />                           |
-| <img>	  | <img />                          |
-| <input>	| <input />                        |
-| <link>  | <link />                         |
+| HTML      | self-closing tag	JSX equivalent |
+|-----------|----------------------------------|
+| `<br>`    | `<br />`                         |
+| `<hr>`    | `<hr />`                         |
+| `<img>`	  | `<img />`                        |
+| `<input>`	| `<input />`                      |
+| `<link>`  | `<link />`                       |
 
 
 ## Babel
