@@ -24,6 +24,8 @@
 - A function that returns a JSX element
 
 ```js
+import React from 'react';
+
 const PostList = (props) => {
   return (
     <ul>
@@ -34,7 +36,7 @@ const PostList = (props) => {
       ))}
     </ul>
   )
-}
+};
 ```
 
 ## Babel
