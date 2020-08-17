@@ -8,7 +8,6 @@
 | tags            | `<h1></h1> `            |	`React.createElement('h1', null)`                 |
 | attributes      | `<img src="foo.png"/>`	| `React.createElement('img', { src: "foo.png" })`  |
 | variables	      | `<h1>{message}</h1>`    | `React.createElement('h1', null, message)`        |
-|
 
 - MUST self-close tags
 
@@ -20,6 +19,23 @@
 | `<input>`	| `<input />`                      |
 | `<link>`  | `<link />`                       |
 
+## Function Component
+
+- A function that returns a JSX element
+
+```js
+const PostList = (props) => {
+  return (
+    <ul>
+      {props.posts.map(post => (
+        <li key={post.id}>
+          {post.body} by: {post.user}
+        </li>
+      ))}
+    </ul>
+  )
+}
+```
 
 ## Babel
 
