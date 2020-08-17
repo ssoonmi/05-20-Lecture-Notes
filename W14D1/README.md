@@ -1,5 +1,12 @@
 # Intro to React
 
+Easy Links:
+
+[React.createElement Demo]
+[React.createElement Examples]
+[React.createElement Practice Problems]
+[React.createElement Practice Solutions]
+
 ## Why React?
 
 React was created by Facebook to create dynamic webpages using JavaScript that
