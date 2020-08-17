@@ -2,10 +2,10 @@
 
 Easy Links:
 
-[React.createElement Demo]
-[React.createElement Examples]
-[React.createElement Practice Problems]
-[React.createElement Practice Solutions]
+- [React.createElement Demo]
+- [React.createElement Examples]
+- [React.createElement Practice Problems]
+- [React.createElement Practice Solutions]
 
 ## Why React?
 
