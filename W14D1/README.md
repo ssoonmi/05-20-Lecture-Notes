@@ -42,6 +42,8 @@ React.createElement(
 
 ### Practice
 
+[React.createElement Examples]
+
 Example 1:
 
 ```html
@@ -129,9 +131,9 @@ const postList = React.createElement(
 );
 ```
 
-[React.createElement Practice]
+[React.createElement Practice Problems]
 
-[React.createElement Solutions]
+[React.createElement Practice Solutions]
 
 [Facebook Image]: ./facebook.jpeg
 [React.createElement Demo]: ./createElement
