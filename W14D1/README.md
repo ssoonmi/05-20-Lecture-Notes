@@ -37,6 +37,7 @@ React.createElement(
   element
 - `props` should be in an object (property names are camelCase)
 - To put a `class` property on an element, use `className` instead of `class`
+- Any arguments passed in after the second will be considered child elements
 
 [React.createElement Demo]
 
