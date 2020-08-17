@@ -1,7 +1,7 @@
 /* setting up the space... */
 .wrapper.grid {
   /* UNCOMMENT THE NEXT LINE TO SEE THIS SECTION */
-  /* display: block; */
+  display: block;
   box-sizing: border-box;
   height: fit-content;
   width: 600px;
