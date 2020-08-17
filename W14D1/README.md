@@ -137,5 +137,6 @@ const postList = React.createElement(
 
 [Facebook Image]: ./facebook.jpeg
 [React.createElement Demo]: ./createElement
-[React.createElement Practice]: ./practice.js
-[React.createElement Solutions]: ./solution.js
+[React.createElement Examples]: ./example.js
+[React.createElement Practice Problems]: ./practice.js
+[React.createElement Practice Solutions]: ./solution.js
