@@ -80,3 +80,9 @@ npx create-react-app <project folder name> --template @appacademy/simple
 import React from 'react';
 import App from './App'; // import from `./App.js`
 ```
+
+## JSX Lecture
+
+[JSX Lecure Code]
+
+[JSX Lecure Code]: ./jsx-lecture
