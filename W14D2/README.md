@@ -85,4 +85,24 @@ import App from './App'; // import from `./App.js`
 
 [JSX Lecure Code]
 
+## JSX Walkthrough
+
+[JSX Walkthrough Code]
+
+Part 1
+- Remove unnecessary boilerplate code that comes with `create-react-app`
+
+Part 2
+- Navigation component
+
+Part 3
+- PetDetails components
+
+Part 4
+- OwnersList components
+
+[JSX Walkthrough Solutions]
+
+[JSX Walkthrough Code]: ./jsx-solutions
+[JSX Walkthrough Solutions]: ./jsx-solutions.zip
 [JSX Lecure Code]: ./jsx-lecture
