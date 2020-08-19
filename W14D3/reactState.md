@@ -4,6 +4,7 @@
 
 * Props are not to be changed by a component, but state is intended to be changed.
 
+* We should only assign a value to `state` if it will be updated in our component. 
 
 
 ## Initializing State
