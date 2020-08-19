@@ -52,3 +52,10 @@
 
 
 
+## Additional Readings:
+
+* [Using CRA Templates](https://open.appacademy.io/learn/js-py---may-2020-online/week-14-may-2020-online/using-custom-cra-templates)
+
+* [Forms in React](https://open.appacademy.io/learn/js-py---may-2020-online/week-14-may-2020-online/forms-in-react)
+
+* [React Documentation](https://reactjs.org/docs/hello-world.html)
