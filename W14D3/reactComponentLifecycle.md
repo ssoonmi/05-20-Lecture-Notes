@@ -48,7 +48,7 @@ A component will update if it receives new props or if the `setState` method is 
 
 ## Unmounting
 
-Just before a class component is removed from the component tree, the `componentWillUnmount` lifecycle method is called.
+Just before a class component is removed from the component tree, the `componentWillUnmount` lifecycle method is called. This is often used for cleaning up any asynchronous functions from our React Component.
 
 
 
