@@ -3,6 +3,7 @@ import React from "react";
 class Stopwatch extends React.Component {
   constructor() {
     super();
+
     this.state = {
       now: 0,
       running: false,
@@ -47,6 +48,7 @@ class Stopwatch extends React.Component {
   };
 
   render() {
+    console.log("Stopwatch#render");
     return (
       <div>
         <p>{(this.state.now - this.state.start) / 100}</p>

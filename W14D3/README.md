@@ -35,15 +35,15 @@
 
 * How to use context, aka the `this` keyword
     - Context is determined by how a function is invoked.
-    - Method style: context is set to the receiver
-    - Function style: context is global or window
-    - Using `.call()` or `.apply()`: We explicitly set the context and give the functions arguments at the same time.
+        1. Method style: context is set to the receiver
+        2. Function style: context is global or window
+        3. Using `.call()` or `.apply()`: We explicitly set the context and give the functions arguments at the same time.
 
 * Binding and context
-    - By using `.bind()` we can set the context of a function.
+    - By using `.bind()` we can explicitly set the context of a function.
 
 * Context and arrow functions
-    - An arrow function will have the same context as the scope it is defined in
+    - An arrow function will have the same context as the scope in which it's defined.
 
 * Recall event handling
     - `event.target`

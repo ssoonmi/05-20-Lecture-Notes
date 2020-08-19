@@ -17,6 +17,9 @@
 
 
 
+
+
+
 ## Mounting
 
 When a class component is being added to the component tree, the following process occurs:
@@ -25,6 +28,9 @@ When a class component is being added to the component tree, the following proce
 2. The render method is called;
 3. React updates the DOM; and
 4. The componentDidMount lifecycle method is called.
+
+
+
 
 
 
@@ -46,9 +52,15 @@ A component will update if it receives new props or if the `setState` method is 
 
 
 
+
+
+
 ## Unmounting
 
 Just before a class component is removed from the component tree, the `componentWillUnmount` lifecycle method is called. This is often used for cleaning up any asynchronous functions from our React Component.
+
+
+
 
 
 
@@ -60,20 +72,20 @@ EX:
 import React from 'react';
 
 class FetchingData extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       repositories: [],
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const url = `https://api.github.com/users/${this.props.gitHubUsername}/repos`;
 
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => this.setState({ repositories: data }));
+    const res = await fetch(url);
+    const data = await res.json();
+    this.setState({ repositories: data });
   }
 
   render() {

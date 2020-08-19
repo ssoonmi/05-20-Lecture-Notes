@@ -7,6 +7,8 @@
 * To access props within a class component, use the `this.props` property
 
 * If your class component defines a `constructor` method that needs access to `props`, define a `props` parameter.
+    - In the contructor, be sure to call the `super` method and pass in the `props`
+
 EX:
 ```javascript
 class Message extends React.Component {
@@ -23,6 +25,4 @@ class Message extends React.Component {
   }
 }
 ```
-
-* In the contructor, be sure to call the `super` method and pass in the `props`
 

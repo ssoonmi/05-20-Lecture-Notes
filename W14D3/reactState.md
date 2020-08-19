@@ -1,3 +1,5 @@
+
+
 # React State
 
 * State is data that's internal to a component.
@@ -7,9 +9,17 @@
 * We should only assign a value to `state` if it will be updated in our component. 
 
 
+
+
+
+
+
+
+
 ## Initializing State
 
 * When creating a stateful class component, you can use a class `constructor` method to initialize the `this.state` object.
+
 Ex:
 ```javascript
 import React from 'react';
@@ -20,8 +30,8 @@ class RandomQuote extends React.Component {
 
     const quote = 'May the Force be with you.';
 
-    this.state = {
-      quote: quote
+    this.state = { 
+      quote: quote 
     };
   }
 
@@ -37,8 +47,6 @@ class RandomQuote extends React.Component {
 
 ```
 
-
-
 ## Updating State
 
 * The `this.setState` method accepts an object containing the state properties to update.
@@ -52,10 +60,10 @@ class RandomQuote extends React.Component {
 Ex:
 ```javascript
 changeQuote = () => {
-  const newQuote= 'My favorite state is non-Neutonian fluid.'
+  const newQuote= 'My favorite state is non-Newtonian fluid.'
 
-  this.setState({
-    quote: newQuote
+  this.setState({ 
+    quote: newQuote 
   });
 }
 ```

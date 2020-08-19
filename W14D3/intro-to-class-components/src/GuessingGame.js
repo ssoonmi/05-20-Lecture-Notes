@@ -10,7 +10,8 @@ class GuessingGame extends React.Component {
       solved: false
     };
 
-    console.log('Number to Guess: ', this.state.numberToGuess);
+    // this.makeTheGuess.bind(this); 
+    // Can also use bind method insteaad of fat arrow
   }
 
   generateRandomNumber() {
@@ -18,6 +19,7 @@ class GuessingGame extends React.Component {
   }
 
   makeTheGuess = () => {
+    // debugger
     if (this.state.guess === this.state.numberToGuess) {
       this.setState({ 
         message: 'You got it right!',
@@ -31,8 +33,15 @@ class GuessingGame extends React.Component {
   }
 
   getInputValue = e => {
+    // debugger
+    // If our input is an empty string, Number.parseInt("") = NaN
+    // However, out input field is set to type="number"
+    // And if an input field with type="number" has the value NaN, it will through an error.
+    // To avoid this, we use a ternary operator to see if e.target is truthy or falsey ("" is falsey)
+      // and if e.target.value is falsey, we explicitly set it to "" rather than NaN.
+    const guess = e.target.value ? Number.parseInt(guess) : "";
     this.setState({
-      guess: Number.parseInt(e.target.value),
+      guess: guess,
     });
   }
 
@@ -52,7 +61,7 @@ class GuessingGame extends React.Component {
         <input value={this.state.guess} type="number" onChange={this.getInputValue} />
         <button onClick={this.makeTheGuess}>Make your guess</button>
         <p>{this.state.message}</p>
-        {(this.state.guess === this.state.numberToGuess) && this.state.solved ?
+        {this.state.solved ?
           <button onClick={this.reset}>Play again</button> :
           ''}
       </>
