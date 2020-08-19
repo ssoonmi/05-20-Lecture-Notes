@@ -5,8 +5,12 @@ class GuessingGame extends React.Component {
     super();
 
     this.state = {
+      guess: '',
       numberToGuess: this.generateRandomNumber(),
+      solved: false
     };
+
+    console.log('Number to Guess: ', this.state.numberToGuess);
   }
 
   generateRandomNumber() {
@@ -15,7 +19,10 @@ class GuessingGame extends React.Component {
 
   makeTheGuess = () => {
     if (this.state.guess === this.state.numberToGuess) {
-      this.setState({ message: 'You got it right!' });
+      this.setState({ 
+        message: 'You got it right!',
+        solved: true 
+      });
     } else if (this.state.guess < this.state.numberToGuess) {
       this.setState({ message: 'Try a bigger number...' });
     } else {
@@ -45,7 +52,7 @@ class GuessingGame extends React.Component {
         <input value={this.state.guess} type="number" onChange={this.getInputValue} />
         <button onClick={this.makeTheGuess}>Make your guess</button>
         <p>{this.state.message}</p>
-        {this.state.guess === this.state.numberToGuess ?
+        {(this.state.guess === this.state.numberToGuess) && this.state.solved ?
           <button onClick={this.reset}>Play again</button> :
           ''}
       </>
