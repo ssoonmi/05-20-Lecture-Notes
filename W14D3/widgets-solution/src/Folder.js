@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Headers = ({ titles, currentTab, selectTab }) => {
+const Headers = ({titles, currentTab, selectTab }) => {
+  // We can use the above object destructuring for props where we define parameters.
+  // Or we can use the below object destructuring and just have (props) as a parameter.
+  // const { titles, currentTab, selectTab } = props;
+
   const handleClick = (e) => {
     const idx = parseInt(e.target.id, 10);
     selectTab(idx);
@@ -20,7 +24,9 @@ const Headers = ({ titles, currentTab, selectTab }) => {
       </li>
     );
   });
-  
+
+  // Uncomment the below debugger for the debugger waterfall
+  // debugger;
   return (
     <ul className='tab-header'>
       {tabs}
@@ -34,15 +40,21 @@ class Folder extends React.Component {
     this.state = {
       currentTab: 0
     };
+    // Uncomment the below debugger for the debugger waterfall
+    // debugger;
   }
 
   selectTab = (num) => {
+    // Uncomment the below debugger for the debugger waterfall
+    // debugger;
     this.setState({ currentTab: num });
   }
 
   render() {
     const folder = this.props.folders[this.state.currentTab];
-    const titles = this.props.folders.map((folder) => folder.title);
+    const titles = this.props.folders.map(folder => folder.title);
+    // Uncomment the below debugger for the debugger waterfall
+    // debugger;
 
     return (
       <div>

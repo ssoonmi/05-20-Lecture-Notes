@@ -21,13 +21,17 @@ const folders = [
   { title: 'three', content: 'Third folder here' }
 ];
 
-const Root = () => (
-  <div>
-    <Clock />
-    <Folder folders={folders} />
-    <Weather />
-    <AutoComplete names={names} />
-  </div>
-);
+const Root = () => {
+  // Uncomment the below debugger for the debugger waterfall
+  // debugger;
+  return(
+    <div>
+      <Clock />
+      <Folder folders={folders} />
+      <Weather />
+      <AutoComplete names={names} />
+    </div>
+  )
+};
 
 export default Root;
