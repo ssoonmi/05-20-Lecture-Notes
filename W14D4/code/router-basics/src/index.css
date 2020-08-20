@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap');
+
+body {
+  font-family: 'Open Sans';
+}
+
+.detail-pane {
+  flex: 1 0 0px;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.list-detail-layout {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.list {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.list-item {
+  padding: .5em 1em;
+}
+
+.list-item a {
+  color: #333;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+a.is-selected {
+  color: green;
+  font-weight: 700;
+}
