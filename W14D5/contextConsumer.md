@@ -35,7 +35,10 @@ Ex:
 
     render (
       return (
-        // some JSX
+        <div>
+          {this.context.relevant} // We are able to access value on this.context
+          // some JSX
+        </div>
       )
     )
   }
