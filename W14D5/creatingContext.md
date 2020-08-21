@@ -15,12 +15,3 @@ const SampleContext = createContext();
 export default SampleContext;
 ```
 
-
-
-
-
-## Updating the Context from a nested component
-
-
-
-
