@@ -20,19 +20,7 @@ export default SampleContext;
 
 
 
-## Adding a Provider to the App Component
 
-The `Provider` component expects a `value` property to set the `context` passed throughout your application. 
-You need to wrap your child components with provider component tags to give them access to the `context`.
-
-Ex:
-```javascript
-<Sample.Provider value={/* some value */}>
-  <ChildComponent />
-</Sample.Provider>
-```
-
-Now, our ChildComponent and ALL of it's children will have the ability to access whatever is stored under `value` via `context`.
 
 
 
