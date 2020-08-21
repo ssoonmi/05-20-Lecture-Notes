@@ -27,7 +27,7 @@ React Context should NOT be used for:
 
 [PupContext Homework Solutions]
 
-[`createContext`]
+[`React.createContext`]
 
 [`Context.Provider`]
 
