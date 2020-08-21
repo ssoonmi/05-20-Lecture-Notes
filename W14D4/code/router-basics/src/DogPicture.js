@@ -54,10 +54,15 @@ class DogPicture extends React.Component {
 
   render() {
     return (
-      <div 
-        className="detail-pane" 
-        style={this.getImageForPane()} 
-        onClick={() => this.props.history.push(`/breeds/${this.props.match.params.breed}`)}
+      <div
+        className="detail-pane"
+        style={this.getImageForPane()}
+        onClick={
+          () => (
+            // this.setState(); 
+            this.props.history.push(`/breeds/${this.props.match.params.breed}`)
+          )
+        }
       >
         {this.getError()}
       </div>

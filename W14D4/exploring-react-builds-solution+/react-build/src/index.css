@@ -1,0 +1,13 @@
+/* TODO Add site wide styles */
+.bleu {
+  width: 250px;
+}
+
+.active {
+  font-weight: 900;
+}
+
+.nav-link {
+  display: block;
+  height: fit-content;
+}
