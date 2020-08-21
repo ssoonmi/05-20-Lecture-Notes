@@ -19,23 +19,6 @@ export default SampleContext;
 
 
 
-
-
-
-
-
-
-
-## Adding a Consumer to a nested component
-
-
-
-
-
-
-
-
-
 ## Updating the Context from a nested component
 
 

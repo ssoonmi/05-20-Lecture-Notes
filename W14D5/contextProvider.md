@@ -4,14 +4,18 @@
 The `Provider` component expects a `value` property to set the `context` passed throughout your application. 
 You need to wrap your child components with provider component tags to give them access to the `context`.
 
+
 Ex:
 ```javascript
-<Sample.Provider value={/* some value */}>
+<SampleContext.Provider value={/* some value */}>
   <ChildComponent />
-</Sample.Provider>
+</SampleContext.Provider>
 ```
 
 Now, our ChildComponent and ALL of it's children will have the ability to access whatever is stored under `value` via `context`.
+
+We must import `SampleContext` (or whatever we've named the context) into our files.
+
 
 
 
@@ -32,6 +36,8 @@ Then that component is a good choice to wrap with a provider component.
 
 
 
+
+
 ## How do we refactor a component to be wrapped by a Provider?
 
 1. Since our component, `MyComponent`, wold need to have it's own `state`, it will be a class component.
@@ -43,6 +49,10 @@ Then that component is a good choice to wrap with a provider component.
 4. In our `-WithContext` component, any relevant events should be set as key-value pairs in the component's state.
 
 4. In the `render` method of our new class component, `MyComponentWithContext`, we will return our original component, `MyComponent`, wrapped by a provider component.
+
+
+
+
 
 
 ## Example:
