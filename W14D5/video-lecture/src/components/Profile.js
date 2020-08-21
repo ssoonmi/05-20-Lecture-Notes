@@ -9,11 +9,12 @@ class Profile extends React.Component {
     };
   }
 
-  updateSelection = (e) => {
+  updateSelection = e => {
     this.setState({ color: e.target.value });
   };
 
-  handleClick = (e) => {
+  handleClick = e => {
+    debugger;
     e.preventDefault();
     this.props.updateContext(this.state.color);
   };
