@@ -15,15 +15,23 @@ We must import `SampleContext` (or whatever we've named the context) into our fi
 
 
 
+
+
+
+
+
 ## static contextType = SampleContext;
 
 By creating this static instance method in our class component, we can now access all values in `SampleContext` under the `this.context` property.
 
 Ex:
 ```javascript
+  import React from 'react';
+  import SampleContext from '../contexts/SampleContext';
+
   class ChildComponent extends React.Component {
-    static contextType = SampleContext
-    // we now have access to all values under context via the this.context property
+    static contextType = SampleContext;
+    // we now have access to all values under context via the this.context property or attribute
 
     render (
       return (
@@ -42,6 +50,8 @@ Ex:
 
 
 
+
+
 ## SampleContext.Consumer
 
 1. Where we have our `ChildComponent`, we will create a functional component named using the `-WithContext` style, Ii.e. `ChildComponentWithContext`. 
@@ -51,16 +61,30 @@ Ex:
 3. Inside of that wrapper `SampleContext.Consumer` component we will have a function which takes `value` as an argument (the argument can be any name, but `value` is used by convention). `value` will have access to all values contained in context. This function will return our `ChildComponent` with any relevant values passed as `props`.
 
 
+
 EX:
 ```javascript
-const ChildComponentWithContext = () => {
-  return (
-    <SampleContext.Consumer>
-      {(value) => <ChildComponent value={value} />}
-    </SampleContext.Consumer>
-  );
-};
+  import React from 'react';
+  import SampleContext from '../contexts/SampleContext';
 
-export default ChildComponentWithContext;
+  const ChildComponent = props => {
+
+    return (
+      <div>
+        {props.relevant}
+        // Some JSX
+      </div>
+    )
+  }
+
+  const ChildComponentWithContext = () => {
+    return (
+      <SampleContext.Consumer>
+        {value => <ChildComponent relevant={value.relevant} />}
+      </SampleContext.Consumer>
+    );
+  };
+
+  export default ChildComponentWithContext;
 ```
 

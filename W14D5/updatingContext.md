@@ -1,9 +1,9 @@
 
 # Updating the Context from a nested component
 
-It's a common need to update the global `context` from a child consumer component. 
+It's a common need to update the `context` from a child consumer component. 
 
-From the `context` update fired from the child component, your application will re-render ALL of the nested components that depend on that data.
+When a function stored in the `context` triggers an update and is fired from the child component, your application will re-render ALL of the nested components that depend on that data, ie. Child Components of the Provider.
 
 We will simply need to invoke the function defined in our `Provider` which was stored in context and designed to update context.
 
@@ -23,19 +23,23 @@ Ex:
     }
 
     return (
-      // Some JSX
+      <div onClick={handleClick}>
+        // Some JSX
+      </div>
     )
   }
 
   const ChildComponentWithContext = () => {
     return (
       <SampleContext.Consumer>
-        {(value) => <ChildComponent value={value} />}
+        {(value) => <ChildComponent handleEvent={value.handleEvent} />}
       </SampleContext.Consumer>
     );
   };
 
 
+
+---------------------------------------------------------------
 
 
 
@@ -47,6 +51,7 @@ Ex:
     return (
       <div>
         {props.relevant}
+        <SomeChildComponent/>
       <div>
     )
   };
@@ -62,6 +67,7 @@ Ex:
 
     handleEvent = () => {
       // Logic to handle some event
+      this.setState({ // some Object });
     }
 
     render() {
