@@ -1,4 +1,4 @@
-# LOs
+# React Context LOs
 
 * Use Context to share and manage global information within a React application
 * Create a wrapper component with Context.Provider to set a component's default context
@@ -25,10 +25,28 @@ React Context should NOT be used for:
 * Anything which is loaded when scrolling a page
 * Small or frequent updates to a page
 
+[PupContext Homework Solutions]
 
+[`createContext`]
+
+[`Context.Provider`]
+
+[`Context.Consumer`]
+
+[Updating Context Value]
 
 
 
 ## Command to set up a simple React App
 
 * npx create-react-app context-to-do-list --template @appacademy/simple
+
+[PupContext Homework Solutions]: ./react-redux-context-solution
+
+[`React.createContext`]: ./creatingContext.md
+
+[`Context.Provider`]: ./contextProvider.md
+
+[`Context.Consumer`]: ./contextConsumer.md
+
+[Updating Context Value]: ./updatingContext.md
