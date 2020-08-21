@@ -66,7 +66,12 @@ Ex:
 
     render() {
       return(
-        <SampleContext.Provider value={this.state}>
+        <SampleContext.Provider 
+          value = {
+            this.state.relevant
+            this.state.handleEvent
+          }
+        >
           <MyComponent relevant={this.state.relevant}/>
         </SampleContext.Provider>
       )

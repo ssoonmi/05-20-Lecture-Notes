@@ -2,9 +2,10 @@
 # Adding a Consumer to a nested component
 
 We will provide child components access to the values in context via two options:
-1. `SampleContext.Consumer`
-or in class components we can use the instance method:
-2. `static contextType = SampleContext;`
+1. `SampleContext.Consumer` - 
+  `SampleContext.Consumer` can be used with both functional and class components.
+2. `static contextType = SampleContext;` - 
+  In class components we can use the instance method `static contextType = SampleContext;`.
 
 By providing values via `SampleContext.Consumer` or `static contextType = SampleContext;` we will not have to thread props to nested components.
 

@@ -113,7 +113,12 @@ REFACTORED WITH CONTEXT:
 
     render() {
       return(
-        <Sample.Provider value={this.state}>
+        <Sample.Provider 
+          value = {
+            relevant: this.state.relevant, 
+            handleEvent:this.state.handleEvent
+          }
+        >
           <MyComponent relevant={this.state.relevant}/>
         </Sample.Provider>
       )
