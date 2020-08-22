@@ -8,14 +8,17 @@ class Profile extends React.Component {
       color: "",
     };
   }
+  // static contextType = ThemeContext;
 
   updateSelection = e => {
+    this.context.color; // value of the provider
     this.setState({ color: e.target.value });
   };
 
   handleClick = e => {
     debugger;
     e.preventDefault();
+    // this.context.updateContext(this.state.color);
     this.props.updateContext(this.state.color);
   };
 
@@ -42,4 +45,5 @@ const ProfileWithContext = () => {
   );
 };
 
+// export default Profile;
 export default ProfileWithContext;

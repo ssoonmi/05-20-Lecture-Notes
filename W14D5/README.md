@@ -41,6 +41,17 @@ React Context should NOT be used for:
 
 * npx create-react-app context-to-do-list --template @appacademy/simple
 
+
+## [Assessment Prep]
+
+
+## Project Solutions
+
+[Context To Do List Solutions]
+
+[Twitter Revisited Solutions]
+
+
 [PupContext Homework Solutions]: ./react-redux-context-solution
 
 [`React.createContext`]: ./creatingContext.md
@@ -50,3 +61,9 @@ React Context should NOT be used for:
 [`Context.Consumer`]: ./contextConsumer.md
 
 [Updating Context Value]: ./updatingContext.md
+
+[Assessment Prep]: ./assessment-prep.md
+
+[Context To Do List Solutions]: ./context-to-do-list-solution
+
+[Twitter Revisited Solutions]: ./twitter-revisited-solution
