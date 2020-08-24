@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "petrack_app",
+    "password": "petrack_app",
+    "database": "petrack_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  },
+  "test": {
+    "username": "petrack_app",
+    "password": "petrack_app",
+    "database": "petrack_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  },
+  "production": {
+    "username": "petrack_app",
+    "password": "petrack_app",
+    "database": "petrack_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  }
+}

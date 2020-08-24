@@ -1,0 +1,24 @@
+extends layout.pug
+
+block main
+  h1.uk-heading-small= listTitle
+  if error
+    .uk-alert-danger(uk-alert)
+      p= error
+  else
+    if recipes
+      .uk-grid-small.uk-grid-match.uk-child-width-1-4(uk-grid)
+        each recipe, i in recipes
+          - var cardback = 'uk-card-default'
+          if i % 3 === 0
+            - cardback = 'uk-card-primary'
+          if i % 3 === 1
+            - cardback = 'uk-card-secondary'
+          a.undecorated(href="/recipes/" + recipe.id)
+            .uk-card.uk-card-hover.uk-card-body.uk-flex.uk-flex-column.uk-flex-center(class=cardback)
+              h3.uk-card-title= recipe.title
+              p= recipe.updated
+    else
+      div(uk-alert)
+        h3 You have no recipes
+        p Why don't you go and #[a(href="/recipes/new") make one]!

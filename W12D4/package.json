@@ -1,0 +1,17 @@
+{
+  "name": "W12D4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jwt-demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}

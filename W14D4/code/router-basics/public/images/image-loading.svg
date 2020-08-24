@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(0.428571,0,0,1,0,0)">
+        <rect x="0" y="0" width="1400" height="600"/>
+    </g>
+    <g transform="matrix(1,0,0,1,185.061,307.793)">
+        <g id="Artboard11" serif:id="Artboard1">
+            <g>
+                <text x="0px" y="0px" style="font-family:'OpenSans', 'Open Sans', sans-serif;font-size:30px;fill:white;">Image Loading...</text>
+            </g>
+        </g>
+    </g>
+</svg>

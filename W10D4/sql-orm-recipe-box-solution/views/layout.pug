@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="google" content="notranslate")
+    meta(http-equiv="Content-Language" content="en")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="/assets/uikit.min.css")
+    link(rel="stylesheet", href="/assets/site.css")
+    script(src="/assets/uikit.min.js")
+    script(src="/assets/uikit-icons.min.js")
+    title Recipe Box
+  body
+    header
+      nav.uk-navbar-container.uk-margin(uk-navbar)
+        .uk-navbar-left
+          a.uk-navbar-item.uk-logo(href="/") a/A Recipe Box
+          ul.uk-navbar-nav
+            li
+              a(href="/recipes/new")
+                span.uk-icon.uk-margin-small-right(uk-icon="icon: album")
+                | Add a Recipe
+        .uk-navbar-right
+          .uk-navbar-item
+            form(action="/recipes")
+              input.uk-input.uk-form-width-small(type="search" name="term" placeholder="Search" required)
+              button.uk-button.uk-button-default Find a recipe
+    main.uk-container
+      block main
+    footer

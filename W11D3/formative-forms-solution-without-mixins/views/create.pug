@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  h1= title
+  include includes/form_errors
+  form(action='/create' method='post')
+    include includes/basic_info
+    div
+      input(type='submit' value="Create User" class='btn btn-primary') 

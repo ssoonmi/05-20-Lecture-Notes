@@ -1,0 +1,44 @@
+/* setting up the space... */
+.wrapper.grid {
+  /* UNCOMMENT THE NEXT LINE TO SEE THIS SECTION */
+  display: block;
+  box-sizing: border-box;
+  height: fit-content;
+  width: 600px;
+}
+
+.grid__container, .sidebar {
+  padding-left: 5px;
+  list-style: none;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header"
+    "main main sidebar"
+}
+
+.grid__container__item {
+  margin: 10px;
+  border: 5px dashed black;
+  padding: 5px;
+  background-color: greenyellow;
+}
+
+.grid__container__item.one {
+  grid-area: header;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  justify-self: center;
+}
+.grid__container__item.two {
+  grid-area: main;
+  justify-self: center;
+}
+.grid__container__item.three {
+  grid-area: sidebar;
+  justify-self: right;
+}

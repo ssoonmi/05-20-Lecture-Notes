@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box vs. FlexBox vs. Grid</title>
+    <meta name="description" content="Box vs. FlexBox vs. Grid">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/box.css">
+    <link rel="stylesheet" href="css/positioning.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <link rel="stylesheet" href="css/mediaQueries.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/sticky.css">
+  </head>
+  <main>
+    <header class="title" ><h1 class="title__h1">Display Properties</h1></header>
+    <body>
+      <div class="wrapper box">
+        <h2 class="box__h2">Box Model</h2>
+        <div>
+          <p>Box Container</p>
+          <ul class="box__container">
+            <li class="box__container__li ele">Element One</li>
+            <li class="box__container__li ele">Element Two</li>
+            <li class="box__container__li ele">Element Three</li>
+            <li class="box__container__li ele">Element Four</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper position">
+        <h2 class="position__h2">Positioning</h2>
+        <p>Positioning Container</p>
+        <div class="position__container">
+          <p  class="position__container__item">Item</p>
+        </div>
+      </div>
+      <div class="wrapper mediaQuery">
+        <h2 class="mediaQuery__h2">Media Queries</h2>
+        <p>Media Queries Container</p>
+        <ul class="mediaQuery__container">
+          <li class="mediaQuery__container__item">A</li>
+          <li class="mediaQuery__container__item">B</li>
+          <li class="mediaQuery__container__item">C</li>
+          <li class="mediaQuery__container__item">D</li>
+        </ul>
+      </div>
+      <div class="wrapper flexbox">
+        <h2 class="flexbox__h2">FlexBox</h2>
+        <div>
+          <ul class="flexbox__container">
+            <li class="flexbox__container__item one">Element One</li>
+            <li class="flexbox__container__item two">Element Two</li>
+            <li class="flexbox__container__item three">Element Three</li>
+            <li class="flexbox__container__item four">Element Four</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper grid">
+        <h2 class="grid__h2">Grid</h2>
+        <div>
+          <ul class="grid__container">
+            <li class="grid__container__item one">
+              <h2>Header</h2>
+            </li>
+            <li class="grid__container__item two">
+              <h3>Main</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugit hic doloribus accusamus commodi quia reiciendis iste facilis eius eum laborum numquam quaerat ex, eligendi blanditiis debitis totam repellendus asperiores?</p>
+            </li>
+            <li class="grid__container__item three">
+              <h3>NavBar</h3>
+              <ul class="sidebar">
+                <li><a href="#">Here.</a></li>
+                <li><a href="#">THere!</a></li>
+                <li><a href="#">Where?</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </body>
+  </main>
+</html>

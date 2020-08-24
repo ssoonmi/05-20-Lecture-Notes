@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.clue {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  display: inline-block;
+  width: 300px;
+}
+
+.clue__title {
+  background-color: lightcoral;
+  color: white;
+  font-size: 1.25em;
+  padding: .5em;
+  margin: 0;
+}
+
+.clue__question {
+  font-size: 1em;
+  padding: .5em;
+}
+
+.clue__category {
+  font-size: .5em;
+  padding: 1em;
+}
+
+.clue__amount {
+  background-color: green;
+  padding: .5em;
+  text-align: center;
+  color: white;
+}

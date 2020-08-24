@@ -1,0 +1,20 @@
+extends ../layout.pug
+
+block content
+  block description
+  table
+    thead
+      tr
+        th Label
+        th Noodle
+        th Sauce
+        th Taste (0-10)
+        th Description
+    tbody
+      each pasta in pastas
+        tr
+          td= pasta.label
+          td: a(href="/noodle/" + pasta.Noodle.id)= pasta.Noodle.name
+          td: a(href="/sauce/" + pasta.Sauce.id)= pasta.Sauce.name
+          td= pasta.taste
+          td= pasta.description

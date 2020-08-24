@@ -47,4 +47,4 @@ console.log(recursiveIsEven(-9));
 // 3rd frame,     return from 4th frame = false,    returns false,     popped off the stack
 // 2nd frame,     return from 3rd frame = false,    returns false,     popped off the stack
 // 1st frame,     return from 2nd frame = false,    returns false,     popped off the stack
-// Final return value:
+// Final return value: false

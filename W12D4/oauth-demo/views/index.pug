@@ -1,0 +1,11 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title
+  body
+    h1= loggedIn?  "Email: " + email : "Sign In"
+    if (loggedIn)
+      h2 Id: #{id}
+    else
+      a(href= href) Sign In with Google

@@ -1,0 +1,39 @@
+/* setting up the space... */
+.wrapper.box {
+  /* UNCOMMENT THE NEXT LINE TO SEE THIS SECTION */
+  /* display: block; */
+  padding: 5px;
+}
+
+.box__container {
+  display: block;
+  padding: 20px;
+  background-color: yellow;
+}
+/*************** space is set up ***************/
+
+/*************** box-sizing ***************/
+/* leave me uncommented  */
+.title__h1 {
+  padding: 20px;
+  border: 10px solid black;
+  /* margin: 20px; */
+  /* width: 350px; */
+  /* box-sizing: border-box; */
+}
+
+/*************** Box-Model Demo ***************/
+.box__container__li {
+  border: 5px dashed black;
+  background-color: greenyellow;
+  text-align: center;
+  
+  /* Play with the styles below */
+  /* display: block; */
+  /* margin: 0 auto; */
+  /* box-sizing: border-box; */
+  /* width: 150px; */
+  /* height: 150px; */
+  /* padding: 15px; */
+  /* margin: 25px; */
+}

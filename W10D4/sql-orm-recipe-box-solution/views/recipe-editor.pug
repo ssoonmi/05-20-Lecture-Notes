@@ -1,0 +1,76 @@
+extends layout.pug
+
+block main
+  a(href="/") Back to latest recipes
+  if recipe
+    | &nbsp;|&nbsp;
+    a(href="/recipes/" + recipe.id) Cancel edit
+  if error
+    .uk-alert-danger(uk-alert)
+      p= error
+  else
+    if recipe || recipeError
+      if recipe
+        h1.uk-heading-small= recipe.title
+        .uk-text-meta Created on #{recipe.created}
+        .uk-text-meta Updated on #{recipe.updated}
+
+        if deletionError
+          .uk-alert-danger(uk-alert)
+            p= deletionError
+        form.uk-margin-top(method="post" action="/recipes/" + recipe.id + "/delete")
+          button.uk-button.uk-button-danger(type="submit") Delete this recipe
+      else
+        .uk-alert-danger(uk-alert)
+          p= recipeError
+
+      h2.uk-text-lead Ingredients
+      each ingredient in recipe.Ingredients
+        div
+          span.ingredient-amount= ingredient.amount
+          span.ingredient-amount-name= ingredient.MeasurementUnit.name
+          span.ingredient-food-stuff.uk-text-bold= ingredient.foodStuff
+      else
+        p No ingredients. Add some in the form below
+
+      h3.uk-text-lead New ingredient form
+      if ingredientInsertError
+        .uk-alert-danger(uk-alert)
+          p Insert error
+          p= ingredientInsertError
+      if measures
+        form.uk-flex(method="post" action="/ingredients")
+          input(type="hidden" name="recipeId" value=recipe.id)
+          input.uk-input.no-expand(required type="number" name="amount" placeholder="amount")
+          select.uk-select.no-expand(required name="measurementUnitId")
+            option(value="") Choose...
+            each measure in measures
+              option(value=measure.id)= measure.name
+          input.uk-input.expand(required type="text" name="foodStuff" placeholder="food stuff")
+          button.uk-button.uk-button-primary.no-expand(type="submit") Add
+      else
+        .uk-alert-danger(uk-alert)
+          p
+            | Could not load measures. You may need to look at the measurement
+            | repository
+
+      h2.uk-text-lead Instructions
+      if recipe.Instructions && recipe.Instructions.length
+        ol
+          each instruction in recipe.Instructions
+            li.instructions-list__list-item= instruction.specification
+      else
+        p No instructions. Add one below
+      h3.uk-text-lead New instruction form
+      if instructionInsertError
+        .uk-alert-danger(uk-alert)
+          p Insert error
+          p= instructionInsertError
+      form.uk-flex(method="post" action="/instructions")
+        input(type="hidden" name="recipeId" value=recipe.id)
+        input.uk-input.expand(required type="text" name="specification" placeholder="instruction text")
+        button.uk-button.uk-button-primary.no-expand(type="submit") Add
+    else
+      div(uk-alert)
+        h3 That recipe doesn't exist
+        p Why don't you go and #[a(href="/recipes/new") make one]!

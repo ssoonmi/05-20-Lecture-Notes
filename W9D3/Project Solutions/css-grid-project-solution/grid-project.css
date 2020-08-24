@@ -1,0 +1,455 @@
+/***** Main Body and Nav Menu Styles *****/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.nyt-masthead {
+  text-align: center;
+  margin: 20px auto 6px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.navbar ul {
+  margin: 10px 0 5px;
+}
+
+.navbar li {
+  display: inline;
+  padding-right: 7px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  margin: 10px 0 0;
+  padding-top: 5p;
+  color: lightgray;
+  opacity: 0.3;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/***** PHASE 1 - Main Grid Styles *****/
+
+.grid__section {
+  border: 1px solid #333333;
+}
+
+.grid__section-1 {
+  grid-area: header;
+}
+
+.grid__section-2 {
+  grid-area: main;
+}
+
+.grid__section-3 {
+  grid-area: sidebar;
+}
+
+.grid__section-4 {
+  grid-area: other-news;
+}
+
+.grid__section-5 {
+  grid-area: smarter-living;
+}
+
+.grid__section-6 {
+  grid-area: features;
+}
+
+.grid__section-7 {
+  grid-area: discovery;
+}
+
+.grid__section-8 {
+  grid-area: most-popular;
+}
+
+.grid__section-9 {
+  grid-area: news;
+}
+
+.grid__section-10 {
+  grid-area: footer;
+}
+
+/* setting up the grid__container */
+.grid__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "main sidebar"
+    "other-news other-news"
+    "smarter-living smarter-living"
+    "features features"
+    "discovery discovery"
+    "most-popular most-popular"
+    "news news"
+    "footer footer"
+  ;
+}
+
+/***** PHASE 2 - Flex Styling the header *****/
+
+.flex-container-1 {
+  display: flex;
+  height: 85px;
+}
+
+.flex__item {
+  /* respects height, width, and container's responsive dimensions */
+  display: inline-block;
+  height: inherit;
+}
+
+.flex__item-1,
+.flex__item-2,
+.flex__item-3 {
+  flex-grow: 2;
+}
+.flex__item-4,
+.flex__item-5 {
+  flex-grow: 1;
+}
+
+/****** PHASE 3 - Nested Grid Styles ******/
+
+.grid__item-2-1 {
+  grid-area: g2-1;
+  height: 480px;
+}
+
+.grid__item-2-2 {
+  grid-area: g2-2;
+  height: 200px;
+}
+
+.grid__item-2-3 {
+  grid-area: g2-3;
+  height: 200px;
+}
+
+.grid__item-2-4 {
+  grid-area: g2-4;
+  height: 150px;
+}
+
+.grid__item-2-5 {
+  grid-area: g2-5;
+  height: 350px;
+}
+
+.grid__item-2-6 {
+  grid-area: g2-6;
+  height: 480px;
+}
+
+.grid__item-2-7 {
+  grid-area: g2-7;
+  height: 200px;
+}
+
+.grid__item-2-8 {
+  grid-area: g2-8;
+  height: 200px;
+}
+
+.grid__item-2-9 {
+  grid-area: g2-9;
+  height: 200px;
+}
+
+/* setting up the sub-grid */
+.grid__section-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "g2-1 g2-1 g2-1 g2-1 g2-1"
+    "g2-2 g2-2 g2-3 g2-3 g2-3"
+    "g2-4 g2-4 g2-4 g2-4 g2-4"
+    "g2-5 g2-5 g2-5 g2-5 g2-5"
+    "g2-6 g2-6 g2-6 g2-6 g2-6"
+    "g2-7 g2-7 g2-7 g2-8 g2-8"
+    "g2-9 g2-9 g2-9 g2-9 g2-9"
+  ;
+}
+
+.flex__item, .grid__item {
+  border: 1px solid #333333;
+}
+
+/* Grid Section 3 - Nested Grid Styles */
+
+.grid__item-3-1 {
+  grid-area: g3-1;
+  height: 200px;
+}
+
+.grid__item-3-2 {
+  grid-area: g3-2;
+  height: 290px;
+}
+
+ .grid__item-3-3 {
+  grid-area: g3-3;
+  height: 760px;
+}
+
+.grid__item-3-4 {
+  grid-area: g3-4;
+  height: 760px;
+}
+
+.grid__item-3-5 {
+  grid-area: g3-5;
+  height: 330px;
+}
+
+.grid__item-3-6 {
+  grid-area: g3-6;
+  height: 240px;
+}
+
+.grid__item-3-7 {
+  grid-area: g3-7;
+  height: 240px;
+}
+
+.grid__section-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "g3-1 g3-1"
+    "g3-2 g3-2"
+    "g3-3 g3-4"
+    "g3-5 g3-5"
+    "g3-6 g3-6"
+    "g3-7 g3-7"
+  ;
+}
+
+
+/****** PHASE 4 - Finishing the last grid sections ******/
+/* Grid Section 4 - Nested Grid Styles */
+
+.grid__section-4 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 590px;
+}
+
+.grid__item-4-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 6;
+}
+
+.grid__item-4-2 {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.grid__item-4-3 {
+  grid-column: 3 / span 2;
+  grid-row: 3 / span 2;
+}
+
+.grid__item-4-4 {
+  grid-column: 3 / span 2;
+  grid-row: 5 / span 2;
+}
+
+
+/* Grid Section 5 - Flex Styles */
+
+.grid__section-5 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 273px;
+}
+
+.grid__section-5 > .grid__item {
+  width: 20%;
+}
+
+/* Grid Section 6 - Nested Grid Styles */
+
+.grid__section-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 712px;
+}
+
+.grid__item-6-1 {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 2;
+}
+
+/* Grid Section 7 - Nested Grid Styles */
+
+.grid__section-7 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 400px;
+}
+
+.grid__item-7-1 {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.grid__item-7-2 {
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.grid__item-7-3 {
+  grid-column: 5 / span 3;
+  grid-row: 1 / span 1;
+}
+
+.grid__item-7-4 {
+  grid-column: 5 / span 3;
+  grid-row: 2 / span 2;
+}
+
+/* Grid Section 8 - Nested Grid Styles */
+
+.grid__section-8 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 400px;
+}
+
+.grid__item-8-1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-8-2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-8-3 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-8-4 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-8-5 {
+  grid-column: 5 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.grid__item-8-6 {
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 1;
+}
+
+/* Grid Section 9 - Flex Styles */
+
+.grid__section-9 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid__section-9 > .grid__item {
+  width: 20%;
+  height: 360px;
+}
+
+/* Grid Section 10 - Nested Grid Styles */
+
+.grid__section-10 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 213px;
+  grid-template-rows: repeat(3, 1fr);
+  height: 404px;
+}
+
+.grid__item-10-1 {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-10-2 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-10-3 {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-10-4 {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-10-5 {
+  grid-column: 5 / span 1;
+  grid-row: 1 / span 3;
+}
+
+.grid__item-10-6 {
+  grid-column: 6 / span 1;
+  grid-row: 1 / span 2;
+}
+
+.grid__item-10-7 {
+  grid-column: 6 / span 1;
+  grid-row: 3 / span 1;
+}
+
+/* Responsive Styles */
+
+@media (min-width:1024px) {
+  .nyt-masthead {
+    width: 430px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .navbar {
+    display: none;
+  }
+  .nyt-masthead {
+    width: 225px;
+    height: 31px;
+    margin: 3px auto 0px;
+  }
+}

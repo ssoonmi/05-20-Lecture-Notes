@@ -1,0 +1,44 @@
+/* setting up the space... */
+.wrapper.flexbox {
+  /* UNCOMMENT THE NEXT LINE TO SEE THIS SECTION */
+  /* display: block; */
+  height: fit-content;
+}
+/*************** space is set up ***************/
+
+.flexbox__container {
+  background-color: yellow;
+  display: flex;
+  width: 100%;
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  
+  height: 300px;
+  /* align-items: flex-start; */
+
+}
+
+
+
+.flexbox__container__item {
+  margin: 10px;
+  border: 5px dashed black;
+  background-color: greenyellow;
+  text-align: center;
+  /* flex-grow: 2; */
+  
+}
+
+.flexbox__container__item.one {
+  /* flex-grow: 1; */
+  /* flex-shrink: 100; */
+  /* flex-basis: 0%; */
+  /* order: 1; */
+}
+
+.flexbox__container__item.two {
+  /* flex-grow: 2; */
+  /* align-self: flex-end; */
+}

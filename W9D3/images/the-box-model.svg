@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 700 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="box-model" transform="matrix(0.591216,0,0,0.595238,0,0)">
+        <rect x="0" y="0" width="1184" height="672" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="0" y="0" width="1184" height="672"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(1.69143,0,0,1.68,0,0)">
+                <rect x="0" y="0" width="700" height="400" style="fill:rgb(232,232,232);"/>
+            </g>
+            <g id="margin" transform="matrix(0.962553,0,0,1.24837,96.9084,-74.917)">
+                <rect x="199.442" y="135.675" width="912.369" height="449.181" style="fill:rgb(245,204,0);"/>
+            </g>
+            <g id="border" transform="matrix(0.77921,0,0,0.878483,217.113,58.3407)">
+                <rect x="199.442" y="135.675" width="912.369" height="449.181"/>
+            </g>
+            <g id="padding" transform="matrix(0.687538,0,0,0.69354,277.216,124.969)">
+                <rect x="199.442" y="135.675" width="912.369" height="449.181" style="fill:rgb(0,9,215);"/>
+            </g>
+            <g id="content" transform="matrix(0.572948,0,0,0.46236,352.344,208.256)">
+                <rect x="199.442" y="135.675" width="912.369" height="449.181" style="fill:rgb(235,235,235);"/>
+            </g>
+            <g transform="matrix(1.69143,0,0,1.68,-90.8755,-76.4619)">
+                <text x="329.597px" y="217.559px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;">This is the content of this block element. It has</text>
+                <text x="329.597px" y="233.05px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;">a speciﬁc width set. When the text reaches</text>
+                <text x="329.597px" y="248.54px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;">the total width of the element, the browser</text>
+                <text x="329.597px" y="264.031px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;">wraps the content to the next line within the</text>
+                <text x="329.597px" y="279.522px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;">element.</text>
+            </g>
+            <g transform="matrix(1.69143,0,0,1.68,-268.607,-218.34)">
+                <text x="566.276px" y="217.559px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;">margin</text>
+            </g>
+            <g transform="matrix(1.69143,0,0,1.68,-268.607,-113.528)">
+                <text x="562.508px" y="217.559px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;fill:white;">padding</text>
+            </g>
+            <g transform="matrix(1.69143,0,0,1.68,-268.607,-159.007)">
+                <text x="567.521px" y="217.559px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:15px;fill:white;">border</text>
+            </g>
+            <g transform="matrix(1.69143,0,0,1.68,-540.575,-330.648)">
+                <text x="329.597px" y="241.197px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:48px;">The Box Model</text>
+            </g>
+        </g>
+    </g>
+</svg>

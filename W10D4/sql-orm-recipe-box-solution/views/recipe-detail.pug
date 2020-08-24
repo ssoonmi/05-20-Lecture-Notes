@@ -1,0 +1,31 @@
+extends layout.pug
+
+block main
+  div
+    a(href="/") Back to latest recipes
+    | &nbsp;|&nbsp;
+    a(href="/recipes/" + recipe.id + "/edit") Edit
+  if error
+    .uk-alert-danger(uk-alert)
+      p= error
+  else
+    if recipe
+      h1.uk-heading-small= recipe.title
+      .uk-text-meta Created on #{recipe.created}
+      .uk-text-meta Updated on #{recipe.updated}
+
+      h2.uk-text-lead Ingredients
+      each ingredient in recipe.Ingredients
+        div
+          span.ingredient-amount= ingredient.amount
+          span.ingredient-amount-name= ingredient.MeasurementUnit.name
+          span.ingredient-food-stuff.uk-text-bold= ingredient.foodStuff
+
+      h2.uk-text-lead Instructions
+      ol
+        each instruction in recipe.Instructions
+          li.instructions-list__list-item= instruction.specification
+    else
+      div(uk-alert)
+        h3 It doesn't look like that recipe exists!
+        p Why don't you go and #[a(href="/recipes/new") make one]!

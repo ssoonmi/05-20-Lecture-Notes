@@ -1,0 +1,14 @@
+html
+  head
+    title Routes to Test
+  body
+    h1 Routes to Test
+    h2 Product Page
+    ul
+      each path in productPaths
+        li: a(href=path class='class-name')= path
+    h2 Products Page
+    ul
+      each path in productsPaths
+        li
+          a(href=path)= path

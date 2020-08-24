@@ -1,0 +1,71 @@
+/*************** setting up the space... ***************/
+.wrapper.mediaQuery {
+  /* UNCOMMENT THE NEXT LINE TO SEE THIS SECTION */
+  /* display: block; */
+  padding: 5px;
+}
+
+.mediaQuery__h2 {
+  padding-bottom: 10px;
+}
+
+.mediaQuery__container {
+  display: block;
+  width: 1200px;
+  padding: 20px;
+  background-color: yellow;
+  height: 900px;
+  /* position: relative; */
+}
+
+.mediaQuery__container__item { 
+  display: inline-block;
+  border: 5px dashed black;
+  background-color: greenyellow;
+  width: 100px;
+  padding: 15px;
+  margin: 25px;
+}
+/*************** space is set up ***************/
+
+/*************** Positioning ***************/
+/* Play with the below queries */
+
+/* @media screen and (max-width: 450px) {
+  .mediaQuery__container__item {
+    display: block;
+  }
+} */
+
+
+
+
+/* intermidiate media query */
+/* @media (max-width: 780px) and (min-width: 451px) {
+  .mediaQuery__container__item {
+    display: inline-block;
+    width: fit-content;
+  }
+} */
+
+
+
+
+
+
+/* Mobile-First Design */
+/* @media screen and (min-width: 781px) {
+  .mediaQuery__container__item {
+    display: inline-block;
+  }
+} */
+
+
+
+
+/* Orientation */
+/* @media screen and (orientation: landscape) {
+  .mediaQuery__container__item {
+    display: inline-block
+  }
+} */
