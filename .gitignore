@@ -3,3 +3,5 @@
 node_modules/
 
 W8D1/test.js
+
+.env
