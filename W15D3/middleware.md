@@ -9,7 +9,7 @@ When a dispatch is made, the middleware intercepts the action before it reaches 
 In the redux library's `createStore` function used to instantiate a `store`. `createStore` accepts three arguments:
 (reducer, preloadedState, enhancer)
 
-Middleware is given to the `store` via the optional enhancer argument.
+Middleware is given to the `store` via the optional `enhancer` argument.
 
 Ex:
 ```javascript

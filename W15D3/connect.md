@@ -1,10 +1,10 @@
 # Connect
 
-Using `connect`, you can pass specific slices of the store's `state` and specific `action-dispatches` to a React component as `props`.
+Using `connect`, you can pass specific slices of the `Redux store's state` and specific `action-dispatches` to a React component as `props`.
 
-The React-Redux `connect` function is a `higher-order function`. 
+The React-Redux `connect` function is a `higher-order function`: 
 
-`connect` takes two arguments (`mapStateToProps` and `mapDispatchToProps`) and returns a function.
+  * `connect` takes two arguments (`mapStateToProps` and `mapDispatchToProps`) and returns a function.
 
 The returned function will take a React component as an argument and return a new React component.
 
@@ -34,7 +34,7 @@ Ex:
 ```
 
 
-Typically, to keep things as concise as possible, the ConnectedComponent variable is omitted:
+Typically, to keep things concise, the `ConnectedComponent` variable is omitted:
 
 ```javascript
   import React from 'react';
@@ -61,13 +61,13 @@ Typically, to keep things as concise as possible, the ConnectedComponent variabl
 
 The first argument to `connect` is a function, `mapStateToProps` (or `msp` for short).
 
-The first argument to `mapStateToProps` is mandatory.
+The first argument to `connect`, `mapStateToProps`, is mandatory.
 
 It tells `connect` how to map the `Redux store's state` into your component's `props`.
 
-It must take a first argument, the `Redux store's state`.
+`mapStateToProps` must take a first argument, the `Redux store's state`.
 
-`mapStateToProps` will return an object containing the relevant slice of the `Redux state` as `props` for your component.
+`mapStateToProps` will return an object containing the relevant slice of the `Redux store's state` as `props` for your component.
 
 
 Ex:
@@ -92,11 +92,9 @@ Ex:
 
 
 
-## ownProps
+### ownProps
 
 ownProps is an optional 2nd argument to `mapStateToProps`.
-
-
 
 
 

@@ -2,7 +2,7 @@
 
 One of the most common uses of middleware is to solve asynchronicity.
 
-We can install `thunk` using:
+We can install the `thunk` middleware using:
 
   * `npm install redux-thunk`
 

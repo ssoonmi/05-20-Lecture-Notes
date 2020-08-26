@@ -1,6 +1,8 @@
 # <Provider />
 
-`<Provider />` is a React component in which you wrap the rest of the application. It is intrinsicly tied to the `connect` function.
+`<Provider />` is a React component in which you wrap the rest of the application.
+ 
+It is intrinsicly tied to the `connect` function.
 
 The Provider component receives the `store` as a `prop` and sets a store `context`. 
 
@@ -13,7 +15,7 @@ Note:
 Because you wrapped the entire App in the Provider component, all your components can access the `store` `context`.
 
 
-Components that need to access the `store` `context` have to be wrapped in a container component created by the `connect` function, which will see soon.
+Components that need to access the `store` `context` have to be wrapped in a `container component` created by the `connect` function, which will see soon.
 
 
 
