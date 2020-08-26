@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { fetchTweet } from "../store/actions/tweetActions";
 import TweetShow from './TweetShow';
 
-class ConnectedTweets extends React.Component {
+class ConnectedTweetShow extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -32,4 +32,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchTweet: (id) => dispatch(fetchTweet(id)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ConnectedTweets);
+export default connect(mapStateToProps, mapDispatchToProps)(ConnectedTweetShow);
