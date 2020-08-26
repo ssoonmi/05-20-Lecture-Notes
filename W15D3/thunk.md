@@ -12,6 +12,9 @@ However, we will write a `thunk action creator` to make an asynchronous request 
 
 
 
+
+
+
 Ex:
 
 ```javascript
@@ -45,7 +48,7 @@ Ex:
 
 
 
-  // ./src/store.js
+  // ./store/configureStore.js
 
   import { createStore, applyMiddleware } from 'redux';
   import logger from 'redux-logger';
@@ -71,7 +74,7 @@ Ex:
 
 
 
-  // ./src/middleware/thunkMiddleware.js
+  // ./store/middleware/thunkMiddleware.js
 
   const thunk = ({ dispatch, getState }) => next => action => {
     if (typeof action === 'function') {
@@ -82,35 +85,27 @@ Ex:
 
   export default thunk;
 
-
-
-
   ----------------------------------------
 
+  // ./store/actions/fruitActions.js
 
-
-
-  // ./src/actions/fruitActions.js
-
-  import { FRUIT_STAND_API_BASE_URL } from '../config';
-
-  export const RECEIVE_FRUITS = 'RECEIVE_FRUITS';
+  export const RECEIVE_TWEETS = 'RECEIVE_TWEETS';
 
   // the below is a thunk action creator
-  export const fetchFruits = () => {
+  export const fetchTweets = () => {
     return async dispatch => {
-      const res = await fetch(`/fruits`); // Using proxy in our package.json, 
-                                          // we're able to set the path to simply '/fruits'
+      const res = await fetch(`/tweets`); // Using proxy in our package.json, 
+               // we're able to set the path to simply '/tweets'
       const data = await res.json();
-      dispatch(receiveFruits(data.fruits));
+      dispatch(receiveTweets(data.tweets));
     }
   };
 
   // the below is an action creator
-  const receiveFruits = (fruits) => {
+  const receiveTweets = (tweets) => {
     return {
-      type: RECEIVE_FRUITS,
-      fruits,
+      type: RECEIVE_TWEETS,
+      tweets,
     };
   };
 
@@ -122,7 +117,7 @@ Ex:
 
 
 
-  // ./src/reducers/fruitReducer.js
+  // ./store/reducers/fruitReducer.js
 
   import { RECEIVE_FRUITS } from '../actions/fruitActions';
 

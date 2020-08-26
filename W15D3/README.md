@@ -62,7 +62,7 @@ We use the React-Redux library to improve how React Components interact with the
 
 The React-Redux library has two main parts- The `<Provider />` component and `connect` function.
 
-* <Provider /> allows its children t have access to the store
+* <Provider /> allows its children to have access to the store
 
 * `connect` subscribes React components to specific slices of Redux state and action creators
 

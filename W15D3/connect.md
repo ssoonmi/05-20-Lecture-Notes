@@ -9,19 +9,21 @@ The React-Redux `connect` function is a `higher-order function`:
 The returned function will take a React component as an argument and return a new React component.
 
 
+
+
 Ex:
 ```javascript
   import React from 'react';
   import { connect } from 'react-redux';
   import MyComponent from './MyComponent';
 
-  const mapDispatchToProps = () => {
+  const mapStateToProps = () => {
     // we'll go over this soon
-  }
+  };
 
   const mapDispatchToProps = () => {
     // we'll go over this soon
-  }
+  };
 
   const createConnectedComponent = connect(
     mapStateToProps,
@@ -41,7 +43,7 @@ Typically, to keep things concise, the `ConnectedComponent` variable is omitted:
   import { connect } from 'react-redux';
   import MyComponent from './MyComponent';
 
-  const mapDispatchToProps = () => {
+  const mapStateToProps = () => {
     // we'll go over this soon
   }
 
@@ -51,6 +53,9 @@ Typically, to keep things concise, the `ConnectedComponent` variable is omitted:
 
   export default connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 ```
+
+
+
 
 
 
@@ -68,6 +73,9 @@ It tells `connect` how to map the `Redux store's state` into your component's `p
 `mapStateToProps` must take a first argument, the `Redux store's state`.
 
 `mapStateToProps` will return an object containing the relevant slice of the `Redux store's state` as `props` for your component.
+
+
+
 
 
 Ex:
@@ -129,6 +137,9 @@ Ex:
 
   export default connect(mapStateToProps)(MyComponent);
 ```
+
+
+
 
 
 
@@ -199,6 +210,10 @@ Ex:
 
   const ConnectedComponent = connect(null, mapDispatchToProps)(MyComponent);
 ```
+
+
+
+
 
 Note: 
 * The `connect` function is invoked with `null` as a placeholder for the `mapStateToProps` function. The `connect` function expects `mapStateToProps` as its first argument and `mapDispatchToProps` as its second argument.

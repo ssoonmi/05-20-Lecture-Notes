@@ -5,9 +5,9 @@
 * `npm install`
 * create a user for the database
 * create a `.env` file using `.env.example` as an example
-* `npm dotenv sequelize db:create`
-* `npm dotenv sequelize db:migrate`
-* `npm dotenv sequelize db:seed:all`
+* `npx dotenv sequelize db:create`
+* `npx dotenv sequelize db:migrate`
+* `npx dotenv sequelize db:seed:all`
 
 ## ReSTful API
 

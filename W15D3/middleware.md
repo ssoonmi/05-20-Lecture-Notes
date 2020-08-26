@@ -11,13 +11,18 @@ In the redux library's `createStore` function used to instantiate a `store`. `cr
 
 Middleware is given to the `store` via the optional `enhancer` argument.
 
+
+
+
+
+
 Ex:
 ```javascript
 // ./src/store.js
 
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger'; // third-party logger middleware
-//the logger middleware prints the store's state before and after an action is processed.
+// the logger middleware prints the store's state before and after an action is processed.
 
 import rootReducer from './reducers/rootReducer';
 
@@ -35,6 +40,9 @@ export default configureStore;
 
 
 
+
+
+
 ## How to write a middleware function
 
 A Redux middleware must always have the following signature:
@@ -46,11 +54,16 @@ const middleware = store => next => action => {
 };
 ```
 
+
 1. Middleware receives the `store` as an argument and returns a function.
 
 2. That function takes the `next` link in the middleware chain as an argument and returns another function.
 
 3. This function receives the `action` and then triggers any side effects before returning the result of `next(action)`. 
+
+
+
+
 
 
 
