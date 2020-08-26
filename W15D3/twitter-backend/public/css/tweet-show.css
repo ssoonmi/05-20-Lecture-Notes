@@ -1,0 +1,39 @@
+.tweet-thread > * {
+  border-bottom: 1.25px solid rgb(56, 68, 77);
+  padding: 7px 15px 5px 15px;
+  display: flex;
+}
+
+.tweet-thread .tweet {
+  margin-left: 10px;
+}
+
+.tweet-thread .user-icon {
+  font-size: 24px;
+  height: 49px;
+  width: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.tweet-show {
+  width: 600px;
+  border-left: 1.25px solid rgb(56, 68, 77);
+  border-right: 1.25px solid rgb(56, 68, 77);
+}
+
+.tweet-show-header {
+  padding: 0 15px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.25px solid rgb(56, 68, 77);
+}
+
+.tweet-show-header h1 {
+  font-size: 19px;
+  font-weight: bold;
+}

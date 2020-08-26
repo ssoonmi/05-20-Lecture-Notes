@@ -1,0 +1,141 @@
+.feed {
+  width: 600px;
+  border-left: 1.25px solid rgb(56, 68, 77);
+  border-right: 1.25px solid rgb(56, 68, 77);
+}
+
+.feed-header {
+  padding: 0 15px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1.25px solid rgb(56, 68, 77);
+}
+
+.feed-header h1 {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.feed-form {
+  border-bottom: 10px solid rgb(56, 68, 77);
+  padding: 7px 15px 5px 15px;
+  display: flex;
+}
+
+.feed .user-icon {
+  font-size: 24px;
+  height: 49px;
+  width: 49px;
+  min-height: 49px;
+  min-width: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+#tweet-form {
+  margin-left: 10px;
+  width: 100%;
+}
+
+#tweet-form textarea {
+  padding: 2px 10px 5px 10px;
+  font-family: sans-serif;
+  margin: 0px;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 19px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#tweet-form textarea:focus {
+  outline: 0;
+}
+
+.feed-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 5px;
+}
+
+#tweet-form button[type="submit"] {
+  height: 39px;
+  border-radius: 24px;
+  outline: 0;
+  padding: 0 15px;
+  border: 0;
+  margin: 10px 0;
+  color: white;
+  background-color: rgb(29, 161, 242);
+  cursor: pointer;
+}
+
+#tweet-form button[type="submit"]:disabled {
+  background-color: rgb(35, 96, 142);
+  color: rgb(137, 143, 148);
+  cursor: default;
+}
+
+.tweets-list li {
+  border-bottom: 1.25px solid rgb(56, 68, 77);
+  padding: 7px 15px 5px 15px;
+  display: flex;
+}
+
+.tweets-list .tweet {
+  margin-left: 10px;
+}
+
+.tweet {
+  width: 100%;
+  position: relative;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tweet-header .dropdown-arrow {
+  margin-left: auto;
+}
+
+.tweet-header .modal-background {
+  z-index: 300;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: default;
+}
+
+.tweet-header .dropdown-menu {
+  z-index: 400;
+  position: absolute;
+  top: 0;
+  width: 300px;
+  padding: 10px 0;
+  right: 0;
+  box-shadow: rgba(136, 153, 166, 0.2) 0px 0px 15px, rgba(136, 153, 166, 0.15) 0px 0px 3px 1px;
+  background-color: rgb(21, 32, 43);
+  border-radius: 15px;
+}
+
+.tweet-header .dropdown-menu button {
+  background-color: transparent;
+  padding: 15px;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  color: white;
+}

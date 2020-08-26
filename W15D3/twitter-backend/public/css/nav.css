@@ -1,0 +1,130 @@
+.nav-icons {
+  height: 26px;
+}
+
+.nav-icons path {
+  fill: white;
+}
+
+.top-nav li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 4px 0;
+  border-radius: 23px;
+  width: fit-content;
+}
+
+li:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.top-nav li div {
+  height: fit-content;
+  font-size: 19px;
+  margin-right: 15px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+ .top-nav li:hover div {
+  color: rgb(29, 161, 242);
+}
+
+ .top-nav li:hover:not(.logo) .nav-icons path {
+  fill: rgb(29, 161, 242);
+}
+
+body {
+  display: flex;
+}
+
+header {
+  flex-basis: 275px; 
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+nav {
+  width: 275px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.user-nav-button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.user-nav-button:hover {
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.user-nav-button .user-icon {
+  font-size: 24px;
+  height: 39px;
+  width: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.user-nav-button .user-info {
+  margin-left: 10px;
+  margin-right: 30px;
+  height: fit-content;
+}
+
+.user-nav-button .dropdown-arrow {
+  margin-left: auto;
+}
+
+.user-nav-button .modal-background {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  cursor: default;
+}
+
+.user-nav-button .dropdown-menu {
+  position: absolute;
+  bottom: 68px;
+  width: 300px;
+  padding: 10px 0;
+  left: -12px;
+  box-shadow: rgba(136, 153, 166, 0.2) 0px 0px 15px, rgba(136, 153, 166, 0.15) 0px 0px 3px 1px;
+  background-color: rgb(21, 32, 43);
+  border-radius: 15px;
+}
+
+.user-nav-button .dropdown-menu button {
+  background-color: transparent;
+  padding: 15px;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  color: white;
+}
+
+main {
+  flex-basis: 900px; 
+  flex-grow: 1;
+}
