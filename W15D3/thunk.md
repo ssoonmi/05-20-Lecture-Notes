@@ -2,7 +2,12 @@
 
 One of the most common uses of middleware is to solve asynchronicity.
 
-We will write a `thunk action creator` to make an asynchronous request to an API and `dispatch` an `action` when the response is received.
+We can install `thunk` using:
+
+  * `npm install redux-thunk`
+
+
+However, we will write a `thunk action creator` to make an asynchronous request to an API and `dispatch` an `action` when the response is received.
 
 
 
@@ -62,6 +67,7 @@ Ex:
 
   export const RECEIVE_FRUITS = 'RECEIVE_FRUITS';
 
+  // the below is a thunk action creator
   export const fetchFruits = () => (dispatch) => (
     fetch(`${FRUIT_STAND_API_BASE_URL}/fruits`)
       .then((res) => res.json())
@@ -70,6 +76,7 @@ Ex:
       })
   );
 
+  // the below is an action creator
   const receiveFruits = (fruits) => {
     return {
       type: RECEIVE_FRUITS,
