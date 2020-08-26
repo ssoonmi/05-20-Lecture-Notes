@@ -102,7 +102,7 @@ REFACTORED WITH CONTEXT:
       <div>
         {props.relevant}
         <ChildComponent />
-      <div>
+      </div>
     )
   };
 
@@ -117,7 +117,9 @@ REFACTORED WITH CONTEXT:
 
     handleEvent = () => {
       // Logic to handle some event
-      this.setState({ //some object })
+      this.setState({ 
+        //some object 
+      });
     }
 
     render() {

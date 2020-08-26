@@ -16,6 +16,35 @@ Ex:
 
 ```javascript
 
+  // ./src/index.js
+
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import { Provider } from 'react-redux';
+
+  import './index.css';
+  import App from './App';
+  import configureStore from './store';
+  import { fetchFruits } from './actions/fruitActions';
+
+  const store = configureStore();
+  store.dispatch(fetchFruits());
+
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+
+
+
+-------------------------------------------------------------------
+
+
+
   // ./src/store.js
 
   import { createStore, applyMiddleware } from 'redux';
@@ -68,13 +97,13 @@ Ex:
   export const RECEIVE_FRUITS = 'RECEIVE_FRUITS';
 
   // the below is a thunk action creator
-  export const fetchFruits = () => (dispatch) => (
-    fetch(`${FRUIT_STAND_API_BASE_URL}/fruits`)
-      .then((res) => res.json())
-      .then((data) => {
-        dispatch(receiveFruits(data.fruits));
-      })
-  );
+  export const fetchFruits = () => {
+    return async dispatch => {
+      const res = await fetch(`${FRUIT_STAND_API_BASE_URL}/fruits`);
+      const data = await res.json();
+      dispatch(receiveFruits(data.fruits));
+    }
+  };
 
   // the below is an action creator
   const receiveFruits = (fruits) => {

@@ -1,6 +1,6 @@
 # Adding configuration for the API base URL
 
-The `FRUIT_STAND_API_BASE_URL` variable (imported at the top of the `fruitActions.js` file) is defined in the `config.js` file:
+The `FRUIT_STAND_API_BASE_URL` variable from out thunk example (imported at the top of the `src/actions/fruitActions.js` file) is defined in the `config.js` file:
 
 ```javascript
 export const FRUIT_STAND_API_BASE_URL = process.env.REACT_APP_FRUIT_STAND_API_BASE_URL;

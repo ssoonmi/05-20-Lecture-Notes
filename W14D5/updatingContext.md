@@ -52,7 +52,7 @@ Ex:
       <div>
         {props.relevant}
         <SomeChildComponent/>
-      <div>
+      </div>
     )
   };
 
@@ -67,7 +67,9 @@ Ex:
 
     handleEvent = () => {
       // Logic to handle some event
-      this.setState({ // some Object });
+      this.setState({ 
+        // some Object 
+      });
     }
 
     render() {
