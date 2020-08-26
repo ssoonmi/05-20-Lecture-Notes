@@ -1,22 +1,12 @@
 # LOs
 
-* Describe what a higher-order component (HOC) is
-
-* Write a higher-order component (HOC) that accepts a component as an argument and returns a new component
-
 * Use the React-Redux library's <Provider /> component to make your Redux store available to any nested components that have been wrapped in the connect function
 
 * Use the React-Redux library's connect function to give a component access to a Redux store
 
-* Write a selector to extract and format information from state stored in a Redux store
-
 * Use the React-Redux library's applyMiddleware function to configure one or more middleware when creating a store
 
 * Write a thunk action creator to make an asynchronous request to an API and dispatch an action when the response is received
-
-* Describe a situation where defining multiple containers for a single component is advantageous
-
-* Configure a React application to use the Redux development tools
 
 
 
@@ -77,4 +67,9 @@ The React-Redux library has two main parts- The `<Provider />` component and `co
 * `connect` subscribes React components to specific slices of Redux state and action creators
 
 To use the React-Redux library we must
-  * `npm instal react-redux`
+  * `npm install react-redux`
+
+
+Other installs in this lesson:
+* `redux-logger`
+* `redux-thunk`
