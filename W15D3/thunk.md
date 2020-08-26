@@ -99,7 +99,8 @@ Ex:
   // the below is a thunk action creator
   export const fetchFruits = () => {
     return async dispatch => {
-      const res = await fetch(`${FRUIT_STAND_API_BASE_URL}/fruits`);
+      const res = await fetch(`/fruits`); // Using proxy in our package.json, 
+                                          // we're able to set the path to simply '/fruits'
       const data = await res.json();
       dispatch(receiveFruits(data.fruits));
     }
