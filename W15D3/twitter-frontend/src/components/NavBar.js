@@ -6,6 +6,7 @@ const NavBar = () => {
     <nav>
       <h1>Twitter Lite!</h1>
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/login">Log In</NavLink>
     </nav>
   )
 }
