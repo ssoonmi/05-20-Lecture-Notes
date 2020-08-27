@@ -1,4 +1,5 @@
 import { RECEIVE_TWEETS } from "../actions/tweetActions";
+import { SIGNUP } from '../authentication';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -10,6 +11,12 @@ const usersReducer = (state = {}, action) => {
         newState[user.id] = user;
       });
       return newState;
+    
+    case SIGNUP:
+      debugger
+      newState[action.user.id] = action.user;
+      return newState;
+
     default:
       return state;
   }
