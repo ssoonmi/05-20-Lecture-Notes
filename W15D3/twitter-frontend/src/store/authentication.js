@@ -29,6 +29,7 @@ export const login = (username, password) => {
       },
       body: JSON.stringify({ username, password })
     });
+    
     const data = await res.json();
     dispatch(setUser(data));
     res.data = data;
@@ -56,21 +57,13 @@ export const signup = (username, email, password, password2) => {
       },
       body: JSON.stringify({ username, email, password, password2 })
     });
+
     const data = await res.json();
     dispatch(newUser(data));
     res.data = data;
     return res;
   };
 }
-
-// import authReducer from '.';
-// import { login } from '.';
-
-// {
-//   id,
-//   username,
-//   token
-// }
 
 export default function authReducer(state = {}, action) {
   console.log(action);

@@ -13,7 +13,6 @@ const usersReducer = (state = {}, action) => {
       return newState;
     
     case SIGNUP:
-      debugger
       newState[action.user.id] = action.user;
       return newState;
 

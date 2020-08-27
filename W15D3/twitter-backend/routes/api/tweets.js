@@ -30,7 +30,6 @@ const validateTweet = [
 router.post('/', requireUser, validateTweet, routeHandler(async (req, res)=> {
   const { message } = req.body;
   const userId = req.user.id;
-  console.log("Post Tweet Request:", req);
   
   const newTweet = await Tweet.create({ message, userId });
   console.log('NewTweet', newTweet);
