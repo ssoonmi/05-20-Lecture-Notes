@@ -73,3 +73,22 @@ To use the React-Redux library we must
 Other installs in this lesson:
 * `redux-logger`
 * `redux-thunk`
+
+
+
+
+## Lecture Videos
+
+
+
+## Pokedex Solutions
+
+[Pokedex Redux Solutions]
+
+[Pokedex Redux Solutions Zip]
+
+
+[Pokedex Redux Solutions]: ./pokedex-redux-solution
+
+[Pokedex Redux Solutions Zip]: ./pokedex-redux-solution.zip
+
