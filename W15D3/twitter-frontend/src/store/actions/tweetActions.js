@@ -2,6 +2,24 @@ export const RECEIVE_TWEETS = "RECEIVE_TWEETS";
 export const RECEIVE_TWEET = "RECEIVE_TWEET";
 export const NEW_TWEET = "NEW_TWEET";
 
+// the below is an action creator
+const receiveTweets = (tweets) => {
+  return {
+    type: RECEIVE_TWEETS,
+    tweets,
+  };
+};
+
+
+// the below is an action creator
+const receiveTweet = (tweet) => {
+  return {
+    type: RECEIVE_TWEET,
+    tweet,
+  };
+};
+
+
 // the below is a thunk action creator
 export const fetchTweets = () => {
   return async (dispatch) => {
@@ -12,13 +30,6 @@ export const fetchTweets = () => {
   };
 };
 
-// the below is an action creator
-const receiveTweets = (tweets) => {
-  return {
-    type: RECEIVE_TWEETS,
-    tweets,
-  };
-};
 
 // the below is a thunk action creator
 export const fetchTweet = (id) => {
@@ -30,13 +41,6 @@ export const fetchTweet = (id) => {
   };
 };
 
-// the below is an action creator
-const receiveTweet = (tweet) => {
-  return {
-    type: RECEIVE_TWEET,
-    tweet,
-  };
-};
 
 export const createTweet = (message) => {
   return async (dispatch) => {
