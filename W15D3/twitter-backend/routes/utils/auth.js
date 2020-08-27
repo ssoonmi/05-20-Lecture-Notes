@@ -26,6 +26,7 @@ exports.getUserFromToken = async (token) => {
 }
 
 exports.requireUser = (req, res, next) => {
+  console.log('Current User', req.user);
   if (req.user) return next();
   const err = Error("Unauthorized");
   err.status = 401;
