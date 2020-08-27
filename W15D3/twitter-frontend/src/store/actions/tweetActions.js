@@ -1,5 +1,6 @@
 export const RECEIVE_TWEETS = "RECEIVE_TWEETS";
 export const RECEIVE_TWEET = "RECEIVE_TWEET";
+export const NEW_TWEET = "NEW_TWEET";
 
 // the below is a thunk action creator
 export const fetchTweets = () => {
@@ -25,7 +26,6 @@ export const fetchTweet = (id) => {
     const res = await fetch(`/api/tweets/${id}`); // Using proxy in our package.json,
     // we're able to set the path to simply '/tweets'
     const data = await res.json();
-    debugger
     dispatch(receiveTweet(data.tweet));
   };
 };
@@ -35,5 +35,23 @@ const receiveTweet = (tweet) => {
   return {
     type: RECEIVE_TWEET,
     tweet,
+  };
+};
+
+export const createTweet = (message) => {
+  return async (dispatch) => {
+    debugger
+    const res = await fetch('/api/tweets', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message })
+    });
+    debugger
+    const data = await res.json();
+    dispatch(receiveTweet(data.tweet));
+    res.data = data;
+    return res;
   };
 };

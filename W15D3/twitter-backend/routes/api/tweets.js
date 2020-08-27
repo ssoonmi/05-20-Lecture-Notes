@@ -30,8 +30,11 @@ const validateTweet = [
 router.post('/', requireUser, validateTweet, routeHandler(async (req, res)=> {
   const { message } = req.body;
   const userId = req.user.id;
-
+  console.log(req);
+  
   const newTweet = await Tweet.create({ message, userId });
+  console.log('NewTweet', newTweet);
+
   const tweet = await Tweet.findByPk(newTweet.id, {
     include: [
       {
@@ -40,6 +43,7 @@ router.post('/', requireUser, validateTweet, routeHandler(async (req, res)=> {
       },
     ]
   });
+  console.log('tweet', tweet);
   res.json({ tweet });
 }));
 

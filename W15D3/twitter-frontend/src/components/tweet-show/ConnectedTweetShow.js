@@ -1,7 +1,7 @@
 import React from "react";
-import Tweets from "./Tweets";
+import Tweets from "../tweets/Tweets";
 import { connect } from "react-redux";
-import { fetchTweet } from "../store/actions/tweetActions";
+import { fetchTweet } from "../../store/actions/tweetActions";
 import TweetShow from './TweetShow';
 
 class ConnectedTweetShow extends React.Component {

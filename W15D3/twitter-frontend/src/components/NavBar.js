@@ -7,10 +7,15 @@ const NavBar = ({loggedIn, logOut}) => { // we use object destructuring on our p
   return(
     <nav>
       <h1>Twitter Lite!</h1>
-      <NavLink to="/">Home</NavLink>
-      {loggedIn ? 
-        <button onClick={logOut}>Log Out</button> :
-        <NavLink to="/login">Log In</NavLink>
+      {loggedIn ?
+        <>
+          <NavLink to="/">Home</NavLink>
+          <button onClick={logOut}>Log Out</button>
+        </> :
+        <>
+          <NavLink to="/login">Log In</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>
+        </>
       }
     </nav>
   )

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom'
-import Tweets from './components/ConnectedTweets';
+import Tweets from './components/tweets/ConnectedTweets';
 import NavBar from './components/NavBar';
-import TweetShow from './components/ConnectedTweetShow';
+import TweetShow from './components/tweet-show/ConnectedTweetShow';
 import Login from './components/Login';
+import NewTweet from './components/NewTweet';
+import SignUp from './components/SignUp';
 import { connect } from 'react-redux';
 
 const ProtectedRoute = ({
@@ -36,10 +38,12 @@ function App() {
     <>
       <NavBar />
       <main>
+        <NewTweet />
         <Switch>
           <ConnectedProtectedRoute exact path="/" component={Tweets} />
           <Route exact path="/tweets/:id" component={TweetShow} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={SignUp} />
         </Switch>
       </main>
     </>
