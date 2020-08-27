@@ -20,7 +20,7 @@ class ConnectedTweetShow extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
   const tweet = state.tweets[ownProps.match.params.id] || {};
-  // debugger
+  
   return ({
     tweet: tweet,
     user: state.users[tweet.userId] || {},

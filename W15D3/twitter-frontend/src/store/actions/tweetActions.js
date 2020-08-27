@@ -44,7 +44,6 @@ export const fetchTweet = (id) => {
 
 export const createTweet = (message) => {
   return async (dispatch) => {
-    debugger
     const res = await fetch('/api/tweets', {
       method: "POST",
       headers: {
@@ -52,7 +51,7 @@ export const createTweet = (message) => {
       },
       body: JSON.stringify({ message })
     });
-    debugger
+    
     const data = await res.json();
     dispatch(receiveTweet(data.tweet));
     res.data = data;
