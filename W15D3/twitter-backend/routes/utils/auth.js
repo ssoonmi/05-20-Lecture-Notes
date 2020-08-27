@@ -30,4 +30,5 @@ exports.requireUser = (req, res, next) => {
   const err = Error("Unauthorized");
   err.status = 401;
   err.title = "Unauthorized";
+  next(err);
 }
