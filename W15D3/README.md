@@ -82,16 +82,24 @@ Other installs in this lesson:
 [Lecture Video Google Drive Folder]
 
 
-## Pokedex Solutions
+## Solutions
+
+[Giphy Redux Solutions]
+
+[Giphy Redux Solutions Zip]
 
 [Pokedex Redux Solutions]
 
 [Pokedex Redux Solutions Zip]
 
 
+
 [Lecture Video Google Drive Folder]: https://drive.google.com/drive/folders/1E5dCjQ433Z7GcrhLJY6_aPqBkzW87fpY?usp=sharing
 
-[Pokedex Redux Solutions]: ./pokedex-redux-solution
 
+
+[Giphy Redux Solutions]: ./giphy-redux-solution
+[Giphy Redux Solutions Zip]: ./giphy-redux-solution.zip
+[Pokedex Redux Solutions]: ./pokedex-redux-solution
 [Pokedex Redux Solutions Zip]: ./pokedex-redux-solution.zip
 
