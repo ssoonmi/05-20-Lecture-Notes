@@ -7,19 +7,18 @@ const tweetsRouter = require('./tweets');
 const { ValidationError } = require("sequelize");
 const { getUserFromToken } = require("../utils/auth");
 
-router.use('/users', usersRouter);
-router.use('/tweets', tweetsRouter);
-
-
 router.use(async (req, res, next) => {
   const token = req.cookies.token;
   if (!token) return next();
 
   const user = await getUserFromToken(token, res);
   if (user) req.user = user;
-  else res.clearCookie('token');
+  else res.clearCookie("token");
   next();
 });
+
+router.use('/users', usersRouter);
+router.use('/tweets', tweetsRouter);
 
 router.use((err, req, res, next) => {
   if (err instanceof ValidationError) {
