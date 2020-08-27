@@ -79,6 +79,7 @@ Other installs in this lesson:
 
 ## Lecture Videos
 
+[Lecture Video Google Drive Folder]
 
 
 ## Pokedex Solutions
@@ -87,6 +88,8 @@ Other installs in this lesson:
 
 [Pokedex Redux Solutions Zip]
 
+
+[Lecture Video Google Drive Folder]: https://drive.google.com/drive/folders/1E5dCjQ433Z7GcrhLJY6_aPqBkzW87fpY?usp=sharing
 
 [Pokedex Redux Solutions]: ./pokedex-redux-solution
 
