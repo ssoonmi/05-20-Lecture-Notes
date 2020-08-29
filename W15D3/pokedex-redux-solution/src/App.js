@@ -3,7 +3,7 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import LoginPanelRedux from './LoginPanelRedux';
-import PokemonBrowserRedux from './PokemonBrowerRedux';
+import PokemonBrowserRedux from './PokemonBrowserRedux';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (

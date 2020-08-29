@@ -90,9 +90,10 @@ class PokemonBrowser extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    pokemon: state.pokemon.list,
+    state
   };
 };
+
 const mapDispatchToProps = (dispatch) => {
   return {
     getPokemon: (pokemon) => dispatch(getPokemon(pokemon)),
