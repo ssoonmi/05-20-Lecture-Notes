@@ -1,5 +1,7 @@
 # Twitter React Walkthrough
 
+[GitHub Project Kanban Set Up][6]
+
 [Project Set Up][1]
 
 [Material-UI Set Up][2] (Optional)
@@ -17,3 +19,4 @@
 [3]: https://drive.google.com/file/d/1cipYCZKS54MDcUrL5OfGpEHYUR6yLhAf/view?usp=sharing
 [4]: https://drive.google.com/file/d/12MmehlB-Qulh4KzvKqsnF-wKgrZ9REhS/view?usp=sharing
 [5]: https://drive.google.com/file/d/1n4ddnHwYwOVvOT_qm5jWQktoqBzCuIyS/view?usp=sharing
+[6]: https://drive.google.com/file/d/1tEc0q0AYKFameWdhIvYaR-I6zGdRrjva/view?usp=sharing
