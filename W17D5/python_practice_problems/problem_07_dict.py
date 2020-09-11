@@ -2,7 +2,7 @@
 #
 # Write a function named "my_map" that takes a dictionary as a parameter.
 # Return another dictionary that consists of the key/value pairs from the
-# argument where the values are tripled. Use any construct that want to 
+# argument where the values are tripled. Use any construct that you want to 
 # implement "my_map".
 #
 #

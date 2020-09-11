@@ -1,16 +1,22 @@
 #  Write a function "comparison" that takes in a single parameter, a function.
 # 
-#  "comparison" will return another function that accepts list containing 2 numbers. 
+#  "comparison" will return another function that accepts list containing 2 
+#     numbers. 
 # 
-#  Each of these numbers will be invoked on the original function recieved as an argument by "comparison".
+#  Each of these numbers will be invoked on the original function recieved as 
+#      an argument by "comparison".
 #
-#  When the numbers are invoked on the original function we will compare the return values:
+#  When the numbers are invoked on the original function we will compare the 
+#     return values:
 #
-#     If the return value of the first number is greater than the return value of second number:
+#     If the return value of the first number is greater than the return value 
+#     of the second number:
 #          return 1
-#     If the return value of the first number is less than than the return value of second number:
+#     If the return value of the first number is less than than the return value
+#     of the second number:
 #          return -1
-#     If the return value of the first number is equal to the return value of second number:
+#     If the return value of the first number is equal to the return value of 
+#     the second number:
 #          return 0
 # 
 # 
