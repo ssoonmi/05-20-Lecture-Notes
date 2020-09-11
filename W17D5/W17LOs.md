@@ -6,7 +6,7 @@
 
 * Use [PEP 8](https://www.python.org/dev/peps/pep-0008/) as a reference for how to write your code
 * `print` messages to the console terminal
-* Use # and """ (or ''') to write code comments
+* Use `#` and `"""` (or `'''`) to write code comments
 
 ### Number Data Type
 
@@ -14,7 +14,7 @@
     * int
     * float
     * complex
-* Evaluate arithmetic expressions that include familiar operators and **, // and %
+* Evaluate arithmetic expressions that include familiar operators and `**`, `//` and `%`
 * Predict when an arithmetic expression will throw an error
 
 ### String Data Type
@@ -38,30 +38,30 @@
 * Predict the evaluation of expressions that use the boolean operations of `and`, `or` and `not`
 * Explain how Python handles non-Boolean objects in conditional statements (Truthy and Falsey)
 
-  BONUS: know that the boolean constants `True` and `False` are actually subclassed `int` values; `True == 1 and False == 0`
+  BONUS: know that the boolean constants `True` and `False` are actually subclassed `int` values; `True == 1` and `False == 0`
 
   BONUS: understand how the `__bool__` dunder method adds Truthy/Falsey to user defined classes
 
 ### Comparison Operators
 
-* understand that conditionals in Python return boolean values
-* understand what the operators `>`,`<`, `>=`, `<=`, `==`, and `!=` do
+* Understand that conditionals in Python return boolean values
+* Understand what the operators `>`,`<`, `>=`, `<=`, `==`, and `!=` do
 
-  BONUS: explain how to short-circuit conditional expressions (See Supplemental LOs for more info on this: Boolean Short Circuit)
+  BONUS: Explain how to short-circuit conditional expressions (See Supplemental LOs for more info on this: Boolean Short Circuit)
 
 ### Identity vs. Equality
 
 * Explain the difference between `==` and `is`
 
   BONUS:
-  * understand that the `==` operator compares compatible values, or returns `False`
-  * understand that the `is` operator compares object references for the identity of their referenced objects
+  * Enderstand that the `==` operator compares compatible values, or returns `False`
+  * Enderstand that the `is` operator compares object references for the identity of their referenced objects
 
-  BONUS: understand that the dunder method `__eq__` is used to define how user-defined classes will behave when compared with `==`, and in the absence of this dunder method the `==` comparison uses the `is` comparison.
+  BONUS: Understand that the dunder method `__eq__` is used to define how user-defined classes will behave when compared with `==`, and in the absence of this dunder method the `==` comparison uses the `is` comparison.
 
 ### If Statements
 
-* know how to write an `if` statement in Python, and what the `elif` and `else` blocks do.
+* Know how to write an `if` statement in Python, and what the `elif` and `else` blocks do.
 
 ### While Statements
 
@@ -79,15 +79,15 @@ while condition:
 
   BONUS:
 
-  * know what the syntax for `try`, `except`, and `finally` blocks are
-  * understand that Exceptions are objects that belong to a class hierarchy
-  * know how to catch and examine an Exception, and how to construct and raise a simple one.
+  * Know what the syntax for `try`, `except`, and `finally` blocks are
+  * Understand that Exceptions are objects that belong to a class hierarchy
+  * Know how to catch and examine an Exception, and how to construct and raise a simple one.
 
-  BONUS: see also W17D4/src/why_does_pythons_for_have_an_else.py for some example code
+  BONUS: See also W17D4/src/why_does_pythons_for_have_an_else.py for some example code
 
 ### pass
 
-* understand what the Python `pass` statement is for, and when to use it
+* Understand what the Python `pass` statement is for, and when to use it
 
 ### Functions
 
@@ -114,7 +114,7 @@ while condition:
 
 ### Getting Input From The Command Line
 
-* know how to use the `input()` function to get responses from a CLI user
+* Know how to use the `input()` function to get responses from a CLI user
 
 ### Scripts Vs. Programs
 
@@ -139,7 +139,7 @@ while condition:
 ### Built-in Functions
 
 * Use functions with iterables `filter`, `map`, `sorted`, `enumerate`, `zip`
-    * ex: creating a list with `filter` extracting short strings from list `lst`:
+    * ex: Creating a list with `filter` extracting short strings from list `lst`:
         ```py
         lst = ["cat", "at", "a"]
         list(filter(lambda el: len(el) < 3, lst)) 
@@ -149,7 +149,7 @@ while condition:
         * `filter` passes each `el` from `lst` to the anonymous function
         * `filter` returns a generator function that will yield all `el`s that evaluated to True in the `lambda` function
         * `list()` casts the result of the generator function as a list
-    * ex: creating a list with `map` squaring  `num` from `nums`:
+    * ex: Creating a list with `map` squaring  `num` from `nums`:
         ```py
         nums = [1, 2, 3]
         set(map(lambda num: num ** 2, nums)) 
@@ -169,7 +169,7 @@ while condition:
 
 ### `for` Statements
 
-* understand the one-and-only syntax for a Python `for` loop:
+* Understand the one-and-only syntax for a Python `for` loop:
 
 ```py
 for item in iterable:
@@ -177,7 +177,7 @@ for item in iterable:
   print(item)
 ```
 
-* understand what `break` and `continue` do in the context of a `for` loop
+* Understand what `break` and `continue` do in the context of a `for` loop
 
   BONUS: know that a `for` loop in Python has an `else` clause
 
@@ -187,7 +187,7 @@ for item in iterable:
 
 * When ordering arguments within a function or function call, arguments need to occur in a particular order:
 
-  1. formal positional arguments
+  1. Formal positional arguments
   1. `*args`
   1. Keyword arguments with default values
   1. `**kwargs`
@@ -231,16 +231,16 @@ BONUS: Know the big things that changed from Python 2 to Python 3:
 
 ### Classes in Python
 
-* how to use the class keyword to define a class
-* how to name classes
-* how to create instances from classes
-* how to initialize classes with the "dunder method" `__init__()`
-* how to declare instance methods for a class
-* how to make string representations of classes using dunder methods
+* How to use the class keyword to define a class
+* How to name classes
+* How to create instances from classes
+* How to initialize classes with the dunder method `__init__()`
+* How to declare instance methods for a class
+* How to make string representations of classes using dunder methods
     * `__str__()` to generate a human-friendly string representing your class (`<Dog: Fido>`)
     * `__repr__()` to generate string equivalent of the python initializer call (`"Dog(name='Fido')"`)
 
-  BONUS: how to use the dunder class variable `__slots__` to reserve memory for instance variables
+  BONUS: How to use the dunder class variable `__slots__` to reserve memory for instance variables
 
 ### Inheritance in Python
 
@@ -251,7 +251,7 @@ BONUS: Know the big things that changed from Python 2 to Python 3:
 
 ### Properties in Python
 
-* You create the getter property by decorating a method with @property.
+* You create the getter property by decorating a method with `@property`.
 * You create the setter property by decorating a corresponding method with the decorator `@<getter_method_name>.setter`.
 
   BONUS: You may also define a `deleter` property and a `docstring` for your property if desired - for more information see the [`property()` class documentation](https://docs.python.org/3.8/library/functions.html) linked from the _BUILT-IN-FUNCTIONS_ table at the start of Chapter 2 in the _Python Standard Library_
