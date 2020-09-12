@@ -43,8 +43,8 @@ def times_zero(num):
     return num * 0
 
 zeroed = comparison(times_zero)
-print(neg(1, 3))  # => 0
-print(neg(5, 3))  # => 0
+print(zeroed(1, 3))  # => 0
+print(zeroed(5, 3))  # => 0
 
 
 def nth_perfect_square(num):
