@@ -14,6 +14,6 @@
 test1 = [2]
 print("my_while_filter test1:", my_while_filter(test1)) # => [2]
 test2 = list(range(40))
-print("my_while_filter test2:", my_while_filter(test2)) # => [2, 4, 6, 8, 10, 12, 14, 16, ... 40]
+print("my_while_filter test2:", my_while_filter(test2)) # => [2, 4, 6, 8, 10, 12, 14, 16, ... 38]
 test3 = []
 print("my_while_filter test3:", my_while_filter(test3)) # => []
