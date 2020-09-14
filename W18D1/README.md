@@ -35,6 +35,7 @@ Play around with running the following packages:
 - `pipenv` is a Python virtual environment manager
 - manages packages and their versions in a project
 - manages Python version in a project (npm does not specify Node.js versions and does not manage it nor does it enforce a node version)
+- uses `virtualenv` to create the virtual environment
 
 ### Create a `pipenv` virtual environment 
 
