@@ -106,6 +106,8 @@ To run commands in a `pipenv` virtual environment, you can do several things:
 
 ## Testing with `unittest`
 
+[`unittest` docs]
+
 ### What is `unittest`?
 
 - `unittest` is a testing-suite package, just like how `mocha` is a testing-suite package built for Node.js
@@ -116,10 +118,10 @@ To run commands in a `pipenv` virtual environment, you can do several things:
 
 1. Create a folder called `test` in your project
 1. Make sure to have a `__init__.py` in the test folder
-1. Create a test file
+1. Create a test file **file names should start or end with `test`** in the test folder
 1. import `unittest` at the top of a test file
 1. Create a class that inherits from `unittest.TestCase`
-1. Create methods on that class where each method is going to be a single test
+1. Create methods on that class where each method is going to be a single test **method names need to start with `test_`**
 1. Inside those methods, use methods inherited from `unittest.TestCase` to assert certain behavior from the code run by an imported file
 1. Run command `python -m unittest` in the project folder
 
@@ -129,13 +131,15 @@ from file_name import class_to_test
 
 
 class Tests(unittest.TestCase):
-    def first_test(self):
+    def test_first(self):
         self.assertEqual(class_to_test.two(), 2)
 ```
 
 [Code example of using `unittest`]
 
 ## Testing with `pytest`
+
+[`pytest` docs]
 
 ### What is `pytest`?
 
@@ -148,17 +152,17 @@ class Tests(unittest.TestCase):
 1. Install `pytest`: `pipenv install pytest`
 1. Create a folder called `test` in your project
 1. Make sure to have a `__init__.py` in the test folder
-1. Create a test file
-1. Create functions each function is going to be a single test
+1. Create a test file **file names should start or end with `test`** in the test folder
+1. Create functions each function is going to be a single test **function names need to start with `test_`**
 1. Inside those functions, use the `assert` keyword before an expression that should evaluate to `True` to allow the test to pass, or `False` to make the test fail
-1. Run command `pytest` in the `pipenv` shell
+1. Run command `pytest` OR `python -m pytest` in the `pipenv` shell
 
 ```py
-def first_test():
+def test_first():
     assert 3 == 3
 
 
-def second_test():
+def test_first():
     assert 1 != 2
 ```
 
@@ -168,11 +172,11 @@ Can also skip tests by importing `pytest` into the test file
 import pytest
 
 
-@pytest.mark.skip() # skips first_test
-def first_test():
+@pytest.mark.skip() # skips test_first
+def test_first():
     assert 3 == 3
 
-def second_test():
+def test_second():
     if True:
         pytest.skip() # skips the test
     assert 1 != 2 # does not run
@@ -181,6 +185,8 @@ def second_test():
 [Code example of using `pytest`]
 
 
+[`unittest` docs]: https://docs.python.org/3/library/unittest.html
+[`pytest` docs]: https://docs.pytest.org/en/reorganize-docs/index.html
 [another_package]: ./another_package
 [my_package]: ./my_package
 [Code example of using `unittest`]: ./unittest-package
