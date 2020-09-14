@@ -5,3 +5,7 @@ node_modules/
 W8D1/test.js
 
 .env
+
+__pycache__/
+.venv/
+.pytest_cache/
