@@ -6,6 +6,8 @@ W8D1/test.js
 
 .env
 
+.vscode/
+
 __pycache__/
 .venv/
 .pytest_cache/
