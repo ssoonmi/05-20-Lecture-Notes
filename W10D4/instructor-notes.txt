@@ -1,0 +1,18 @@
+installing sequelize
+database migrations
+relationships with sequelize
+crud operations with sequelize
+
+
+What is a Database schema?
+How do we update a Database schema?
+How do we update a Database schema and also keep existing data intact?
+How do we do this without an ORM? Raw SQL
+But it gets tedious, lengthy, and a simple spelling mistake can cause a huge error
+That's where ORM's come in
+What is Sequelize?
+- Concept of an ORM
+	- similar to classes and instances of classes
+Sequelize automates the tasks of database creation, table creation, index creation, updating, deleting, querying, you name it!
+How do we update the Database schema with Sequelize? Migrations
+

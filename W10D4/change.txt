@@ -1,0 +1,10 @@
+Tests for testing the inserts?
+
+npm test command at the end of the README
+
+npm install command at the beginning
+
+add command to change environment in npx sequelize-cli README
+
+time for videos are wrong in SQL day 3
+
