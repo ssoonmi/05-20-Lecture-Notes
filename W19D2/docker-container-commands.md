@@ -63,6 +63,7 @@ Here are some examples.
 | `docker container stop $(docker ps -a -q)`  | Stop all containers.                                           |
 | `docker container prune`                    | Remove all stopped containers.                                 |
 | `docker container rm <CONTAINERNAME>`       | Remove one or more stopped containers.                         |
+| `docker container rm $(docker ps -a -q)`       | Remove all containers.                         |
 | `docker container rm -f <CONTAINERNAME>`    | Remove a running container by forcefully killing its processes (should rarely be used). |
 
 Here's an analogy to help you understand when to use `docker container rm -f`.
