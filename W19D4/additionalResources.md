@@ -1,5 +1,5 @@
 # Additional Resources
-https://devcenter.heroku.com/articles/container-registry-and-runtime
+
 ## DockerDocumentation
 
 * [Docker Compose versions and features](https://docs.docker.com/compose/compose-file/compose-versioning/)
