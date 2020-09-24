@@ -33,6 +33,8 @@ The term `services` refers to running multiple containers.
 
 Below is a breakdown of the general way your file should be formatted:
 
+* Reference: [Dockerfile with docker-compose.yml](https://docs.docker.com/compose/gettingstarted/)
+
 ```python
 # If no version is specified, then version 1.0 is assumed. 
 # Recommend version 2 at the minimum
@@ -40,7 +42,7 @@ version: '3.1'
 
 services:  # Will start up containers (is the same as using docker container run).
 servicename: # Friendly name (postgres, node, etc.), also the DNS name inside your network.
-  image: # Image this service will use
+  image: # Image this service will use. This image can be defined in a Dockerfile
   command: # Optional, will replace the default CMD specified by the image
   environment: # Optional, same as -e in docker container run
   volumes: # Optional, same as -v in docker container run

@@ -12,7 +12,9 @@ version: '2'
 services: # the containers we will run
 
   wordpress: # container called wordpress
-    image: wordpress
+    image: wordpress # we can have a Dockerfile for this wordpress image
+      # Note- alternatively, under the image key we can set the build key and 
+      # build an image right in docker-compose.yml
     ports: 
       - 8080:80
     environment: # enviornment variables
@@ -24,7 +26,7 @@ services: # the containers we will run
       - ./wordpress-data:/var/www/html
 
   mysql: #container called mysql
-    image: mariadb
+    image: mariadb # we can have a Dockerfile for this mariadb image
     environment: # enviornment variables
       MYSQL_DB_HOST: mysql
       MYSQL_DB_NAME: wordpress

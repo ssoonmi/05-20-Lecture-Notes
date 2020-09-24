@@ -3,7 +3,9 @@
 ## DockerDocumentation
 
 * [Docker Compose versions and features](https://docs.docker.com/compose/compose-file/compose-versioning/)
-* [Docker Compose CLI flags](https://docs.docker.com/compose/reference/overview/).
+* [Docker Compose CLI flags](https://docs.docker.com/compose/reference/overview/)
+* [Dockerfile with docker-compose.yml](https://docs.docker.com/compose/gettingstarted/)
+* [Environment variables in Compose](https://docs.docker.com/compose/environment-variables/)
 * [Documentation on Dockerfile building](https://docs.docker.com/engine/reference/builder/)
 * [Documentation on Best Dockerfile Practice](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
@@ -11,8 +13,8 @@
 
 * [Examples- Docker Compose with Different Frameworks](https://docs.docker.com/compose/samples-for-compose/)
 * [Example- Dockerfile with Node](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
-* [Example- Dockerfile with Node](https://github.com/StephenGrider/docker-react)
-* [Example- Dockerfile with Node](https://www.freecodecamp.org/news/how-to-develop-a-flask-graphql-graphene-mysql-and-docker-starter-kit-4d475f24ee76/)
+* [Example- Dockerfile with React](https://github.com/StephenGrider/docker-react)
+* [Example- Dockerfile with Flask](https://www.freecodecamp.org/news/how-to-develop-a-flask-graphql-graphene-mysql-and-docker-starter-kit-4d475f24ee76/)
 
 ## Docker and Heroku 
 
