@@ -49,8 +49,3 @@ volumes: # Optional, same as docker volume create
 
 networks: # Optional, same as docker network create
 ```
-
-## Additional Resources
-
-* Check out [this resource](https://yaml.org/refcard.html) for YAML formatting.
-* See a list of Docker Compose versions and features [here](https://docs.docker.com/compose/compose-file/compose-versioning/).
