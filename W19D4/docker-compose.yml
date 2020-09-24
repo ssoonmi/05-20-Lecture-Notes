@@ -1,0 +1,39 @@
+# This is a commitable file which we can pull from github!
+# It contains all of the information for our:
+  # containers
+  # volumes
+  # networks
+  # enviornment variables
+# With Docker Compose, we can build our entire fullstack application using a single command:
+  # docker-compose up
+
+version: '2'
+
+services: # the containers we will run
+
+  wordpress: # container called wordpress
+    image: wordpress
+    ports: 
+      - 8080:80
+    environment: # enviornment variables
+      WORDPRESS_DB_HOST: mysql
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: example
+      WORDPRESS_DB_PASSWORD: examplePW
+    volumes: 
+      - ./wordpress-data:/var/www/html
+
+  mysql: #container called mysql
+    image: mariadb
+    environment: # enviornment variables
+      MYSQL_DB_HOST: mysql
+      MYSQL_DB_NAME: wordpress
+      MYSQL_DB_USER: example
+      MYSQL_DB_PASSWORD: examplePW
+    volumes: # named volume
+      - mysql-data:/var/lib/mysql
+
+volumes: # for a named volume, we need a separate volume key
+  mysql-data:
+
+# if we had a named network, we would need a separate network key
