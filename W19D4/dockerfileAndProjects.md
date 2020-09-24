@@ -2,7 +2,13 @@
 
 You will be expected to deploy both your Full Stack Projects onto `Heroku` using `Docker`.
 
-You will create a `Dockerfile` for each of the images you'll need to run your project. 
+You will create a `Dockerfile` for each of the custom images you'll need to run your project. 
+
+
+
+
+
+
 
 ## Determining What Images You Need
 
@@ -10,7 +16,7 @@ A good rule of thumb is to have one image for each service your application will
 
 If you have a `Flask`, `React`, and `Postgres` application, you would have:
 * One container running `Flask`
-* One running Node to interpret `JavaScript`
+* One running `Node` to interpret `JavaScript`
 * One container running `Postgres`
 
 In that scenario, you'd create a `Dockerfile` for your `Flask` service and a `Dockerfile` for your `React` service. You would just use the base image for `Postgres`.
@@ -19,6 +25,12 @@ NOTE:
     Think about whether that service relies on any custom setup. 
     * An example of a service that wouldn't require a custom image is a database. 
     * For pretty much all of your purposes, the basic database image will provide everything you need.
+
+
+
+
+
+
 
 ### Best Practices for Building Your Dockerfiles
 

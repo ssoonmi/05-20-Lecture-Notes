@@ -7,13 +7,24 @@ Docker Compose can build custom images.
 ```python
 version: '3'
 services:
-  webapp:
+  webapp: 
     #  the build command tells compose it's building this image
-    build: 
+    build: #image
         # Will build in the current directory   
-        context: .
-        dockerfile: whateverthenameis.Dockerfile
+        context: . # the path to the  dockerfile
+        dockerfile: whateverthenameis.Dockerfile # default is Dockerfile
         #  by passing a name here you are telling compose to name and tag the built image by this name
+    image: whateverImage:whatevertag
+    ports: 
+        - '80:80'
+```
+
+```python
+version: '3'
+services:
+  webapp: 
+    #  the build command tells compose it's building this image
+    build: ./backend # the path to the  dockerfile
     image: whateverImage:whatevertag
     ports: 
         - '80:80'
