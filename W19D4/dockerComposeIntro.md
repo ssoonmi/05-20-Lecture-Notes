@@ -11,7 +11,8 @@ The term `services` refers to running multiple containers.
 * Can easily deploy multiple containers
 * Automatically configure a single network for your app
 * Preservation of volume data when containers are created. 
-    - When docker-compose up runs, if it finds any containers from previous runs, it copies the volumes from the old container to the new container it is creating. 
+    - When `docker-compose up` runs, if it finds any containers from previous runs, it copies the volumes from the old container to the new container it is creating. 
+    - Use `docker-compose down -v` to remove volumes.
 * Only recreate containers that have changed. 
     - Compose caches the configuration used to create a container. 
 * Compose allows you to use variables in the Compose file.

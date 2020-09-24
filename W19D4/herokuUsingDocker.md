@@ -1,7 +1,7 @@
 # Hosting Using Docker and Heroku
 
 We will use `Heroku` to host the images for our projects.
-* we will use the  `heroku container registry`
+* We will use the  `heroku container registry`
 
 ## Heroku vs Docker
 
@@ -20,3 +20,6 @@ The Container Registry will allow you to deploy your Docker images on to Heroku'
 
 ### NOTE
     Do not use docker-compose when pushing to Heroku. You will be pushing images straight up to the container registry, and then using Heroku dynos to run your images.
+
+### Reading
+[Hosting Using Docker](https://open.appacademy.io/learn/js-py---may-2020-online/week-19-may-2020-online/hosting-using-docker)
